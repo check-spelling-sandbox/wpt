@@ -590,7 +590,7 @@ test(() => {
     error: (error) => results.push(error),
     complete: () => {
       results.push('complete'),
-      // Re-entrantly tries to invoke `complete()`. However, this function must
+      // Reentrantly tries to invoke `complete()`. However, this function must
       // only ever run once.
       target.dispatchEvent(new Event('custom event'));
     },
@@ -603,7 +603,7 @@ test(() => {
     [1, 'complete'],
     "complete() can only be called once, and cannot invoke other Observer methods"
   );
-}, "Subscriber#complete() cannot re-entrantly invoke itself");
+}, "Subscriber#complete() cannot reentrantly invoke itself");
 
 test(() => {
   const results = [];
@@ -621,7 +621,7 @@ test(() => {
     next: (x) => results.push(x),
     error: (error) => {
       results.push('error'),
-      // Re-entrantly tries to invoke `error()`. However, this function must
+      // Reentrantly tries to invoke `error()`. However, this function must
       // only ever run once.
       target.dispatchEvent(new Event('custom event'));
     },
@@ -635,7 +635,7 @@ test(() => {
     [1, 'error'],
     "error() can only be called once, and cannot invoke other Observer methods"
   );
-}, "Subscriber#error() cannot re-entrantly invoke itself");
+}, "Subscriber#error() cannot reentrantly invoke itself");
 
 test(() => {
   const results = [];

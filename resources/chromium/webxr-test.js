@@ -2411,7 +2411,7 @@ class MockXRPresentationProvider {
     this.submit_frame_count_++;
 
     // Trigger the submit completion callbacks here. WARNING: The
-    // Javascript-based mojo mocks are *not* re-entrant. It's OK to
+    // Javascript-based mojo mocks are *not* reentrant. It's OK to
     // wait for these notifications on the next frame, but waiting
     // within the current frame would never finish since the incoming
     // calls would be queued until the current execution context finishes.

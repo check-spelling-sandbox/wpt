@@ -48,7 +48,7 @@
 //    EventRecordDetails event;
 // };
 // * chronologicalOrder
-//   * Since some events may be dispatched re-entrantly (e.g., while existing events are being dispatched), and others may be merged
+//   * Since some events may be dispatched reentrantly (e.g., while existing events are being dispatched), and others may be merged
 //     given the 'mergeEventTypes' option in the EventRecorder, this value is the actual chronological order that the event fired
 // * sequentialOccurrences
 //   * If this event was fired multiple times in a row (see the 'mergeEventTypes' option), this value is the count of occurrences.

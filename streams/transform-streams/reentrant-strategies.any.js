@@ -4,7 +4,7 @@
 // META: script=../resources/test-utils.js
 'use strict';
 
-// The size() function of readableStrategy can re-entrantly call back into the TransformStream implementation. This
+// The size() function of readableStrategy can reentrantly call back into the TransformStream implementation. This
 // makes it risky to cache state across the call to ReadableStreamDefaultControllerEnqueue. These tests attempt to catch
 // such errors. They are separated from the other strategy tests because no real user code should ever do anything like
 // this.
