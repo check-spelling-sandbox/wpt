@@ -38,7 +38,7 @@
       declarations.forEach(decl => {
         test(function(){
           assert_true(cssTextSerialization.indexOf(decl) !== -1,
-                      `cssText serialization ('${cssTextSerialization}') must contain contain '${decl}'`);
+                      `cssText serialization ('${cssTextSerialization}') must contain '${decl}'`);
         }, `cssText ('${cssText}') must contain '${decl}' in its serialization`);
       });
     }
