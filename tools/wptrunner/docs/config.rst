@@ -67,7 +67,7 @@ knows where to find some tests.
 
     :tests: Path to the root of the subtree containing tests.
     :meta: Path to the corresponding metadata directory.
-    :url_base: URL prefix to for the tests in this manifest. This
+    :url_base: URL prefix for the tests in this manifest. This
                should be ``/`` for the default manifest but must be
                different for other manifests.
 

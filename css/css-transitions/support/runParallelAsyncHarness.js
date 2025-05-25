@@ -20,7 +20,7 @@
         // time in milliseconds a test-run takes
         duration: 1000,
 
-        // test-cases to run for for the test - there must be at least one
+        // test-cases to run for the test - there must be at least one
         // each case creates its separate async_test() instance
         cases: {
             // test case named "test1"
