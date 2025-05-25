@@ -56,12 +56,12 @@
   test(() => {
     rule.selectorText = "named:First";
     assert_equals(rule.selectorText, "named:first");
-  }, "Set selectorText to named page with case insensitive :first pseudo page");
+  }, "Set selectorText to named page with case-insensitive :first pseudo page");
 
   test(() => {
     rule.selectorText = "named:First";
     assert_equals(rule.cssText, "@page named:first { }");
-  }, "Set cssText to named page with case insensitive :first pseudo page");
+  }, "Set cssText to named page with case-insensitive :first pseudo page");
 
   test(() => {
     rule.selectorText = "named:first:first";
