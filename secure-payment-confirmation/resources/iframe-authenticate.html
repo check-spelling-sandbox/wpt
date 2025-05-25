@@ -7,7 +7,7 @@
 <script>
 'use strict';
 
-// Setup the listener first, to avoid race conditions.
+// Set up the listener first, to avoid race conditions.
 window.addEventListener('message', async function handler(evt) {
   window.removeEventListener('message', handler);
 

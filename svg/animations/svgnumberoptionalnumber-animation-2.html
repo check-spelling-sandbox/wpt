@@ -50,7 +50,7 @@ animate.setAttribute("from", "5");
 animate.setAttribute("to", "40 10");
 feGaussianBlur.appendChild(animate);
 
-// Setup animation test
+// Set up animation test
 function sample1() {
     assert_approx_equals(feGaussianBlur.stdDeviationX.animVal, 5, epsilon);
     assert_approx_equals(feGaussianBlur.stdDeviationY.animVal, 5, epsilon);

@@ -31,7 +31,7 @@ animate.setAttribute("from", "50 70px 5cm 8pt");
 animate.setAttribute("to", "3cm 80 100px 4in");
 text.appendChild(animate);
 
-// Setup animation test
+// Set up animation test
 function sample1() {
     assert_equals(text.x.animVal.numberOfItems, 4);
     assert_approx_equals(text.x.animVal.getItem(0).value, 50, epsilon);

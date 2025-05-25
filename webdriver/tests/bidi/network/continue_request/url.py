@@ -50,7 +50,7 @@ async def test_navigation(
     )
 
     # Note: only subscribe to network events after setup_blocked_request is done
-    # otherwise the event subscription required to setup the blocked request
+    # otherwise the event subscription required to set up the blocked request
     # will collide with the global subscription here.
     await subscribe_events(
         events=[

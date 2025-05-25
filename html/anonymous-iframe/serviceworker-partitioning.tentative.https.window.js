@@ -37,7 +37,7 @@ promise_test(async t => {
     return { iframe: iframe, name: name, sw: sw };
   }));
 
-  // Setup a MessageChannel for each pair (iframe, serviceworker).
+  // Set up a MessageChannel for each pair (iframe, serviceworker).
   // Ping each serviceworker telling him which iframe it belongs to.
   iframes.forEach((iframe, i) => {
     iframe.channel = new MessageChannel();

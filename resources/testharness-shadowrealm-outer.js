@@ -82,7 +82,7 @@ if (globalThis.constructor.name === "SharedWorkerGlobalScope") {
  * fetchAdaptor() above, or an equivalent if fetch() is not present in the
  * hosting realm.
  *
- * @param {ShadowRealm} realm - the ShadowRealm in which to setup a
+ * @param {ShadowRealm} realm - the ShadowRealm in which to set up a
  *   fakeDynamicImport() global function.
  * @param {function} adaptor - an adaptor function that does what fetchAdaptor()
  *   does.

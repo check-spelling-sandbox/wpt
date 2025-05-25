@@ -79,7 +79,7 @@ async def test_headers_overrides_original_headers(
     url,
     headers,
 ):
-    # Setup a blocked response which contains a foo=bar response header.
+    # Set up a blocked response which contains a foo=bar response header.
     request = await setup_blocked_request(
         phase="responseStarted",
         blocked_url=url(

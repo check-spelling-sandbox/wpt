@@ -55,7 +55,7 @@ promise_test(async function() {
     timeOnScrollEventOnAnotherScroller = performance.now();
   }, { once: true });
 
-  // Setup another scroll event listener for the other scroll container.
+  // Set up another scroll event listener for the other scroll container.
   const scrollEventPromise = new Promise(resolve => {
     scrollers[0].addEventListener("scroll", resolve, { once: true });
   });

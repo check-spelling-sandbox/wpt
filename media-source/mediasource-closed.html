@@ -31,7 +31,7 @@
           {
               var sourceBuffer = mediaSource.addSourceBuffer(MediaSourceUtil.AUDIO_ONLY_TYPE);
 
-              // Setup a handler to run when the MediaSource closes.
+              // Set up a handler to run when the MediaSource closes.
               mediaSource.addEventListener('sourceclose', test.step_func(function (event)
               {
                   assert_equals(mediaSource.sourceBuffers.length, 0, "sourceBuffers is empty");
@@ -84,7 +84,7 @@
               var sourceBuffer = mediaSource.addSourceBuffer(MediaSourceUtil.AUDIO_ONLY_TYPE);
 
               assert_equals(mediaSource.readyState, "open", "readyState is 'open'");
-              // Setup a handler to run when the MediaSource closes.
+              // Set up a handler to run when the MediaSource closes.
               mediaSource.addEventListener("sourceclose", test.step_func(function (event)
               {
                   assert_equals(mediaSource.readyState, "closed", "readyState is 'closed'");
@@ -103,7 +103,7 @@
               var sourceBuffer = mediaSource.addSourceBuffer(MediaSourceUtil.AUDIO_ONLY_TYPE);
 
               assert_equals(mediaSource.readyState, "open", "readyState is 'open'");
-              // Setup a handler to run when the MediaSource closes.
+              // Set up a handler to run when the MediaSource closes.
               mediaSource.addEventListener("sourceclose", test.step_func(function (event)
               {
                   assert_equals(mediaSource.readyState, "closed", "readyState is 'closed'");
@@ -121,7 +121,7 @@
 
               assert_equals(mediaSource.readyState, "open", "readyState is open");
 
-              // Setup a handler to run when the MediaSource closes.
+              // Set up a handler to run when the MediaSource closes.
               mediaSource.addEventListener("sourceclose", test.step_func(function (event)
               {
                   assert_equals(mediaSource.readyState, "closed", "readyState is closed");

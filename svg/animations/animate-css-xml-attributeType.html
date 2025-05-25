@@ -29,7 +29,7 @@ set.setAttribute("begin", "0s");
 polygon.appendChild(set);
 rootSVGElement.appendChild(polygon);
 
-// Setup animation test
+// Set up animation test
 function sample1() {
     assert_approx_equals(polygon.animatedPoints.getItem(0).x, 100, epsilon);
     assert_equals(polygon.points.getItem(0).x, 100);

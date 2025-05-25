@@ -48,7 +48,7 @@ animate.setAttribute("dur", "4s");
 animate.setAttribute("values", "matrix;saturate;hueRotate;luminanceToAlpha");
 colorMatrix.appendChild(animate);
 
-// Setup animation test
+// Set up animation test
 function sample1() {
     assert_equals(colorMatrix.type.animVal, SVGFEColorMatrixElement.SVG_FECOLORMATRIX_TYPE_MATRIX);
     assert_equals(colorMatrix.type.baseVal, SVGFEColorMatrixElement.SVG_FECOLORMATRIX_TYPE_MATRIX);

@@ -36,7 +36,7 @@
 
         // all callbacks are optional:
 
-        // invoked for individual test before it starts so you can setup the environment
+        // invoked for individual test before it starts so you can set up the environment
         // like DOM, CSS, adding event listeners and such
         setup: function(data, options){},
 

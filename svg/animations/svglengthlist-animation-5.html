@@ -32,7 +32,7 @@ animate.setAttribute("from", "0 0 0 0");
 animate.setAttribute("to", "20 20 20 20");
 text.appendChild(animate);
 
-// Setup animation test
+// Set up animation test
 function sample1() {
     assert_equals(text.x.animVal.numberOfItems, 4);
     assert_approx_equals(text.x.animVal.getItem(0).value, 50, epsilon);

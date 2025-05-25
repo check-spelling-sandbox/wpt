@@ -66,7 +66,7 @@ animate.setAttribute("dur", "5s");
 animate.setAttribute("values", "identity;table;discrete;linear;gamma");
 feRFunc.appendChild(animate);
 
-// Setup animation test
+// Set up animation test
 function sample1() {
     assert_equals(feRFunc.type.animVal, SVGComponentTransferFunctionElement.SVG_FECOMPONENTTRANSFER_TYPE_IDENTITY);
     assert_equals(feRFunc.type.baseVal, SVGComponentTransferFunctionElement.SVG_FECOMPONENTTRANSFER_TYPE_IDENTITY);

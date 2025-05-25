@@ -50,7 +50,7 @@ animate.setAttribute("from", "dilate");
 animate.setAttribute("to", "erode");
 morphology.appendChild(animate);
 
-// Setup animation test
+// Set up animation test
 function sample1() {
     assert_equals(morphology.operator.animVal, SVGFEMorphologyElement.SVG_MORPHOLOGY_OPERATOR_DILATE);
     assert_equals(morphology.operator.baseVal, SVGFEMorphologyElement.SVG_MORPHOLOGY_OPERATOR_DILATE);

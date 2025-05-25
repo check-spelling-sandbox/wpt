@@ -584,7 +584,7 @@ function defaultAuthenticatorArgs() {
 }
 
 function standardSetup(cb, options = {}) {
-  // Setup an automated testing environment if available.
+  // Set up an automated testing environment if available.
   let authenticatorArgs = Object.assign(defaultAuthenticatorArgs(), options);
   window.test_driver.add_virtual_authenticator(authenticatorArgs)
       .then(authenticator => {

@@ -48,7 +48,7 @@ animate1.setAttribute("values", "normal;multiply;screen;darken;lighten");
 animate1.setAttribute("fill", "freeze");
 feBlend.appendChild(animate1);
 
-// Setup animation test
+// Set up animation test
 function sample1() {
     assert_equals(feBlend.mode.animVal, SVGFEBlendElement.SVG_FEBLEND_MODE_LIGHTEN);
     assert_equals(feBlend.mode.baseVal, SVGFEBlendElement.SVG_FEBLEND_MODE_LIGHTEN);

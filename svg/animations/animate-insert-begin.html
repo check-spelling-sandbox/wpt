@@ -33,7 +33,7 @@ animate.setAttribute("fill", "freeze");
 rect.appendChild(animate);
 rootSVGElement.appendChild(rect);
 
-// Setup animation test
+// Set up animation test
 function sample1() {
     assert_approx_equals(rect.x.animVal.value, 0, epsilon);
     assert_equals(rect.x.baseVal.value, 0);

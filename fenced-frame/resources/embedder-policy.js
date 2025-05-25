@@ -15,7 +15,7 @@ function generateHeader(headers) {
   }).join('|');
 }
 
-// Setup a fenced frame for embedder-* WPTs.
+// Set up a fenced frame for embedder-* WPTs.
 async function setupTest(test_type, uuid, hostname='') {
   let headers = ["Supports-Loading-Mode,fenced-frame"];
   switch (test_type) {

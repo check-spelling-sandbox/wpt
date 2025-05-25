@@ -50,7 +50,7 @@ promise_test(async t => {
   document.body.appendChild(frame);
   await readyPromise;
 
-  // Setup the result promise before triggering authentication, to avoid a
+  // Set up the result promise before triggering authentication, to avoid a
   // race.
   const resultPromise = new Promise(resolve => {
       window.addEventListener('message', function handler(evt) {
@@ -117,7 +117,7 @@ promise_test(async t => {
   document.body.appendChild(frame);
   await readyPromise;
 
-  // Setup the result promise before triggering authentication, to avoid a
+  // Set up the result promise before triggering authentication, to avoid a
   // race.
   const resultPromise = new Promise(resolve => {
       window.addEventListener('message', function handler(evt) {

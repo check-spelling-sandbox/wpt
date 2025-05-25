@@ -339,7 +339,7 @@
       expectations = interpolationTest.options[interpolationMethod.name];
     }
 
-    // Setup a standard equality function if an override is not provided.
+    // Set up a standard equality function if an override is not provided.
     if (!comparisonFunction) {
       comparisonFunction = (actual, expected) => {
         assert_equals(normalizeValue(actual), normalizeValue(expected));
@@ -419,7 +419,7 @@
     var testContainer = createElement(compositionContainer, 'div');
     createElement(testContainer);
 
-    // Setup a standard equality function if an override is not provided.
+    // Set up a standard equality function if an override is not provided.
     if (!comparisonFunction) {
       comparisonFunction = (actual, expected) => {
         assert_equals(normalizeValue(actual), normalizeValue(expected));

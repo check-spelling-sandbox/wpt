@@ -75,7 +75,7 @@
     "path": "android.py",
     "script": "run_install",
     "parser": "get_parser_install",
-    "help": "Setup the x86 android emulator",
+    "help": "Set up the x86 android emulator",
     "virtualenv": true,
     "requirements": [
       "requirements.txt"

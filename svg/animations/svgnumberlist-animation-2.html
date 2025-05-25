@@ -32,7 +32,7 @@ animate.setAttribute("by", "45 45 45 45");
 text.appendChild(animate);
 rootSVGElement.appendChild(text);
 
-// Setup animation test
+// Set up animation test
 function sample1() {
     assert_equals(text.rotate.animVal.numberOfItems, 1);
     assert_approx_equals(text.rotate.animVal.getItem(0).value, 15, epsilon);

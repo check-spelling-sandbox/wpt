@@ -256,7 +256,7 @@
    function generateRecordedEventHandlerWithCallback(callback) {
       return function(e) {
          if (recording) {
-            // Setup the scope for any synchronous events
+            // Set up the scope for any synchronous events
             eventsInScope.push(recordEvent(e));
             callback.call(this, e);
             eventsInScope.pop();

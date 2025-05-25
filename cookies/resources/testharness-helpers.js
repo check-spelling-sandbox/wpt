@@ -30,7 +30,7 @@ function executeTestsSerially(testList, setup, teardown) {
       return;
     }
 
-    // Setup the test fixtures.
+    // Set up the test fixtures.
     if (setup) {
       setup();
     }

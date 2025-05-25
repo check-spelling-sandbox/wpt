@@ -132,7 +132,7 @@ var curStep = 0;
 //            async_test with this name. If null, |func| will be executed as a
 //            free function.
 // |instructions| The text to display to the user. Note, these are shown after
-//                step is executed so these should be instructions to setup the
+//                step is executed so these should be instructions to set up the
 //                checks in the next step.
 function addManualTestStep(func, testName, instructions) {
     stepFunctions.push(func);

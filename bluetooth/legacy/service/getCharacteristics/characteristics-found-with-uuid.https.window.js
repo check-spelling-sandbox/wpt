@@ -7,7 +7,7 @@ const test_desc = 'Find characteristics with UUID in service.';
 
 bluetooth_test(async () => {
   let {device, fake_peripheral, fake_services} = await getDiscoveredHealthThermometerDevice();
-  // Setup a device with two measurement intervals.
+  // Set up a device with two measurement intervals.
   await fake_peripheral.setNextGATTConnectionResponse({code: HCI_SUCCESS});
   await device.gatt.connect();
   let fake_health_thermometer = fake_services.get('health_thermometer');

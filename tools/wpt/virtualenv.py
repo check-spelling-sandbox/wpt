@@ -121,7 +121,7 @@ class Virtualenv:
 
         paths = self.get_paths()
 
-        # Setup the path and site packages as if we'd launched with the virtualenv active
+        # Set up the path and site packages as if we'd launched with the virtualenv active
         bin_dir = paths["scripts"]
         os.environ["PATH"] = os.pathsep.join([bin_dir] + os.environ.get("PATH", "").split(os.pathsep))
 

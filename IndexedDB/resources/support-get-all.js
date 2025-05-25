@@ -9,7 +9,7 @@ const alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
 const ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 const vowels = 'aeiou'.split('');
 
-// Setup the object store identified by `storeName` to test `getAllKeys()`,
+// Set up the object store identified by `storeName` to test `getAllKeys()`,
 // `getAll()` and `getAllRecords()`.
 //  - `callback` is a function that runs after setup with the arguments: `test`,
 //    `connection`, and `expectedRecords`.

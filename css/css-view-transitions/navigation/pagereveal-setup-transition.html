@@ -12,7 +12,7 @@ if (is_new_page) {
   document.documentElement.classList.add('newPage');
 
   addEventListener('pagereveal', e => {
-    // Setup the view-transition-name from the event. Ensure this is not
+    // Set up the view-transition-name from the event. Ensure this is not
     // too late to be discovered to create a shared element animation.
     document.getElementById('target').classList.add('transition');
     requestAnimationFrame(() => requestAnimationFrame(takeScreenshot));

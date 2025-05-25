@@ -11,7 +11,7 @@ from ..formatters.wptreport import WptreportFormatter
 
 
 def test_wptreport_runtime(capfd):
-    # setup the logger
+    # set up the logger
     output = StringIO()
     logger = structuredlog.StructuredLogger("test_a")
     logger.add_handler(handlers.StreamHandler(output, WptreportFormatter()))
@@ -40,7 +40,7 @@ def test_wptreport_runtime(capfd):
 
 def test_wptreport_run_info_optional(capfd):
     """per the mozlog docs, run_info is optional; check we work without it"""
-    # setup the logger
+    # set up the logger
     output = StringIO()
     logger = structuredlog.StructuredLogger("test_a")
     logger.add_handler(handlers.StreamHandler(output, WptreportFormatter()))
