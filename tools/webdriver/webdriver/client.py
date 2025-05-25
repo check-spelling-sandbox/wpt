@@ -527,7 +527,7 @@ class Session:
             e.g. `window/rect`.
         :param body: Optional body of the HTTP request.
 
-        :return: `None` if the HTTP response body was empty, otherwise
+        :return: `None` if the HTTP response body was empty; otherwise,
             the `value` field returned after parsing the response
             body as JSON.
 
@@ -578,7 +578,7 @@ class Session:
         :param body: Optional body of the HTTP request.  Must be JSON
             serialisable.
 
-        :return: `None` if the HTTP response body was empty, otherwise
+        :return: `None` if the HTTP response body was empty; otherwise,
             the result of parsing the body as JSON.
 
         :raises error.WebDriverException: If the remote end returns

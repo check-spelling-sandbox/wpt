@@ -711,7 +711,7 @@
      *
      * Promise tests are tests which are represented by a promise
      * object. If the promise is fulfilled the test passes, if it's
-     * rejected the test fails, otherwise the test passes.
+     * rejected the test fails; otherwise, the test passes.
      *
      * @param {TestFunction} func - Test function. This must return a
      * promise. The test is automatically marked as complete once the
@@ -985,7 +985,7 @@
                     if (!waitingFor || waitingFor.resolve !== resolve)
                         return;
 
-                    // This should always fail, otherwise we should have
+                    // This should always fail; otherwise, we should have
                     // resolved the promise.
                     assert_true(waitingFor.types.length === 0,
                                 'Timed out waiting for ' + waitingFor.types.join(', '));

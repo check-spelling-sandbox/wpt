@@ -239,7 +239,7 @@ function test_various(prefix) {
   ];
   for (let alternative of alternatives) {
     // Since this is called recursively, check prefix for existing
-    // alternatives, otherwise we may have two styles or two variants, etc.
+    // alternatives; otherwise, we may have two styles or two variants, etc.
     if (alternative === 'normal' || !prefix.includes(alternative))
       test_various(prefix.concat(alternative));
   }

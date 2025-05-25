@@ -193,7 +193,7 @@ for (const options of [{}, {negotiated: true, id: 0}]) {
       ++errorExpectedCount;
     }
     assert_equals(closeExpectedCount, 10);
-    // We have to wait until SCTP is connected before we close, otherwise
+    // We have to wait until SCTP is connected before we close; otherwise,
     // there will be no signal.
     // The state is not available under Plan B, and unreliable on negotiated
     // channels.

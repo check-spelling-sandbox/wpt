@@ -22,7 +22,7 @@ Configuration File
 
 A configuration file can be passed using the ``--config`` command line
 argument. If no argument is supplied then ``wptrunner.ini`` in the
-current working directory will be used, if it exists, otherwise
+current working directory will be used, if it exists; otherwise,
 ``wptrunner.default.ini`` in the wptrunner directory. Only a single
 configuration file is used.
 

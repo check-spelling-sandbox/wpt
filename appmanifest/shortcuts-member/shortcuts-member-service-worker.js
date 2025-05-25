@@ -54,7 +54,7 @@ self.addEventListener("activate", e => {
 });
 
 // When a resource need to be fetched, check whether it is
-// contained in the cache and return the cached version, otherwise
+// contained in the cache and return the cached version; otherwise,
 // get it from the network.
 self.addEventListener("fetch", e => {
   e.respondWith(networkFallbackToCache(e.request));

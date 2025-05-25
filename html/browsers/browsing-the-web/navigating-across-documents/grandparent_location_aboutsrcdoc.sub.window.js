@@ -28,7 +28,7 @@ function run_test(cross_origin, same_doc, sandbox, name) {
           // Allow the main frame to try and set the grand child's location.
           if (same_doc) {
             if (!sandbox) {
-              // If `sandbox` is set, the child will self-navigate, otherwise
+              // If `sandbox` is set, the child will self-navigate; otherwise,
               // the main frame initiates the same-document navigation.
               frames[0][0].location = "about:srcdoc#the_anchor";
             }
