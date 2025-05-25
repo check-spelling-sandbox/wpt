@@ -278,7 +278,7 @@ promise_test(() => {
 }, 'Aborting a WritableStream after it is closed is a no-op');
 
 promise_test(t => {
-  // Testing that per https://github.com/whatwg/streams/issues/620#issuecomment-263483953 the fallback to close was
+  // Testing that per https://github.com/whatwg/streams/issues/620#issuecomment-263483953 the fall back to close was
   // removed.
 
   // Cannot use recordingWritableStream since it always has an abort

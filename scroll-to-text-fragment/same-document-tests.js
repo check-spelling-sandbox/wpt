@@ -24,7 +24,7 @@ function runTests() {
     assert_true(isInViewport(document.getElementById('text')), 'Scrolled to text');
   }, 'Basic text directive navigation');
 
-  // Test that we correctly fallback to the element id when we have a text
+  // Test that we correctly fall back to the element id when we have a text
   // directive that doesn't match any text in the page.
   promise_test(async t => {
     assert_implements(document.fragmentDirective, 'Text directive not implemented');
@@ -35,7 +35,7 @@ function runTests() {
     assert_true(isInViewport(document.getElementById('elementid')), 'Scrolled to `elementid`');
   }, 'Basic element id fallback');
 
-  // Test that we correctly fallback to the element id when we have a text
+  // Test that we correctly fall back to the element id when we have a text
   // directive that's malformed and won't be parsed.
   promise_test(async t => {
     assert_implements(document.fragmentDirective, 'Text directive not implemented');

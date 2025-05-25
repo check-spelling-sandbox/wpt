@@ -96,7 +96,7 @@ if (swOption !== 'no-fetch-handler') {
         }
       })());
     } else {
-      // Do nothing to fallback to the network.
+      // Do nothing to fall back to the network.
     }
   });
 }

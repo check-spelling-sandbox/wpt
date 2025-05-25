@@ -171,7 +171,7 @@ iframeTest(TXT_FILE, ROUTER_RULE_KEY_URL_PATTERN_CONSTRUCTED_MATCH_ALL_CACHE, as
   // Both requests are not handled by ServiceWorker.
   const {requests} = await get_info_from_worker(worker);
   assert_equals(requests.length, 0);
-}, 'Subresource load did not match with the cache and fallback to the network');
+}, 'Subresource load did not match with the cache and fall back to the network');
 
 iframeTest(HTML_FILE, ROUTER_RULE_KEY_URLPATTERN_CACHE_WITH_NAME, async (t, iwin, worker) => {
   // No need to set `resources/` because the request is dispatched from iframe.

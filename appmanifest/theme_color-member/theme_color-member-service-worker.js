@@ -29,7 +29,7 @@ const fromCache = async request => {
   return await cache.match(request.url);
 };
 
-// Attempt to get resources from the network first, fallback to the cache if we're
+// Attempt to get resources from the network first, fall back to the cache if we're
 // offline.
 const networkFallbackToCache = async request => {
   try {

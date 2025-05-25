@@ -577,7 +577,7 @@
         if (func) {
             var func_code = func.toString();
 
-            // Try and match with brackets, but fallback to matching without
+            // Try and match with brackets, but fall back to matching without
             var arrow = func_code.match(/^\(\)\s*=>\s*(?:{(.*)}\s*|(.*))$/);
 
             // Check for JS line separators

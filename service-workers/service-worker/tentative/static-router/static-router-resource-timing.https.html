@@ -168,7 +168,7 @@ iframeTest(NON_REGISTERED_ROUTE, ROUTER_RULE_KEY_REQUEST_CACHE, async (t, iwin, 
     final_source_type: 'network',
     description: "cache as source on main resource and cache miss, fallback to network"
   });
-}, 'Main resource fallback to the network when there is no cache entry and resource timing');
+}, 'Main resource fall back to the network when there is no cache entry and resource timing');
 
 // Subresource
 iframeTest(NON_REGISTERED_ROUTE, ROUTER_RULE_KEY_REQUEST_FETCH, async (t, iwin, worker) => {
@@ -251,7 +251,7 @@ iframeTest(REGISTERED_ROUTE, ROUTER_RULE_KEY_URL_PATTERN_CONSTRUCTED_MATCH_ALL_C
     final_source_type: 'network',
     description: "cache as source on subresource and cache misses"
   });
-}, 'Subresource load did not match with the cache and fallback to the network');
+}, 'Subresource load did not match with the cache and fall back to the network');
 
 // Race Tests
 promise_test(async t => {

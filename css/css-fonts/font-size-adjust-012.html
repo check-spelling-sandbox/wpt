@@ -59,13 +59,13 @@
     </div>
     <div class="wrapper">
         <div class="description">
-            2. Different glyphs 'x' and 'A' in the same span, with 2 fonts in font-family fallback and <em>without</em> font-size-adjust. The second glyph can't be rendered by primary font so it will individually fallback to the secondary font. Note it is smaller than the first glyph.
+            2. Different glyphs 'x' and 'A' in the same span, with 2 fonts in font-family fallback and <em>without</em> font-size-adjust. The second glyph can't be rendered by primary font so it will individually fall back to the secondary font. Note it is smaller than the first glyph.
         </div>
         <div class="test"><span>xA</span></div>
     </div>
     <div class="wrapper">
         <div class="description">
-            3. Different glyphs 'x' and 'A' in the same span, with 2 fonts in font-family fallback and <em>with</em> font-size-adjust. The second glyph can't be rendered by primary font so it will individually fallback to the secondary font. Note that now they have the same size.
+            3. Different glyphs 'x' and 'A' in the same span, with 2 fonts in font-family fallback and <em>with</em> font-size-adjust. The second glyph can't be rendered by primary font so it will individually fall back to the secondary font. Note that now they have the same size.
         </div>
         <div class="test">
         <!-- We are inserting a tall inline-block here to make the position of the baseline independent of the adjusted glyph since on the ref test we don't use font-size-adjust but font-size -->
