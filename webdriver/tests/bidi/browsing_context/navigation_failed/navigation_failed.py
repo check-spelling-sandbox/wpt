@@ -234,7 +234,7 @@ async def test_with_new_navigation(
     slow_page_url = url(
         "/webdriver/tests/bidi/browsing_context/support/empty.html?pipe=trickle(d10)"
     )
-    # Depending on implementation, the `trickle(d10)` page can or can not yet
+    # Depending on implementation, the `trickle(d10)` page can or cannot yet
     # create a new document. Depending on this, `aborted` or `failed` event
     # should be emitted.
     await subscribe_events(
@@ -303,7 +303,7 @@ async def test_with_new_navigation_inside_page(
 """
     )
 
-    # Depending on implementation, the `trickle(d10)` page can or can not yet
+    # Depending on implementation, the `trickle(d10)` page can or cannot yet
     # create a new document. Depending on this, `aborted` or `failed` event
     # should be emitted.
     await subscribe_events(
@@ -354,7 +354,7 @@ async def test_close_context(
     slow_page_url = url(
         "/webdriver/tests/bidi/browsing_context/support/empty.html?pipe=trickle(d10)"
     )
-    # Depending on implementation, the `trickle(d10)` page can or can not yet
+    # Depending on implementation, the `trickle(d10)` page can or cannot yet
     # create a new document. Depending on this, `aborted` or `failed` event
     # should be emitted.
     await subscribe_events(
@@ -406,7 +406,7 @@ async def test_close_iframe(
     iframe_url = inline("<div>foo</div>")
     page_url = inline(f"<iframe src={iframe_url}></iframe")
 
-    # Depending on implementation, the `trickle(d10)` page can or can not yet
+    # Depending on implementation, the `trickle(d10)` page can or cannot yet
     # create a new document. Depending on this, `aborted` or `failed` event
     # should be emitted.
     await subscribe_events(

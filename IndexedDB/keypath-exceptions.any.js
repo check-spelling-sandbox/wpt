@@ -14,7 +14,7 @@ indexeddb_test(
       const tx = db.transaction('store', 'readwrite', {durability: 'relaxed'});
       assert_throws_dom('DataError', () => {
         tx.objectStore('store').put({a: {b: 'foo'}});
-      }, 'Put should throw if key can not be inserted at key path location.');
+      }, 'Put should throw if key cannot be inserted at key path location.');
       t.done();
     },
     'The last element of keypath is validated');

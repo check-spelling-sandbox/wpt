@@ -37,7 +37,7 @@ promise_test(async t => {
     const operandType = {dataType: 'float32', shape: [1]};
     builder.input('input', operandType);
   });
-}, 'Destroyed context can not build operator.');
+}, 'Destroyed context cannot build operator.');
 
 promise_test(async t => {
   const context = await navigator.ml.createContext(contextOptions);
@@ -45,7 +45,7 @@ promise_test(async t => {
   assert_throws_dom('InvalidStateError', () => {
     new MLGraphBuilder(context);
   });
-}, 'Destroyed context can not create graph builder.');
+}, 'Destroyed context cannot create graph builder.');
 
 promise_test(async t => {
   const context = await navigator.ml.createContext(contextOptions);
@@ -58,7 +58,7 @@ promise_test(async t => {
   context.destroy();
   promise_rejects_dom(
       t, 'InvalidStateError', builder.build({'output': output_operand}));
-}, 'Destroyed context can not build graph.');
+}, 'Destroyed context cannot build graph.');
 
 promise_test(async t => {
   const context = await navigator.ml.createContext(contextOptions);
@@ -82,7 +82,7 @@ promise_test(async t => {
         },
         dispatchOutputs);
   });
-}, 'Destroyed context can not dispatch.');
+}, 'Destroyed context cannot dispatch.');
 
 promise_test(async t => {
   const context = await navigator.ml.createContext(contextOptions);
@@ -112,7 +112,7 @@ promise_test(async t => {
   promise_rejects_dom(
       t, 'InvalidStateError',
       context.createTensor({dataType: 'float32', shape: [1]}));
-}, 'Destroyed context can not create tensor.');
+}, 'Destroyed context cannot create tensor.');
 
 promise_test(async t => {
   const context = await navigator.ml.createContext(contextOptions);
@@ -123,7 +123,7 @@ promise_test(async t => {
   });
   context.destroy();
   promise_rejects_dom(t, 'InvalidStateError', context.readTensor(tensor));
-}, 'Destroyed context can not read tensor.');
+}, 'Destroyed context cannot read tensor.');
 
 promise_test(async t => {
   const context = await navigator.ml.createContext(contextOptions);
@@ -152,4 +152,4 @@ promise_test(async t => {
   assert_throws_dom('InvalidStateError', () => {
     context.writeTensor(tensor, new Uint8Array(arrayBuffer));
   });
-}, 'Destroyed context can not write tensor.');
+}, 'Destroyed context cannot write tensor.');

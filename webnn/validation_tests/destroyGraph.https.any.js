@@ -53,7 +53,7 @@ promise_test(async t => {
         },
         dispatchOutputs);
   });
-}, 'Destroyed graph can not dispatch.');
+}, 'Destroyed graph cannot dispatch.');
 
 promise_test(async t => {
   const builder = new MLGraphBuilder(context);

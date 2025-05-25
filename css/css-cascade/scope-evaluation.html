@@ -73,7 +73,7 @@ test_scope(document.currentScript, () => {
 test_scope(document.currentScript, () => {
   assert_not_green('.a');
   assert_not_green('.a > span');
-}, 'Scope can not match its own root without :scope');
+}, 'Scope cannot match its own root without :scope');
 </script>
 
 <template>

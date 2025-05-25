@@ -16,19 +16,19 @@ test(function(t) {
   }
 
   check_args([], [1.0], 'NotSupportedError',
-             'feedforward coefficients can not be empty');
+             'feedforward coefficients cannot be empty');
 
   check_args([1.0], [], 'NotSupportedError',
-             'feedback coefficients can not be empty');
+             'feedback coefficients cannot be empty');
 
   var coeff = new Float32Array(21)
   coeff[0] = 1.0;
 
   check_args(coeff, [1.0], 'NotSupportedError',
-             'more than 20 feedforward coefficients can not be used');
+             'more than 20 feedforward coefficients cannot be used');
 
   check_args([1.0], coeff, 'NotSupportedError',
-             'more than 20 feedback coefficients can not be used');
+             'more than 20 feedback coefficients cannot be used');
 
   check_args([0.0, 0.0], [1.0], 'InvalidStateError',
              'at least one feedforward coefficient must be non-zero');

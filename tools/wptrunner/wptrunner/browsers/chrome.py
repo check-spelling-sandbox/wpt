@@ -186,7 +186,7 @@ def executor_kwargs(logger, test_type, test_environment, run_info_data, subsuite
 
     # Enable experimental features based on stable release mode setting. It is
     # unfortunately that we need to do this based on a content shell specific
-    # setting, we choose to do this because we can not dynamically set
+    # setting, we choose to do this because we cannot dynamically set
     # enable-experimental in run_wpt_tests.py.
     if kwargs["enable_experimental"] is None and "--stable-release-mode" not in binary_args:
         chrome_options["args"].extend(["--enable-experimental-web-platform-features",

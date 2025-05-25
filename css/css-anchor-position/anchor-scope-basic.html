@@ -68,7 +68,7 @@
   test((t) => {
     inflate(t, test_skips_named_anchor_with_scope);
     assert_equals(getComputedStyle(main.querySelector('.anchored-a')).top, '30px');
-  }, 'Sibling can not anchor into anchor-scope, even when anchor-name present');
+  }, 'Sibling cannot anchor into anchor-scope, even when anchor-name present');
 </script>
 
 <template id=test_scope_all_common_ancestor>

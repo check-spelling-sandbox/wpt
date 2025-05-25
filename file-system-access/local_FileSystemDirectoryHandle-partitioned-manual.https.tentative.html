@@ -108,7 +108,7 @@ framed_test(async (t, sendTo) => {
   // Assert that an error is raised when attempting to access
   // getDirectoryHandle.
   await sendTo(crossSiteContexts, assertNoAccess);
-}, 'Cross-site sub-frames can not access getDirectoryHandle.');
+}, 'Cross-site sub-frames cannot access getDirectoryHandle.');
 
 // TODO(crbug.com/1322897): Add tests for ancestor bit frames.
 // TODO(crbug.com/1099413): Add tests for non-default buckets.

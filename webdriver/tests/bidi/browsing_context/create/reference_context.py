@@ -42,7 +42,7 @@ async def test_reference_context(bidi_session, wait_for_event, wait_for_future_s
         client_window=context_info["clientWindow"],
     )
 
-    # We can not assert the specific behavior of reference_context here,
+    # We cannot assert the specific behavior of reference_context here,
     # so we only verify that a new browsing context was successfully created
     # when a valid reference_context is provided.
 

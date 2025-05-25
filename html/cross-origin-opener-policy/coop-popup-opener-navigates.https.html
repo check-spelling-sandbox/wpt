@@ -25,7 +25,7 @@ function getExecutorPath(uuid, origin, coop_header) {
     return origin.origin + executor_path + coop_header  + `&uuid=${uuid}`;
 }
 
-// Note: Because we can not navigate the main page to verify the behavior,
+// Note: Because we cannot navigate the main page to verify the behavior,
 // we instead create another layer of popup, and navigate the intermediate
 // one. We can verify the opener behavior from this page, and the openee
 // behavior from the second popup.

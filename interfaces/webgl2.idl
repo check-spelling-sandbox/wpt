@@ -300,7 +300,7 @@ interface mixin WebGL2RenderingContextBase
   undefined copyBufferSubData(GLenum readTarget, GLenum writeTarget, GLintptr readOffset,
                               GLintptr writeOffset, GLsizeiptr size);
   // MapBufferRange, in particular its read-only and write-only modes,
-  // can not be exposed safely to JavaScript. GetBufferSubData
+  // cannot be exposed safely to JavaScript. GetBufferSubData
   // replaces it for the purpose of fetching data back from the GPU.
   undefined getBufferSubData(GLenum target, GLintptr srcByteOffset, [AllowShared] ArrayBufferView dstBuffer,
                              optional unsigned long long dstOffset = 0, optional GLuint length = 0);

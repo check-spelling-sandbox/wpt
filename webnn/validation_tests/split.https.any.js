@@ -73,7 +73,7 @@ const tests = [
   },
   {
     name:
-        '[split] Throw if the splits can not evenly divide the dimension size of input along options.axis.',
+        '[split] Throw if the splits cannot evenly divide the dimension size of input along options.axis.',
     input: {dataType: 'float32', shape: [2, 5]},
     splits: [2],
     options: {
@@ -83,7 +83,7 @@ const tests = [
   },
   {
     name:
-        '[split] Throw if splits (scalar) can not evenly divide the dimension size of input along options.axis.',
+        '[split] Throw if splits (scalar) cannot evenly divide the dimension size of input along options.axis.',
     input: {dataType: 'float32', shape: [2, 5]},
     splits: 2,
     options: {

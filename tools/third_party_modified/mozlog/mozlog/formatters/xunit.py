@@ -107,7 +107,7 @@ class XUnitFormatter(base.BaseFormatter):
             }
         )
         xml_string = ElementTree.tostring(self.root, encoding="utf8")
-        # pretty printing can not be done from xml.etree
+        # pretty printing cannot be done from xml.etree
         from xml.dom import minidom
 
         return minidom.parseString(xml_string).toprettyxml()

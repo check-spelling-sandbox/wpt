@@ -54,7 +54,7 @@ cookie_test(async t => {
   assert_equals(
     await getCookieStringHttp(), 'cookie1=value1; cookie3=value3',
     'Trying to store an HttpOnly cookie with document.cookie fails');
-}, 'HttpOnly cookies can not be set by document.cookie');
+}, 'HttpOnly cookies cannot be set by document.cookie');
 
 
 // Historical: Early iterations of the proposal included an httpOnly option.
@@ -66,7 +66,7 @@ cookie_test(async t => {
     await getCookieStringHttp(),
     'cookie1=value1; cookie2=value2; cookie3=value3',
     'httpOnly is not an option for CookieStore.set()');
-}, 'HttpOnly cookies can not be set by CookieStore');
+}, 'HttpOnly cookies cannot be set by CookieStore');
 
 cookie_test(async t => {
   await setCookieStringHttp('HTTPONLY-cookie=value; path=/; httponly');

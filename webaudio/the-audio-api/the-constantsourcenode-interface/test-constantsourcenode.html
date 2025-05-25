@@ -28,12 +28,12 @@ test(function(t) {
 
   assert_throws_js(RangeError, function() {
     csn.start(-1);
-  }, "When can not be negative");
+  }, "When cannot be negative");
 
   csn.start(0);
   assert_throws_js(RangeError, function() {
     csn.stop(-1);
-  }, "When can not be negative");
+  }, "When cannot be negative");
 }, "ConstantSourceNode stop and start");
 
 async_test(function(t) {

@@ -154,7 +154,7 @@ nfc_test(async (t, mockNFC) => {
   await new Promise((resolve, reject) => {
     t.step_timeout(resolve, 100);
   });
-}, "Test that NDEFReader can not get any reading events once the signal aborts.");
+}, "Test that NDEFReader cannot get any reading events once the signal aborts.");
 
 nfc_test(async (t, mockNFC) => {
   const ndef = new NDEFReader();

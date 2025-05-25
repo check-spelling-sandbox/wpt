@@ -41,7 +41,7 @@ async def test_remove_preload_script_twice(bidi_session):
 
     await bidi_session.script.remove_preload_script(script=script)
 
-    # Check that we can not remove the same script twice
+    # Check that we cannot remove the same script twice
     with pytest.raises(error.NoSuchScriptException):
         await bidi_session.script.remove_preload_script(script=script)
 

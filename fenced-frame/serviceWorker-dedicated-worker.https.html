@@ -50,7 +50,7 @@
 
       const result = await checkIfWorkerIsControlled()
       assert_equals(result, "Not Found");
-    }, "Fenced frame's service workers can not control the dedicated workers in the parent frame");
+    }, "Fenced frame's service workers cannot control the dedicated workers in the parent frame");
 
     promise_test(async t => {
       t.add_cleanup(unregisterAllSW);
@@ -66,6 +66,6 @@
 
       const result = await nextValueFromServer(key);
       assert_equals(result, "Not Found");
-    }, "Service workers in the parent frame of fenced frames can not control dedicated workers in fenced frames");
+    }, "Service workers in the parent frame of fenced frames cannot control dedicated workers in fenced frames");
   </script>
 </body>

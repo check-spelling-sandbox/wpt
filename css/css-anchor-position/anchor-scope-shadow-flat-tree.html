@@ -50,7 +50,7 @@
     assert_equals(getComputedStyle(outer_anchored).top, '20px');
 
     // The inner_anchored element exists directly in the shadow tree,
-    // and can not see the second .anchor since it's hidden behind
+    // and cannot see the second .anchor since it's hidden behind
     // an anchor-scope.
     let inner_anchored = host.shadowRoot.querySelector('.inner_anchored');
     assert_equals(getComputedStyle(inner_anchored).top, '10px');

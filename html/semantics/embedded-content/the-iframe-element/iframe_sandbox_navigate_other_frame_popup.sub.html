@@ -1,6 +1,6 @@
 <!doctype html>
 <meta charset="utf-8">
-<title>Check that sandboxed iframe can not navigate other frame's popup</title>
+<title>Check that sandboxed iframe cannot navigate other frame's popup</title>
 <script src="/resources/testharness.js"></script>
 <script src="/resources/testharnessreport.js"></script>
 <body>
@@ -57,7 +57,7 @@
 
     const result = await message_promise;
     assert_equals(result, 'cannot navigate');
-  }, "Sandboxed iframe can not navigate other frame's popup");
+  }, "Sandboxed iframe cannot navigate other frame's popup");
 
 })();
 </script>

@@ -75,7 +75,7 @@
 
       var computedSpecifiedValue = parseFloat(getComputedStyle(targetElement)[property_name]);
 
-      assert_true(isFinite(computedSpecifiedValue)); /* We can not accept NaN as value */
+      assert_true(isFinite(computedSpecifiedValue)); /* We cannot accept NaN as value */
 
       targetElement.style.setProperty(property_name, expected_value);
 
