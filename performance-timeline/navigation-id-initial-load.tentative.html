@@ -20,7 +20,7 @@ navigation id, not the increment.
     }
 
     promise_test(async t => {
-      // Assert navigation id exists in LCP entries and and are all the same.
+      // Assert navigation id exists in LCP entries and are all the same.
       const navigationIdsOfLCP = (await NavigationIdsFromLCP()).map(e => e.navigationId);
       assert_true(navigationIdsOfLCP.every(e => e == navigationIdsOfLCP[0]),
         'Navigation Ids of LCP entries should be the same at initial navigation');
