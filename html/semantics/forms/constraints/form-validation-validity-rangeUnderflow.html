@@ -73,7 +73,7 @@
         {conditions: {min: "5", value: ""}, expected: false, name: "[target] Value is empty string"},
         {conditions: {min: "4", value: "5"}, expected: false, name: "[target] The min is less than value(integer)"},
         {conditions: {min: "-5.6", value: "-5.5"}, expected: false, name: "[target] The min is less than value(floating number)"},
-        {conditions: {min: "0", value: "-0"}, expected: false, name: "[target] The min equals to value"},
+        {conditions: {min: "0", value: "-0"}, expected: false, name: "[target] The min equals value"},
         {conditions: {min: "5", value: "6abc"}, expected: false, name: "[target] The value is not a number"},
         {conditions: {min: "6", value: "5"}, expected: true, name: "[target] The value is less than min(integer)"},
         {conditions: {min: "-5.4", value: "-5.5"}, expected: true, name: "[target] The value is less than min(floating number)"},
