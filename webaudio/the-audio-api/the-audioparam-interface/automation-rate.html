@@ -104,7 +104,7 @@
         });
       });
 
-      // AudioListener needs it's own special test since it's not a node.
+      // AudioListener needs its own special test since it's not a node.
       audit.define('AudioListener', (task, should) => {
         let context = new OfflineAudioContext(
             {length: sampleRate, sampleRate: sampleRate});

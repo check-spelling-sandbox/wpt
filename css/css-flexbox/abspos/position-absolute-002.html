@@ -149,7 +149,7 @@ var beforePosition = absolute.getBoundingClientRect();
 document.querySelector('.flexbox').style.height = '101px';
 var afterPosition = absolute.getBoundingClientRect();
 
-// Positioned element should not change position when the height of it's parent flexbox is changed.
+// Positioned element should not change position when the height of its parent flexbox is changed.
 for (key in beforePosition) {
     test(function() {
         assert_equals(beforePosition[key], afterPosition[key]);
