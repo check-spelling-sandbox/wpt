@@ -535,7 +535,7 @@
     shadowRoot.appendChild(shadowChild2);
 
     // The elements in the content attribute are in a "darker" tree - they
-    // enter a shadow encapsulation boundary, so not be associated any more.
+    // enter a shadow encapsulation boundary, so not be associated anymore.
     assert_array_equals(lightDomHeading.ariaFlowToElements, []);
 
     // These elements are in a shadow including ancestor, i.e "lighter" tree.
