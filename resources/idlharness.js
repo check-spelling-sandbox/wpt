@@ -5,7 +5,7 @@
  *
  * Most of the interesting stuff happens in the derived classes of IdlObject,
  * especially IdlInterface.  The entry point for all IdlObjects is .test(),
- * which is called by IdlArray.test().  An IdlObject is conceptually just
+ * which is called by IDlArray.test().  An IdlObject is conceptually just
  * "thing we want to run tests on", and an IdlArray is an array of IdlObjects
  * with some additional data thrown in.
  *
