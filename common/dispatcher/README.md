@@ -63,7 +63,7 @@ defined in a single file.
   remote context. Arguments are passed as JSON.
 - If the return value of `fn` when executed in the remote context is a promise,
   the promise returned by `execute_script` resolves to the resolved value of
-  that promise. Otherwise the `execute_script` promise resolves to the return
+  that promise. Otherwise, the `execute_script` promise resolves to the return
   value of `fn`.
 
 Note that `fn` is evaluated on the remote context (`executor.html` in the
@@ -74,7 +74,7 @@ example above), while `args` are evaluated on the caller context
 
 If the return value of the injected function when executed in the remote
 context is a promise, the promise returned by `execute_script` resolves to the
-resolved value of that promise. Otherwise the `execute_script` promise resolves
+resolved value of that promise. Otherwise, the `execute_script` promise resolves
 to the return value of the function.
 
 When the return value of an injected script is a Promise, it should be resolved

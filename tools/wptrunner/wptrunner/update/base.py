@@ -17,7 +17,7 @@ class Step:
 
         When a Step is run() the current state is checked to see
         if the state from this step has already been created. If it
-        has the restore() method is invoked. Otherwise the create()
+        has the restore() method is invoked. Otherwise, the create()
         method is invoked with the state object. This is expected to
         add items with all the keys in __class__.provides to the state
         object.

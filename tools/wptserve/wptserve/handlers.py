@@ -43,7 +43,7 @@ def filesystem_path(base_path, request, url_base="/"):
 
     new_path = os.path.join(base_path, path)
 
-    # Otherwise setting path to / allows access outside the root directory
+    # Otherwise, setting path to / allows access outside the root directory
     if not new_path.startswith(base_path):
         raise HTTPException(404)
 

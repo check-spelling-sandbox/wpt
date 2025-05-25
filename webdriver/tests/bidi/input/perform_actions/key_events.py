@@ -182,7 +182,7 @@ async def test_key_special_key_sends_keydown(
 ):
     if name.startswith("F"):
         # Prevent default behavior for F1, etc., but only after keydown
-        # bubbles up to body. (Otherwise activated browser menus/functions
+        # bubbles up to body. (Otherwise, activated browser menus/functions
         # may interfere with subsequent tests.)
         await bidi_session.script.evaluate(
             expression="""

@@ -159,7 +159,7 @@ def getLogger(name, handler=None):
     """
     Returns the logger with the specified name.
     If the logger doesn't exist, it is created.
-    If handler is specified, adds it to the logger. Otherwise a default handler
+    If handler is specified, adds it to the logger. Otherwise, a default handler
     that logs to standard output will be used.
 
     :param name: The name of the logger to retrieve

@@ -50,7 +50,7 @@ def branch_point() -> Optional[Text]:
         assert base_branch, "GITHUB_BRANCH environment variable is defined"
         branch_point: Optional[Text] = git("merge-base", "HEAD", base_branch)
     else:
-        # Otherwise we aren't on a PR, so we try to find commits that are only in the
+        # Otherwise, we aren't on a PR, so we try to find commits that are only in the
         # current branch c.f.
         # http://stackoverflow.com/questions/13460152/find-first-ancestor-commit-in-another-branch
 

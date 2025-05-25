@@ -66,7 +66,7 @@ function runTests(data) {
           //     will be used rather than inheriting from the base URL.
           //  3. If the baseURL exists and provides a component value then
           //     use that for the expected pattern.
-          //  4. Otherwise fall back on the default pattern of `*` for an
+          //  4. Otherwise, fall back on the default pattern of `*` for an
           //     empty component pattern.
           //
           // Note that username and password are never inherited, and will only

@@ -49,7 +49,7 @@ const basicCases = [
 ].map(([from, to, expectedToWork]) => [from.toString(), to.toString(), expectedToWork]);
 
 for (const [from, to, expectedToWork] of basicCases) {
-  // Otherwise the messages are not consistent between runs which breaks some systems.
+  // Otherwise, the messages are not consistent between runs which breaks some systems.
   const fromForTitle = from.replaceAll(blobURL, "blob:(a blob URL for this origin)")
                            .replaceAll(blobURL2, "blob:(another blob URL for this origin)");
   const toForTitle = to.replaceAll(blobURL, "blob:(a blob URL for this origin)")
@@ -146,7 +146,7 @@ fetch("resources/url-rewriting-helper.html").then(r => r.text()).then(htmlInside
   ];
 
   for (const [from, to, expectedToWork] of dataURLCases) {
-    // Otherwise the messages are unreadably long.
+    // Otherwise, the messages are unreadably long.
     const fromForTitle = from.replaceAll(dataURLStart, "data:(script to run this test)");
     const toForTitle = to.replaceAll(dataURLStart, "data:(script to run this test)");
 

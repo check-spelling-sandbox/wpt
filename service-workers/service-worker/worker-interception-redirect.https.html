@@ -68,7 +68,7 @@ async function cleanup() {
 // respondWith() a redirect. Otherwise, it falls back to network and the server
 // responds with a redirect.
 // - |redirect_location| is "scope2" or "out-of-scope". If "scope2", the
-// redirect ends up in sw2's scope2. Otherwise it's out of scope.
+// redirect ends up in sw2's scope2. Otherwise, it's out of scope.
 function build_worker_url(redirector, redirect_location) {
   let redirect_path;
   // Set path to redirect.py, a file on the server that serves
@@ -82,7 +82,7 @@ function build_worker_url(redirector, redirect_location) {
 
   let redirect_to = base_path() + 'resources/';
   // Append "scope2/" to redirect_to, so the redirect falls in scope2.
-  // Otherwise no change is needed, as the parent "resources/" directory is
+  // Otherwise, no change is needed, as the parent "resources/" directory is
   // used, and is out-of-scope.
   if (redirect_location == 'scope2')
     redirect_to += 'scope2/';

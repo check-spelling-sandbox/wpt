@@ -68,7 +68,7 @@ async function setupServiceWorker() {
   var reg = await navigator.serviceWorker.register(script, { scope: scope });
 
   // We should keep track if we installed a worker or not. If we did then we
-  // need to uninstall it. Otherwise we let the top level test uninstall it
+  // need to uninstall it. Otherwise, we let the top level test uninstall it
   // (If partitioning is not working).
   var installed_a_worker = true;
   await new Promise(resolve => {
@@ -81,7 +81,7 @@ async function setupServiceWorker() {
       return;
     }
 
-    //Otherwise check if one is waiting.
+    //Otherwise, check if one is waiting.
     worker = reg.waiting;
     // If not waiting, grab the installing worker.
     if ( !worker ) {

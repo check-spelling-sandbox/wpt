@@ -93,7 +93,7 @@ promise_test(async t => {
 
   // Resize the element so it is oversized by less than the line scroll amount.
   // The next keyboard-triggered scroll should stop at the end of the snap-area.
-  // Otherwise it is not possible to scroll to the last line of the snap-area
+  // Otherwise, it is not possible to scroll to the last line of the snap-area
   // via keyboard.
   const scrollAmount = scroller.scrollTop;
   target.style.height = `${scroller.clientHeight + 2 * scrollAmount - 1}px`;

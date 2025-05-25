@@ -73,7 +73,7 @@ async function runSelectRawURL(
 // limit.
 // 2. If `resolve_to_config` is true, blink feature `FencedFramesAPIChanges`
 // needs to be enabled for `selectURL()` to return a fenced frame config.
-// Otherwise `selectURL()` will fall back to the old behavior that returns an
+// Otherwise, `selectURL()` will fall back to the old behavior that returns an
 // urn:uuid.
 async function runSelectURL(
     href, keylist = [], resolve_to_config = false, register_beacon = false) {

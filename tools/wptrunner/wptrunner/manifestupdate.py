@@ -491,7 +491,7 @@ class PropertyUpdate:
         # * Where all the new results match, update the right hand side of that
         #   conditional, otherwise remove it
         # * If this leaves nothing existing, then proceed as with the full update
-        # * Otherwise add conditionals for the run_info that doesn't match any
+        # * Otherwise, add conditionals for the run_info that doesn't match any
         #   remaining conditions
         prev_default = None
 
@@ -834,7 +834,7 @@ class LsanUpdate(AppendOnlyListUpdate):
         # we don't want to update foo/bar/__dir__.ini with the same rule
         if result[1]:
             return None
-        # Otherwise return the topmost stack frame
+        # Otherwise, return the topmost stack frame
         # TODO: there is probably some improvement to be made by looking for a "better" stack frame
         return result[0][0]
 
@@ -850,7 +850,7 @@ class LeakObjectUpdate(AppendOnlyListUpdate):
         # If we have an allowed_match that matched, return None
         if result[1]:
             return None
-        # Otherwise return the process/object name
+        # Otherwise, return the process/object name
         return result[0]
 
 

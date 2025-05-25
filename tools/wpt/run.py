@@ -102,7 +102,7 @@ https://slproweb.com/products/Win32OpenSSL.html
 Ensuring that libraries are added to /bin and add the resulting bin directory to
 your PATH.
 
-Otherwise run with --ssl-type=none""")
+Otherwise, run with --ssl-type=none""")
             else:
                 raise WptrunError("""OpenSSL not found. If you don't need HTTPS support run with --ssl-type=none,
 otherwise install OpenSSL and ensure that it's on your $PATH.""")

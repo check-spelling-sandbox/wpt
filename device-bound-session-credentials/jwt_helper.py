@@ -20,7 +20,7 @@ def decode_jwt(token, key=None):
             return None, None, False
 
         # If there is a key passed in (for refresh), use that for checking the signature below.
-        # Otherwise (for registration), use the key sent within the JWT to check the signature.
+        # Otherwise, (for registration), use the key sent within the JWT to check the signature.
         if key == None:
             key = decoded_payload.get('key')
         public_key = serialization.load_pem_public_key(jwk_to_pem(key))

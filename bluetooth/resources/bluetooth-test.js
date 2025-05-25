@@ -289,7 +289,7 @@ const ShouldBeFirst = {
  * Attaches |num_listeners| |event| listeners to |object|. If all events have
  * been fired and the promise resolved in the correct order, returns a promise
  * that fulfills with the result of |object|.|func()| and |event.target.value|
- * of each of event listeners. Otherwise throws an error.
+ * of each of event listeners. Otherwise, throws an error.
  * @param {ShouldBeFirst} should_be_first Indicates whether |func| should
  *     resolve before |event| is fired.
  * @param {EventTarget} object The target object to add event listeners to.

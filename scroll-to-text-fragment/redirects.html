@@ -31,7 +31,7 @@ function buildRedirectUrl(to_url, type) {
     const code = type;
     dest = `${get_host_info().ORIGIN}/common/redirect.py?status=${code}&location=${to_url}`;
   } else if (type == 'meta' || type == 'location') {
-    // Otherwise we're requesting a client-side redirect, either a <meta> tag
+    // Otherwise, we're requesting a client-side redirect, either a <meta> tag
     // or window.location. Use the client-redirect file to bounce to the
     // destination.
     dest = `client-redirect.html?${type}&${to_url}`;

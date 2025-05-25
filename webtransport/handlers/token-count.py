@@ -30,6 +30,6 @@ def stream_data_received(session,
         if (stream_ended):
           del streams_dict[(session.session_id, stream_id)]
         return
-    # Otherwise (e.g. if the stream is bidirectional), echo back the token count
+    # Otherwise, (e.g. if the stream is bidirectional), echo back the token count
     # on the same stream.
     session.send_stream_data(stream_id, str(count).encode())

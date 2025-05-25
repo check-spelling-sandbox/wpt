@@ -1387,7 +1387,7 @@ def get_logger(log_level, log_handlers):
     """Get a logger configured to log at level log_level
 
     If the logger has existing handlers the log_handlers argument is ignored.
-    Otherwise the handlers in log_handlers are added to the logger. If there are
+    Otherwise, the handlers in log_handlers are added to the logger. If there are
     no log_handlers passed and no configured handlers, a stream handler is added
     to the logger.
 

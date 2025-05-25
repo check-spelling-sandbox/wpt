@@ -104,7 +104,7 @@ class Instrument:
                 assert command in known_commands
 
                 # If we are done recording, dump the information from all threads to the file
-                # before exiting. Otherwise for either 'set' or 'pause' we only need to dump
+                # before exiting. Otherwise, for either 'set' or 'pause' we only need to dump
                 # information from the current stack (if any) that was recording on the reporting
                 # thread (as that stack is no longer active).
                 items = []

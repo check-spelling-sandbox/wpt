@@ -259,7 +259,7 @@ function test_exception(testCase /*...*/) {
             // JS Errors from DOMExceptions by checking whether
             // window[exception] exists.  If it does, expectedError is the name
             // of a JS Error subclass and window[exception] is the constructor
-            // for that subclass.  Otherwise it's a name for a DOMException.
+            // for that subclass.  Otherwise, it's a name for a DOMException.
             if (window[exception]) {
                 assert_throws_js(window[exception],
                                  () => { throw error; },

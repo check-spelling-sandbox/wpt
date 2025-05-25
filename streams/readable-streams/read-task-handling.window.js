@@ -29,7 +29,7 @@ test(() => {
         // throw to reject this promise and fail the test.
         assert_false(executed, "shouldn't have run microtasks yet");
 
-        // Otherwise act as if there's no "then" property so the promise
+        // Otherwise, act as if there's no "then" property so the promise
         // fulfills and the test passes.
         return undefined;
     });

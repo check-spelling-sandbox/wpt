@@ -55,7 +55,7 @@
   /**
    * Turns a string into an origin. If `origin` is null this will return the
    * current document's origin. If `origin` contains not '/', this will attempt
-   * to use it as an index in `get_host_info()`. Otherwise returns the input
+   * to use it as an index in `get_host_info()`. Otherwise, returns the input
    * origin.
    * @private
    * @param {string|null} origin The input origin.

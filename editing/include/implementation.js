@@ -2410,7 +2410,7 @@ function recordValues(nodeList) {
             }
 
             // "If ancestor is an Element, add (node, command, ancestor's
-            // specified command value for command) to values. Otherwise add
+            // specified command value for command) to values. Otherwise, add
             // (node, command, null) to values."
             if (ancestor && ancestor.nodeType == Node.ELEMENT_NODE) {
                 values.push([node, command, getSpecifiedCommandValue(ancestor, command)]);
@@ -3119,7 +3119,7 @@ commands.backcolor = {
 commands.bold = {
     action: function() {
         // "If queryCommandState("bold") returns true, set the selection's
-        // value to "normal". Otherwise set the selection's value to "bold".
+        // value to "normal". Otherwise, set the selection's value to "bold".
         // Either way, return true."
         if (myQueryCommandState("bold")) {
             setSelectionValue("bold", "normal");
@@ -3277,7 +3277,7 @@ commands.fontsize = {
     }, indeterm: function() {
         // "True if among formattable nodes that are effectively contained in
         // the active range, there are two that have distinct effective command
-        // values.  Otherwise false."
+        // values.  Otherwise, false."
         return getAllEffectivelyContainedNodes(getActiveRange(), isFormattableNode)
         .map(function(node) {
             return getEffectiveCommandValue(node, "fontsize");
@@ -3441,7 +3441,7 @@ commands.hilitecolor = {
     }, indeterm: function() {
         // "True if among editable Text nodes that are effectively contained in
         // the active range, there are two that have distinct effective command
-        // values.  Otherwise false."
+        // values.  Otherwise, false."
         return getAllEffectivelyContainedNodes(getActiveRange(), function(node) {
             return isEditable(node) && node.nodeType == Node.TEXT_NODE;
         }).map(function(node) {
@@ -3464,7 +3464,7 @@ commands.hilitecolor = {
 commands.italic = {
     action: function() {
         // "If queryCommandState("italic") returns true, set the selection's
-        // value to "normal". Otherwise set the selection's value to "italic".
+        // value to "normal". Otherwise, set the selection's value to "italic".
         // Either way, return true."
         if (myQueryCommandState("italic")) {
             setSelectionValue("italic", "normal");
@@ -3592,7 +3592,7 @@ commands.removeformat = {
 commands.strikethrough = {
     action: function() {
         // "If queryCommandState("strikethrough") returns true, set the
-        // selection's value to null. Otherwise set the selection's value to
+        // selection's value to null. Otherwise, set the selection's value to
         // "line-through".  Either way, return true."
         if (myQueryCommandState("strikethrough")) {
             setSelectionValue("strikethrough", null);
@@ -3627,7 +3627,7 @@ commands.subscript = {
         // command value "subscript" and at least one with some other effective
         // command value; or if there is some formattable node effectively
         // contained in the active range with effective command value "mixed".
-        // Otherwise false."
+        // Otherwise, false."
         var nodes = getAllEffectivelyContainedNodes(getActiveRange(), isFormattableNode);
         return (nodes.some(function(node) { return getEffectiveCommandValue(node, "subscript") == "subscript" })
             && nodes.some(function(node) { return getEffectiveCommandValue(node, "subscript") != "subscript" }))
@@ -3660,7 +3660,7 @@ commands.superscript = {
         // command value "superscript" and at least one with some other
         // effective command value; or if there is some formattable node
         // effectively contained in the active range with effective command
-        // value "mixed".  Otherwise false."
+        // value "mixed".  Otherwise, false."
         var nodes = getAllEffectivelyContainedNodes(getActiveRange(), isFormattableNode);
         return (nodes.some(function(node) { return getEffectiveCommandValue(node, "superscript") == "superscript" })
             && nodes.some(function(node) { return getEffectiveCommandValue(node, "superscript") != "superscript" }))
@@ -3674,7 +3674,7 @@ commands.superscript = {
 commands.underline = {
     action: function() {
         // "If queryCommandState("underline") returns true, set the selection's
-        // value to null. Otherwise set the selection's value to "underline".
+        // value to null. Otherwise, set the selection's value to "underline".
         // Either way, return true."
         if (myQueryCommandState("underline")) {
             setSelectionValue("underline", null);
@@ -8000,7 +8000,7 @@ commands.justifycenter = {
         // "Return false if the active range is null.  Otherwise, block-extend
         // the active range. Return true if among visible editable nodes that
         // are contained in the result and have no children, at least one has
-        // alignment value "center" and at least one does not. Otherwise return
+        // alignment value "center" and at least one does not. Otherwise, return
         // false."
         if (!getActiveRange()) {
             return false;
@@ -8014,7 +8014,7 @@ commands.justifycenter = {
         // "Return false if the active range is null.  Otherwise, block-extend
         // the active range. Return true if there is at least one visible
         // editable node that is contained in the result and has no children,
-        // and all such nodes have alignment value "center".  Otherwise return
+        // and all such nodes have alignment value "center".  Otherwise, return
         // false."
         if (!getActiveRange()) {
             return false;
@@ -8068,7 +8068,7 @@ commands.justifyfull = {
         // "Return false if the active range is null.  Otherwise, block-extend
         // the active range. Return true if there is at least one visible
         // editable node that is contained in the result and has no children,
-        // and all such nodes have alignment value "justify".  Otherwise return
+        // and all such nodes have alignment value "justify".  Otherwise, return
         // false."
         if (!getActiveRange()) {
             return false;
@@ -8108,7 +8108,7 @@ commands.justifyleft = {
         // "Return false if the active range is null.  Otherwise, block-extend
         // the active range. Return true if among visible editable nodes that
         // are contained in the result and have no children, at least one has
-        // alignment value "left" and at least one does not. Otherwise return
+        // alignment value "left" and at least one does not. Otherwise, return
         // false."
         if (!getActiveRange()) {
             return false;
@@ -8122,7 +8122,7 @@ commands.justifyleft = {
         // "Return false if the active range is null.  Otherwise, block-extend
         // the active range. Return true if there is at least one visible
         // editable node that is contained in the result and has no children,
-        // and all such nodes have alignment value "left".  Otherwise return
+        // and all such nodes have alignment value "left".  Otherwise, return
         // false."
         if (!getActiveRange()) {
             return false;
@@ -8162,7 +8162,7 @@ commands.justifyright = {
         // "Return false if the active range is null.  Otherwise, block-extend
         // the active range. Return true if among visible editable nodes that
         // are contained in the result and have no children, at least one has
-        // alignment value "right" and at least one does not. Otherwise return
+        // alignment value "right" and at least one does not. Otherwise, return
         // false."
         if (!getActiveRange()) {
             return false;
@@ -8176,7 +8176,7 @@ commands.justifyright = {
         // "Return false if the active range is null.  Otherwise, block-extend
         // the active range. Return true if there is at least one visible
         // editable node that is contained in the result and has no children,
-        // and all such nodes have alignment value "right".  Otherwise return
+        // and all such nodes have alignment value "right".  Otherwise, return
         // false."
         if (!getActiveRange()) {
             return false;

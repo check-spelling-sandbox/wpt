@@ -107,7 +107,7 @@ ATTAcomm.prototype = {
    * If that succeeds and the tests in this test file have methods for
    * the API supported by the ATTA, then it automatically runs those tests.
    *
-   * Otherwise it sets up for manualt testing.
+   * Otherwise, it sets up for manualt testing.
    */
   go: function() {
     'use strict';

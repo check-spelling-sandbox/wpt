@@ -16,7 +16,7 @@ function runTest(config, qualifier) {
             // JS Errors from DOMExceptions by checking whether
             // window[expectedError] exists.  If it does, expectedError is the name
             // of a JS Error subclass and window[expectedError] is the constructor
-            // for that subclass.  Otherwise it's a name for a DOMException.
+            // for that subclass.  Otherwise, it's a name for a DOMException.
             if (window[expectedError]) {
                 return promise_rejects_js(test, window[expectedError], p);
             } else {
