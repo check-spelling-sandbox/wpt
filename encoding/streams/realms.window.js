@@ -2,7 +2,7 @@
 
 // Test that objects created by the TextEncoderStream and TextDecoderStream APIs
 // are created in the correct realm. The tests work by creating an iframe for
-// each realm and then posting Javascript to them to be evaluated. Inputs and
+// each realm and then posting JavaScript to them to be evaluated. Inputs and
 // outputs are passed around via global variables in each realm's scope.
 
 // Async setup is required before creating any tests, so require done() to be
