@@ -235,7 +235,7 @@
           else: false_value)`,
         [['--x', '3']],
         'true_value');
-  test_if(`if(style(--non-existent: var(--non-existent)): true_value;
+  test_if(`if(style(--nonexistent: var(--nonexistent)): true_value;
           else: false_value)`,
         [],
         'false_value');

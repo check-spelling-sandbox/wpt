@@ -2303,7 +2303,7 @@
       assert(obj1.data.match(/^http:/), "object.data isn't absolute");
       obj1.appendChild(document.createElement('param'));
       assertEquals(obj1.getElementsByTagName('param').length, 1, "object is missing its only child");
-      // non-existent attributes
+      // nonexistent attributes
       var test = document.createElement('p');
       assert(!('TWVvdywgbWV3Li4u' in test), "TWVvdywgbWV3Li4u unexpectedly found");
       assertEquals(test.TWVvdywgbWV3Li4u, undefined, ".TWVvdywgbWV3Li4u wasn't undefined");

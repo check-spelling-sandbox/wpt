@@ -45,7 +45,7 @@ def test_no_such_element_with_shadow_root(session, get_test_page):
 @pytest.mark.parametrize(
     "selector",
     ["#same1", "#in-frame", "#in-shadow-dom"],
-    ids=["not-existent", "existent-other-frame", "existent-inside-shadow-root"],
+    ids=["nonexistent", "existent-other-frame", "existent-inside-shadow-root"],
 )
 def test_no_elements_with_unknown_selector(session, get_test_page,selector):
     session.url = get_test_page()

@@ -5,7 +5,7 @@
 <link rel="author" title="Mozilla" href="https://mozilla.org">
 <link rel="help" href="https://html.spec.whatwg.org/#document-base-url">
 <link rel="help" href="https://bugzilla.mozilla.org/show_bug.cgi?id=1343919">
-<base href="/non-existent-base/">
+<base href="/nonexistent-base/">
 <script src='/resources/testharness.js'></script>
 <script src='/resources/testharnessreport.js'></script>
 <div id="target"></div>
@@ -18,7 +18,7 @@ const kKeyframes = [
 ];
 function assertBackground() {
   const image = getComputedStyle(target).backgroundImage;
-  assert_true(image.includes("non-existent-base"), image);
+  assert_true(image.includes("nonexistent-base"), image);
 }
 function assertNoBackground() {
   const image = getComputedStyle(target).backgroundImage;

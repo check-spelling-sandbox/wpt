@@ -286,8 +286,8 @@ var validSelectors = [
   {name: "ID selector, chained, matching element with specified id",  selector: "#id-div1, #id-div1",        expect: ["id-div1"],            level: 1, testType: TEST_QSA | TEST_MATCH},
   {name: "ID selector, chained, matching element with specified id",  selector: "#id-div1, #id-div2",        expect: ["id-div1", "id-div2"], level: 1, testType: TEST_QSA | TEST_MATCH},
   {name: "ID Selector, chained, with type selector",                  selector: "div#id-div1, div#id-div2",  expect: ["id-div1", "id-div2"], level: 1, testType: TEST_QSA | TEST_MATCH},
-  {name: "ID selector, not matching non-existent descendent",         selector: "#id #none",                 expect: [] /*no matches*/,      level: 1, testType: TEST_QSA},
-  {name: "ID selector, not matching non-existent ancestor",           selector: "#none #id-div1",            expect: [] /*no matches*/,      level: 1, testType: TEST_QSA},
+  {name: "ID selector, not matching nonexistent descendent",          selector: "#id #none",                 expect: [] /*no matches*/,      level: 1, testType: TEST_QSA},
+  {name: "ID selector, not matching nonexistent ancestor",            selector: "#none #id-div1",            expect: [] /*no matches*/,      level: 1, testType: TEST_QSA},
   {name: "ID selector, matching multiple elements with duplicate id", selector: "#id-li-duplicate",          expect: ["id-li-duplicate", "id-li-duplicate", "id-li-duplicate", "id-li-duplicate"], level: 1, testType: TEST_QSA | TEST_MATCH},
 
   {name: "ID selector, matching id value using non-ASCII characters (1)",    selector: "#\u53F0\u5317Ta\u0301ibe\u030Ci",           expect: ["\u53F0\u5317Ta\u0301ibe\u030Ci"],       level: 1, testType: TEST_QSA | TEST_MATCH},
@@ -669,8 +669,8 @@ var scopedSelectors = [
   {name: "ID selector, chained, matching element with specified id (1)",  selector: "#id-div1, #id-div1",        ctx: "", expect: ["id-div1"],            level: 1, testType: TEST_FIND | TEST_MATCH},
   {name: "ID selector, chained, matching element with specified id (1)",  selector: "#id-div1, #id-div2",        ctx: "", expect: ["id-div1", "id-div2"], level: 1, testType: TEST_FIND | TEST_MATCH},
   {name: "ID Selector, chained, with type selector (1)",                  selector: "div#id-div1, div#id-div2",  ctx: "", expect: ["id-div1", "id-div2"], level: 1, testType: TEST_FIND | TEST_MATCH},
-  {name: "ID selector, not matching non-existent descendent",         selector: "#id #none",                 ctx: "", expect: [] /*no matches*/,      level: 1, testType: TEST_FIND},
-  {name: "ID selector, not matching non-existent ancestor",           selector: "#none #id-div1",            ctx: "", expect: [] /*no matches*/,      level: 1, testType: TEST_FIND},
+  {name: "ID selector, not matching nonexistent descendant",         selector: "#id #none",                 ctx: "", expect: [] /*no matches*/,      level: 1, testType: TEST_FIND},
+  {name: "ID selector, not matching nonexistent ancestor",           selector: "#none #id-div1",            ctx: "", expect: [] /*no matches*/,      level: 1, testType: TEST_FIND},
   {name: "ID selector, matching multiple elements with duplicate id (1)", selector: "#id-li-duplicate",          ctx: "", expect: ["id-li-duplicate", "id-li-duplicate", "id-li-duplicate", "id-li-duplicate"], level: 1, testType: TEST_FIND | TEST_MATCH},
 
   {name: "ID selector, matching id value using non-ASCII characters (3)",    selector: "#\u53F0\u5317Ta\u0301ibe\u030Ci",           ctx: "", expect: ["\u53F0\u5317Ta\u0301ibe\u030Ci"],       level: 1, testType: TEST_FIND | TEST_MATCH},

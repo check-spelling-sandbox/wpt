@@ -42,7 +42,7 @@ test(function() {
     url.searchParams.delete('param1');
     assert_equals(url.href, 'http://example.com/', 'url.href does not have ?');
     assert_equals(url.search, '', 'url.search does not have ?');
-}, 'Removing non-existent param removes ? from URL');
+}, 'Removing nonexistent param removes ? from URL');
 
 test(() => {
   const url = new URL('data:space    ?test');

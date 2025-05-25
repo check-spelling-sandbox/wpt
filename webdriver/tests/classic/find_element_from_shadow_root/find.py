@@ -101,7 +101,7 @@ def test_detached_shadow_root(session, get_test_page, as_frame):
 @pytest.mark.parametrize(
     "selector",
     ["#same1", "#in-frame", "#with-children"],
-    ids=["not-existent", "existent-other-frame", "existent-outside-shadow-root"],
+    ids=["nonexistent", "existent-other-frame", "existent-outside-shadow-root"],
 )
 def test_no_such_element_with_unknown_selector(session, get_test_page, selector):
     session.url = get_test_page()

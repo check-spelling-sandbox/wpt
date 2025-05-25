@@ -13,7 +13,7 @@
         /* Reference to cycle */
         --var3: var(--var1);
 
-        /* Reference to non-existent property */
+        /* Reference to nonexistent property */
         --var4: var(--noexist);
     }
 
@@ -40,5 +40,5 @@
     test( function () {
         let cs = getComputedStyle(target1);
         assert_equals(cs.getPropertyValue('--var4'), '');
-    }, 'A custom property referencing a non-existent variable becomes guaranteed-invalid');
+    }, 'A custom property referencing a nonexistent variable becomes guaranteed-invalid');
 </script>

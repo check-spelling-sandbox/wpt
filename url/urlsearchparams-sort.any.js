@@ -59,4 +59,4 @@ test(function() {
   url.searchParams.sort()
   assert_equals(url.href, "http://example.com/")
   assert_equals(url.search, "")
-}, "Sorting non-existent params removes ? from URL")
+}, "Sorting nonexistent params removes ? from URL")

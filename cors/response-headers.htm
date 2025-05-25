@@ -73,7 +73,7 @@ async_test("getResponseHeader: Combined testing of cors response headers")
             assert_equals(client.getResponseHeader("x-custom-header-empty"), "", 'x-custom-header-empty')
             assert_equals(client.getResponseHeader("set-cookie"), null)
             assert_equals(client.getResponseHeader("set-cookie2"), null)
-            assert_equals(client.getResponseHeader("x-non-existent-header"), null)
+            assert_equals(client.getResponseHeader("x-nonexistent-header"), null)
             assert_equals(client.getResponseHeader("x-nonexposed"), null)
         }
         if (client.readyState == 4)

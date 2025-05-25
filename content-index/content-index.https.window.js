@@ -25,12 +25,12 @@ contentIndexTest(async (t, index) => {
   if (isFetchingIcons) {
     // If the browser will try to fetch these icons we expect it to fail.
     await expectTypeError(
-        index.add(createDescription({iconUrl: '/non-existent-icon.png'})));
+        index.add(createDescription({iconUrl: '/nonexistent-icon.png'})));
     await expectTypeError(
         index.add(createDescription({iconUrl: '/images/broken.png'})));
   } else {
     // If the browser will not try to fetch these icons this should succeed.
-    await index.add(createDescription({iconUrl: '/non-existent-icon.png'}));
+    await index.add(createDescription({iconUrl: '/nonexistent-icon.png'}));
     await index.add(createDescription({iconUrl: '/images/broken.png'}));
   }
 

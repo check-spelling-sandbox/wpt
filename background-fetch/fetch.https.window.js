@@ -242,7 +242,7 @@ backgroundFetchTest(async (test, backgroundFetch) => {
   assert_equals(registration.result, 'failure');
   assert_equals(registration.failureReason, 'bad-status');
 
-}, 'Using Background Fetch to fetch a non-existent resource should fail.');
+}, 'Using Background Fetch to fetch a nonexistent resource should fail.');
 
 backgroundFetchTest(async (test, backgroundFetch) => {
   const registration = await backgroundFetch.fetch(

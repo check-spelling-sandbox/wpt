@@ -119,10 +119,10 @@
   test_if_with_custom_properties('if(style(--x: 0): )', [['--x', '0']], '');
   test_if_with_custom_properties('if(style(--x: blue): true_value;)', [['--x', 'blue']], 'true_value');
   test_if_with_custom_properties('if(style(--x: 3): true_value; else: false_value)', [['--x', '3']], 'true_value');
-  test_if_with_custom_properties('if(style(--non-existent: var(--non-existent)): true_value; else: false_value)', [], 'false_value');
+  test_if_with_custom_properties('if(style(--nonexistent: var(--nonexistent)): true_value; else: false_value)', [], 'false_value');
   test_if_with_custom_properties('if(style(--x: initial): true_value; else: false_value)', [['--x', '']], 'false_value');
   test_if_with_custom_properties('if(style(--x: initial): true_value; else: false_value)', [['--x', 'initial']], 'true_value');
-  test_if_with_custom_properties('if(style(--non-existent: initial): true_value; else: false_value)', [], 'true_value');
+  test_if_with_custom_properties('if(style(--nonexistent: initial): true_value; else: false_value)', [], 'true_value');
   test_if_with_custom_properties('if(style(--x: initial): true_value; else: false_value)', [['--x', '3']], 'false_value');
   test_if_with_custom_properties(`if(style(--inherited: inherit): true_value;
           else: false_value)`,
@@ -169,7 +169,7 @@
           else: false_value)`,
         [['--x', '3']],
         '');
-  test_if_with_custom_properties(`if(style(--non-existent: 0): true_value;
+  test_if_with_custom_properties(`if(style(--nonexistent: 0): true_value;
           else: false_value)`,
         [['--x', '3']],
         'false_value');
@@ -181,7 +181,7 @@
           else: false_value)`,
         [['--x', '3']],
         'false_value');
-  test_if_with_custom_properties(`if(style(--non-existent): true_value;
+  test_if_with_custom_properties(`if(style(--nonexistent): true_value;
           else: false_value;)`,
         [['--x', '3']],
         'false_value');
@@ -212,7 +212,7 @@
           else: false_value)`,
         [],
         'false_value');
-  test_if_with_custom_properties(`if(not style(--non-existent): true_value;
+  test_if_with_custom_properties(`if(not style(--nonexistent): true_value;
           else: false_value)`,
         [],
         'true_value');
@@ -238,7 +238,7 @@
         'true_value');
 
   // Valid if() with multiple conditions with unregistered custom properties
-  test_if_with_custom_properties(`if(style(--non-existent): value1;
+  test_if_with_custom_properties(`if(style(--nonexistent): value1;
           style(--x): value2;
           else: value3;)`,
         [['--x', '3']],
@@ -471,7 +471,7 @@
           else: false_value)`,
         [['--x', '3']],
         'true_value');
-  test_if_with_custom_properties(`if(style(--non-existent: var(--non-existent)): true_value;
+  test_if_with_custom_properties(`if(style(--nonexistent: var(--nonexistent)): true_value;
           else: false_value)`,
         [],
         'false_value');
@@ -695,7 +695,7 @@
   test_if(`if((media(min-width: 1px)) or (style(--x)): true_value;
           else: false_value)`,
         'true_value');
-  test_if(`if((media(height <= 999999px)) and style(--non-existent): true_value;
+  test_if(`if((media(height <= 999999px)) and style(--nonexistent): true_value;
           else: false_value)`,
         'false_value');
   test_if(`if((media((min-color: 1) and (height <= 999999px))) and (style(--x)): true_value;
@@ -736,8 +736,8 @@
 
   // IACVT
   test_if_with_custom_properties('if(style(--x: 0): true_value;)', [['--x', '3']], '');
-  test_if_with_custom_properties('if(style(--non-existent): true_value;)', [['--x', '3']], '');
-  test_if_with_custom_properties('if(style(--non-existent: 3): true_value;)', [['--x', '3']], '');
+  test_if_with_custom_properties('if(style(--nonexistent): true_value;)', [['--x', '3']], '');
+  test_if_with_custom_properties('if(style(--nonexistent: 3): true_value;)', [['--x', '3']], '');
   test_if_with_custom_properties('if(style(--invalid): value)', [], '');
   test_if_with_custom_properties('if(style(--invalid): var(--x))', [['--x', 'true_value']], '');
   test_if_with_custom_properties(`if(style(--x: 1): value1;
