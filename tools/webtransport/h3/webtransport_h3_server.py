@@ -316,7 +316,7 @@ class WebTransportSession:
         assert protocol._http is not None
         self._http: H3ConnectionWithDatagram = protocol._http
 
-        # Use the a shared default path for all handlers so that different
+        # Use a shared default path for all handlers so that different
         # WebTransport sessions can access the same store easily.
         self._stash_path = '/webtransport/handlers'
         self._stash: Optional[stash.Stash] = None

@@ -100,7 +100,7 @@ test(function() {
 
   assert_false("test7" in document, '"test7" in document should be false');
   assert_equals(document.test7, undefined);
-}, "A name shouldn't affect getting an form by id");
+}, "A name shouldn't affect getting a form by id");
 
 test(function() {
   var form = document.getElementsByTagName("form")[11];
@@ -108,7 +108,7 @@ test(function() {
 
   assert_true("test8" in document, '"test8" in document should be true');
   assert_equals(document.test8, form);
-}, "An id shouldn't affect getting an form by name");
+}, "An id shouldn't affect getting a form by name");
 
 test(function() {
   var form = document.getElementsByTagName("form")[12];

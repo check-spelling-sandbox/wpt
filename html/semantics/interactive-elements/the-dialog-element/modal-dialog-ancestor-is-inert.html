@@ -60,7 +60,7 @@ promise_test(async () => {
     handledEvent['body'] = true;
     // body should get a event only via bubbling.
     if (event.target != dialog) {
-      assert_unreached('body was targeted for an click event');
+      assert_unreached('body was targeted for a click event');
       div.style.backgroundColor = 'red';
     }
   });
@@ -69,7 +69,7 @@ promise_test(async () => {
     handledEvent['div'] = true;
     // div should get a event only via bubbling.
     if (event.target != dialog) {
-      assert_unreached('div was targeted for an click event');
+      assert_unreached('div was targeted for a click event');
       div.style.backgroundColor = 'red';
     }
   });

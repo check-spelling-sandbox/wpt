@@ -227,7 +227,7 @@ test(() => {
   shadow1.appendChild(shadowChild);
   control.i.setValidity(flags, m, shadowChild);
 
-  // An element in an nested shadow trees
+  // An element in a nested shadow trees
   let shadow2 = shadowChild.attachShadow({mode: 'closed'});
   let nestedShadowChild = document.createElement('span');
   shadow2.appendChild(nestedShadowChild);

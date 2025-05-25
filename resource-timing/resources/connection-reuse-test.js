@@ -2,7 +2,7 @@
 // PerformanceResourceTiming entries' attributes when reusing connections.
 //
 // Note: to ensure that we reuse the connection to fetch multiple resources, we
-// use the same XMLHttpRequest object throughout an individual test. Although
+// use the same XMLHttpRequest object throughout a individual test. Although
 // it doesn't seem to be specified, each browser tested by WPT will reuse the
 // underlying TCP connection with this approach. Pre-establishing the XHR's
 // connection helps us to test connection reuse also in browsers that may key

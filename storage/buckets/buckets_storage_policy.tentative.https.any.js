@@ -29,4 +29,4 @@ promise_test(async testCase => {
   testQuota(storageKeyQuota, storageKeyQuota * 2, 'twice');
   testQuota(storageKeyQuota, storageKeyQuota * 4, 'four_times');
   testQuota(storageKeyQuota, Number.MAX_SAFE_INTEGER, 'max_safe_int');
-}, 'For an individual bucket, the quota is the minimum of the requested quota and the StorageKey quota.');
+}, 'For a individual bucket, the quota is the minimum of the requested quota and the StorageKey quota.');

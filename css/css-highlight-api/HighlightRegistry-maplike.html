@@ -30,7 +30,7 @@
     assert_true(CSS.highlights.has(name1), 'HighlightRegistry.has returns true when it has the key which is called with as argument.');
     assert_equals(CSS.highlights.size, 1, 'HighlightRegistry.size is 1 after only inserting 1 key.');
 
-    assert_false(CSS.highlights.delete(name2), 'HighlightRegistry.delete returns false when trying to delete an key that is not in the map.');
+    assert_false(CSS.highlights.delete(name2), 'HighlightRegistry.delete returns false when trying to delete a key that is not in the map.');
     assert_equals(CSS.highlights.size, 1, 'HighlightRegistry.size stays the same after trying to delete a non-existing key.');
 
     CSS.highlights.set(name2, h2);

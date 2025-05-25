@@ -77,7 +77,7 @@ async function spin_up_service_worker(test) {
   test.add_cleanup(async () => {
     if (registration.installing) {
       // If there is an installing worker, we need to finish installing it.
-      // Otherwise, the tests fails with an timeout because unregister() blocks
+      // Otherwise, the tests fails with a timeout because unregister() blocks
       // until the install-event-handler finishes.
       const worker = registration.installing;
       await send_message_to_worker_and_wait_for_response(worker, 'awaitInstallEvent');

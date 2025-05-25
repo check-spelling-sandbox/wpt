@@ -38,7 +38,7 @@ test(() => {
         listeners[i].execution_count, 3,
         `Callback execution count for listener ${i}`);
   }
-}, 'Dispatching an multiple events to CaptureController.');
+}, 'Dispatching a multiple events to CaptureController.');
 
 test(() => {
   for (const i in listeners) {

@@ -19,7 +19,7 @@ let reader_promise = new Promise(resolve => set_reader_promise = resolve);
 var set_fetch_promise;
 let fetch_promise = new Promise(resolve => set_fetch_promise = resolve);
 
-// This test creates an controlled iframe that makes a fetch request. The
+// This test creates a controlled iframe that makes a fetch request. The
 // service worker returns a response with a body stream containing an invalid
 // chunk.
 promise_test(async t => {

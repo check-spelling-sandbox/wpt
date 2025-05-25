@@ -38,7 +38,7 @@ promise_test(function(t) {
         // Try to apply structured clone to an already closed bitmap
         try {
             worker.postMessage({data: bitmap});
-            throw new Error("Apply clone to an closed bitmap should be rejected");
+            throw new Error("Apply clone to a closed bitmap should be rejected");
         }
         catch(ex) {
              // Apply structured clone to an already closed bitmap is rejected as expected.
@@ -47,7 +47,7 @@ promise_test(function(t) {
         // Try to apply transferring to an already closed bitmap
         try {
             worker.postMessage({data: bitmap}, [bitmap]);
-            throw new Error("Apply transferring to an closed bitmap should be rejected");
+            throw new Error("Apply transferring to a closed bitmap should be rejected");
         } catch(ex) {
              // Apply structured clone to an already closed bitmap is rejected as expected.
         }

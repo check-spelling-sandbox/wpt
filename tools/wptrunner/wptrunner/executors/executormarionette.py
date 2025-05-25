@@ -1027,7 +1027,7 @@ class MarionetteTestharnessExecutor(TestharnessExecutor):
             result = protocol.base.execute_script(
                 self.script_resume, args=[strip_server(url)], asynchronous=True)
             if result is None:
-                # This can happen if we get an content process crash
+                # This can happen if we get a content process crash
                 return None
             done, rv = handler(result)
             if done:

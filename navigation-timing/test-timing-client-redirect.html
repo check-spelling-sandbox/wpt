@@ -36,9 +36,9 @@
                 test_true(redirect_frame.contentWindow.performance.navigation.type == performanceNamespace.navigation.TYPE_NAVIGATE,
                           'timing.navigation.type is TYPE_NAVIGATE');
 
-                test_equals(redirect_frame.contentWindow.performance.navigation.redirectCount, 0, 'navigation.redirectCount == 0 on an client redirected navigation');
-                test_equals(redirect_frame.contentWindow.performance.timing.redirectStart, 0, 'timing.redirectStart == 0 on an client redirected navigation');
-                test_equals(redirect_frame.contentWindow.performance.timing.redirectEnd, 0, 'timing.redirectEnd == 0 on an client redirected navigation');
+                test_equals(redirect_frame.contentWindow.performance.navigation.redirectCount, 0, 'navigation.redirectCount == 0 on a client redirected navigation');
+                test_equals(redirect_frame.contentWindow.performance.timing.redirectStart, 0, 'timing.redirectStart == 0 on a client redirected navigation');
+                test_equals(redirect_frame.contentWindow.performance.timing.redirectEnd, 0, 'timing.redirectEnd == 0 on a client redirected navigation');
 
                 done();
             }

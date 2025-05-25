@@ -67,7 +67,7 @@ test(function () {
     assert_true(instance instanceof HTMLElement);
     assert_false(instance instanceof ElementInIFrame);
 
-}, 'HTML parser must not instantiate a custom element defined inside an frame in frame element\'s owner document');
+}, 'HTML parser must not instantiate a custom element defined inside a frame in frame element\'s owner document');
 
 document.body.removeChild(iframe);
 

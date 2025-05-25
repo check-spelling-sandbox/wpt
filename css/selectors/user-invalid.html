@@ -73,7 +73,7 @@ promise_test(async () => {
   input.blur();
 
   assert_true(input.matches(":user-valid"), "Put a valid email, :user-valid now matches");
-  assert_false(input.matches(":user-invalid"), "Put an valid email, :user-invalid no longer matches");
+  assert_false(input.matches(":user-invalid"), "Put a valid email, :user-invalid no longer matches");
 }, ':user-invalid selector should respond to user action');
 
 promise_test(async () => {

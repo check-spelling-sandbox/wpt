@@ -7,7 +7,7 @@
 <meta name="flags" content="ahem dom should">
 <meta name="assert" content="Pointer events on the ellipsis should be dispatched to the elided inline element if there's one, rather than directly to the block.">
 <!-- This is tested indirectly, using elementFromPoint instead of actually triggering a pointer event, because:
-  * Actual pointer events can only be dispatched in an manual test, while elementFromPoint allows for an automated test
+  * Actual pointer events can only be dispatched in a manual test, while elementFromPoint allows for an automated test
   * These two methods are expected to give the same result
 
   This indirection and the slight risk of false positive or false negative it introduces

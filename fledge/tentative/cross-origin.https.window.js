@@ -237,7 +237,7 @@ subsetTest(promise_test, async test => {
 subsetTest(promise_test, async test => {
   const uuid = generateUuid(test);
 
-  // Run an auction in an cross-origin iframe, and get the resulting FencedFrameConfig.
+  // Run an auction in a cross-origin iframe, and get the resulting FencedFrameConfig.
   let iframe = await createIframe(
       test, OTHER_ORIGIN1, "join-ad-interest-group; run-ad-auction");
   let config = await runInFrame(
@@ -261,7 +261,7 @@ subsetTest(promise_test, async test => {
 subsetTest(promise_test, async test => {
   const uuid = generateUuid(test);
 
-  // Run an auction in an cross-origin iframe, and get the resulting FencedFrameConfig.
+  // Run an auction in a cross-origin iframe, and get the resulting FencedFrameConfig.
   let iframe = await createIframe(
       test, OTHER_ORIGIN1, "join-ad-interest-group; run-ad-auction");
   let config = await runInFrame(

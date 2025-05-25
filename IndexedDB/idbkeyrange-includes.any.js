@@ -106,7 +106,7 @@ test(() => {
   assert_true(range.includes(5), 'value at closed lower bound');
   assert_true(range.includes(6), 'value after closed lower bound');
   assert_true(range.includes(42), 'value way after open lower bound');
-}, 'IDBKeyRange.includes() with an closed lower-bounded range');
+}, 'IDBKeyRange.includes() with a closed lower-bounded range');
 
 test(() => {
   const range = IDBKeyRange.lowerBound(5, true);
@@ -122,7 +122,7 @@ test(() => {
   assert_true(range.includes(4), 'value before closed upper bound');
   assert_true(range.includes(5), 'value at closed upper bound');
   assert_false(range.includes(6), 'value after closed upper bound');
-}, 'IDBKeyRange.includes() with an closed upper-bounded range');
+}, 'IDBKeyRange.includes() with a closed upper-bounded range');
 
 test(() => {
   const range = IDBKeyRange.upperBound(5, true);

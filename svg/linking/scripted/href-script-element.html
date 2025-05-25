@@ -39,7 +39,7 @@ promise_test(function(t) {
     script.setAttributeNS(XLINKNS, 'xlink:href',
                           'testScripts/externalScript2.js');
 
-    // Load an dummy script to trigger a load event.
+    // Load a dummy script to trigger a load event.
     var dummyScript = createSVGElement(t, 'script', svg);
     dummyScript.setAttribute('href', 'testScripts/dummyScript.js');
     return waitEvent(dummyScript, 'load');
@@ -66,7 +66,7 @@ promise_test(function(t) {
 
     script.setAttribute('href', 'testScripts/externalScript1.js');
 
-    // Load an dummy script to trigger a load event.
+    // Load a dummy script to trigger a load event.
     var dummyScript = createSVGElement(t, 'script', svg);
     dummyScript.setAttribute('href', 'testScripts/dummyScript.js');
     return waitEvent(dummyScript, 'load');
@@ -97,7 +97,7 @@ promise_test(function(t) {
     assert_equals(script.href.baseVal, 'testScripts/externalScript2.js',
                   'href() returns xlink:href attribute because href was unset');
 
-    // Load an dummy script to trigger a load event.
+    // Load a dummy script to trigger a load event.
     var dummyScript = createSVGElement(t, 'script', svg);
     dummyScript.setAttribute('href', 'testScripts/dummyScript.js');
     return waitEvent(dummyScript, 'load');

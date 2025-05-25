@@ -34,7 +34,7 @@
     <div id="noteditable-3" contenteditable="false">
       <div id="editable-in-noteditable-3" contenteditable="">
         <div id="contenteditable-in-contenteditable-3" contenteditable="">
-          This is an contenteditable="" child of a contenteditable="". Since this is the child of an
+          This is a contenteditable="" child of a contenteditable="". Since this is the child of an
           editable element, when the user types here, it's the parent contenteditable="" that gets
           input/beforeinput events, and this doesn't. Basically the child contenteditable="" attribute
           is a no-op.
@@ -157,7 +157,7 @@
     await test_driver.click(input_target);
     await test_driver.send_keys(input_target, "a");
     assert_array_equals(event_log, ["beforeinput: edit-context-top-5", "textupdate: edit-context-top-5"]);
-  }, 'Check that an contenteditable child of an EditContext is editable, but the EditContext gets the events');
+  }, 'Check that a contenteditable child of an EditContext is editable, but the EditContext gets the events');
 
   promise_test(async () => {
     event_log.length = 0;

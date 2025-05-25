@@ -90,7 +90,7 @@ function value_test(value_description, value, value_buffer) {
       },
       (t, db) => {
         assert_key_valid(
-            value, value_description + ' should be usable as an valid key');
+            value, value_description + ' should be usable as a valid key');
         check_key_roundtrip_and_done(t, db, value, value_buffer);
       },
       `${value_description} can be used to supply a binary key`);

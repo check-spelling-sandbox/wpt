@@ -300,7 +300,7 @@ async_test(t => {
         assert_equals(rq, undefined);
         t.done();
     };
-}, 'Attempt to call put() without an key parameter when the object store uses \
+}, 'Attempt to call put() without a key parameter when the object store uses \
 out-of-line keys');
 
 async_test(t => {

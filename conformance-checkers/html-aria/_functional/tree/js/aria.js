@@ -77,7 +77,7 @@ Aria.Tree.prototype = {
 		while(!Aria.isTreeItem(el) || el == originalElm){
 			if(el.previous()){
 				el = el.previous();
-				// recursively choose last child node of previous el, as long as it's not in an collapsed node
+				// recursively choose last child node of previous el, as long as it's not in a collapsed node
 				if (el.down() && Aria.isExpanded(el)){
 					el = el.down();
 					while (el.next() || (el.down() && Aria.isExpanded(el))){

@@ -53,4 +53,4 @@ test(t => {
   let copyDest = new Uint8Array();
   chunk.copyTo(copyDest);
   assert_equals(copyDest.length, 0, 'copyDest.length');
-}, 'Test we can construct an zero-sized EncodedVideoChunk.');
+}, 'Test we can construct a zero-sized EncodedVideoChunk.');

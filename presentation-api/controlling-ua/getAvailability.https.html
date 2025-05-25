@@ -36,7 +36,7 @@
         return promise.then(a => {
           availability = a;
           assert_true(availability instanceof PresentationAvailability, 'The promise is resolved with an instance of PresentationAvailability.');
-          assert_equals(typeof availability.value, 'boolean', 'The availability has an boolean value.');
+          assert_equals(typeof availability.value, 'boolean', 'The availability has a boolean value.');
 
           const request2 = new PresentationRequest('https://example.com');
           return request2.getAvailability();

@@ -117,7 +117,7 @@ merge_pr_F F 820800 _sat_
     #       max_count: 3; epoch: 1d
     #       Expected result: G,F
     #       * H is skipped because because the epoch
-    #         interval is defined as an right-open interval
+    #         interval is defined as a right-open interval
     #       * G is included but in the Monday's interval
     #       * F is included because it is the unique candidate
     #         included in the Sunday's interval

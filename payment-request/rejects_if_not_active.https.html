@@ -62,7 +62,7 @@
       // Get transient activation
       await test_driver.bless("payment 1", () => {}, iframe.contentWindow);
 
-      // We navigate the iframe again, putting request1's document into an non-fully active state.
+      // We navigate the iframe again, putting request1's document into a non-fully active state.
       const request2 = await getLoadedPaymentRequest(
         iframe,
         "./resources/page2.html"

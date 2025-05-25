@@ -6,7 +6,7 @@
 <body>
   <script>
     window.t = async_test();
-    // We want start a document load, create an non-blocking script load inside
+    // We want start a document load, create a non-blocking script load inside
     // it, have the parser complete, then call document.open()/document.close()
     // after the parser is done but before the non-blocking script load
     // completes.  After we do that, the document should reach the 'complete'

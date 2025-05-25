@@ -619,7 +619,7 @@ async function runInFrame(test, child_window, script, param) {
   return receivedResponse.returnValue;
 }
 
-// Creates an frame and navigates it to a URL on "origin", and waits for the URL
+// Creates a frame and navigates it to a URL on "origin", and waits for the URL
 // to finish loading by waiting for the frame to send an event. Then returns
 // the frame's Window object. Depending on the value of "is_iframe", the created
 // frame will either be a new iframe, or a new top-level main frame. In the iframe

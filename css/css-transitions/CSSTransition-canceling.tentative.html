@@ -152,7 +152,7 @@ promise_test(async t => {
   await transition.ready;
 
   assert_equals(transition.playState, 'running');
-  // Set an unrecognized property value
+  // Set a unrecognized property value
   div.style.transitionProperty = 'none';
   getComputedStyle(div).marginLeft;
   await waitForFrame();

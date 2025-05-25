@@ -217,7 +217,7 @@ promise_test(t => {
       assert_false(data.clients.includes(
         frame.src + '&test=sandboxed-iframe'));
     });
-}, 'Request for an sandboxed iframe with allow-scripts flag in the normal ' +
+}, 'Request for a sandboxed iframe with allow-scripts flag in the normal ' +
    'iframe');
 
 promise_test(t => {
@@ -236,7 +236,7 @@ promise_test(t => {
       assert_true(data.clients.includes(
         frame.src + '&test=sandboxed-iframe-same-origin'));
     });
-}, 'Request for an sandboxed iframe with allow-scripts and ' +
+}, 'Request for a sandboxed iframe with allow-scripts and ' +
    'allow-same-origin flag in the normal iframe');
 
 promise_test(t => {
@@ -295,7 +295,7 @@ promise_test(t => {
       assert_false(data.clients.includes(
         frame.src + '&test=sandboxed-iframe'));
     });
-}, 'Request for an sandboxed iframe with allow-scripts flag in the iframe ' +
+}, 'Request for a sandboxed iframe with allow-scripts flag in the iframe ' +
    'sandboxed by an attribute with allow-scripts flag');
 
 promise_test(t => {
@@ -311,7 +311,7 @@ promise_test(t => {
       assert_false(data.clients.includes(
         frame.src + '&test=sandboxed-iframe-same-origin'));
     });
-}, 'Request for an sandboxed iframe with allow-scripts and ' +
+}, 'Request for a sandboxed iframe with allow-scripts and ' +
    'allow-same-origin flag in the iframe sandboxed by an attribute with ' +
    'allow-scripts flag');
 
@@ -378,7 +378,7 @@ promise_test(t => {
       assert_false(data.clients.includes(
         frame.src + '&test=sandboxed-iframe'));
     });
-}, 'Request for an sandboxed iframe with allow-scripts flag in the iframe ' +
+}, 'Request for a sandboxed iframe with allow-scripts flag in the iframe ' +
    'sandboxed by attribute with allow-scripts and allow-same-origin flag');
 
 promise_test(t => {
@@ -397,7 +397,7 @@ promise_test(t => {
       assert_true(data.clients.includes(
         frame.src + '&test=sandboxed-iframe-same-origin'));
     });
-}, 'Request for an sandboxed iframe with allow-scripts and ' +
+}, 'Request for a sandboxed iframe with allow-scripts and ' +
    'allow-same-origin flag in the iframe sandboxed by attribute with ' +
    'allow-scripts and allow-same-origin flag');
 
@@ -443,7 +443,7 @@ promise_test(t => {
       assert_false(data.clients.includes(
         frame.src + '&test=sandboxed-iframe'));
     });
-}, 'Request for an sandboxed iframe with allow-scripts flag in the iframe ' +
+}, 'Request for a sandboxed iframe with allow-scripts flag in the iframe ' +
    'sandboxed by CSP HTTP header with allow-scripts flag');
 
 promise_test(t => {
@@ -459,7 +459,7 @@ promise_test(t => {
       assert_false(data.clients.includes(
         frame.src + '&test=sandboxed-iframe-same-origin'));
     });
-}, 'Request for an sandboxed iframe with allow-scripts and ' +
+}, 'Request for a sandboxed iframe with allow-scripts and ' +
    'allow-same-origin flag in the iframe sandboxed by CSP HTTP header with ' +
    'allow-scripts flag');
 
@@ -509,7 +509,7 @@ promise_test(t => {
       assert_false(
         data.clients.includes(frame.src + '&test=sandboxed-iframe'));
     });
-}, 'Request for an sandboxed iframe with allow-scripts flag in the ' +
+}, 'Request for a sandboxed iframe with allow-scripts flag in the ' +
    'iframe sandboxed by CSP HTTP header with allow-scripts and ' +
    'allow-same-origin flag');
 
@@ -529,7 +529,7 @@ promise_test(t => {
       assert_true(data.clients.includes(
         frame.src + '&test=sandboxed-iframe-same-origin'));
     });
-}, 'Request for an sandboxed iframe with allow-scripts and ' +
+}, 'Request for a sandboxed iframe with allow-scripts and ' +
    'allow-same-origin flag in the iframe sandboxed by CSP HTTP header with ' +
    'allow-scripts and allow-same-origin flag');
 </script>

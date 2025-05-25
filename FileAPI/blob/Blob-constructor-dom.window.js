@@ -39,7 +39,7 @@ test_blob(function() {
 }, {
   expected: "[object HTMLOptionElement]",
   type: "",
-  desc: "Passing an platform object that supports indexed properties as the blobParts array should work (select)."
+  desc: "Passing a platform object that supports indexed properties as the blobParts array should work (select)."
 });
 
 test_blob(function() {
@@ -49,5 +49,5 @@ test_blob(function() {
 }, {
   expected: "[object Attr]",
   type: "",
-  desc: "Passing an platform object that supports indexed properties as the blobParts array should work (attributes)."
+  desc: "Passing a platform object that supports indexed properties as the blobParts array should work (attributes)."
 });

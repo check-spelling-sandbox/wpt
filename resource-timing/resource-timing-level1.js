@@ -16,7 +16,7 @@ window.onload =
         var mimeScript  = "application/javascript";
         var mimeCss     = "text/css";
 
-        /** Hex encoding of a a 150x50px green PNG. */
+        /** Hex encoding of a 150x50px green PNG. */
         var greenPng = "0x89504E470D0A1A0A0000000D494844520000006400000032010300000090FBECFD00000003504C544500FF00345EC0A80000000F49444154281563601805A36068020002BC00011BDDE3900000000049454E44AE426082";
 
         /** Array containing test cases to run.  Initially, it contains the one-off 'about:blank" test,

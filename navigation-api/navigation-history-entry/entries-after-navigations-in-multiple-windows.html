@@ -6,7 +6,7 @@
 <script>
 async_test(t => {
   let start_index = navigation.currentEntry.index;
-  // The navigations in each window should have only added an navigation to
+  // The navigations in each window should have only added a navigation to
   // their own window.
   function assertExpectedEntries(entries, expected_url) {
     assert_equals(entries.length, 2);

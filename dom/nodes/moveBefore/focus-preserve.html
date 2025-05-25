@@ -81,5 +81,5 @@ promise_test(async t => {
     assert_equals(document.activeElement, button);
     await eventually_blurred(t, button);
     assert_equals(document.activeElement, document.body);
-}, "when reparenting an ancestor of an focused element into a hidden parent, reset the document focus");
+}, "when reparenting an ancestor of a focused element into a hidden parent, reset the document focus");
 </script>

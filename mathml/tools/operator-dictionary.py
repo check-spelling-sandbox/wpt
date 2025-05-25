@@ -38,7 +38,7 @@ def buildKeyAndValueFrom(characters, form):
     for c in characters:
         key += chr(c)
     key += " " + form
-    # But save characters as an individual property for easier manipulation in
+    # But save characters as a individual property for easier manipulation in
     # this Python script.
     value = {
         "characters": characters,

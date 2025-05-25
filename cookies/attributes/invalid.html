@@ -64,14 +64,14 @@
       {
         cookie: 'test=8; "Secure"',
         expected: "test=8",
-        // This gets parsed as an unrecognized \"Secure\" attribute, not a valid
-        // Secure attribute. That's why it gets set on an non-secure origin.
+        // This gets parsed as a unrecognized \"Secure\" attribute, not a valid
+        // Secure attribute. That's why it gets set on a non-secure origin.
         name: "Set cookie for quoted Secure attribute",
       },
       {
         cookie: "test=9; Secure qux",
         expected: "test=9",
-        // This should be parsed as an unrecognized "Secure qux" attribute
+        // This should be parsed as a unrecognized "Secure qux" attribute
         // and ignored. That is, the cookie will not be Secure.
         name: "Set cookie for Secure qux",
       },

@@ -51,14 +51,14 @@ class ArrayTransferProcessor extends AudioWorkletProcessor {
         this.port.postMessage({
           type: 'assertion',
           success: false,
-          message: 'Transferring inputs/outputs, an individual input/output ' +
+          message: 'Transferring inputs/outputs, a individual input/output ' +
               'array, or a channel Float32Array MUST fail, but succeeded.'
         });
       } catch (error) {
         this.port.postMessage({
           type: 'assertion',
           success: true,
-          message: 'Transferring inputs/outputs, an individual input/output ' +
+          message: 'Transferring inputs/outputs, a individual input/output ' +
               'array, or a channel Float32Array is not allowed as expected.'
         });
       }

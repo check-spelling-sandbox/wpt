@@ -110,7 +110,7 @@ usb_test(async (t) => {
             0)),
     promise_rejects_dom(t, 'InvalidStateError', device.close()),
   ]);
-}, 'device operations reject if an device state change is in progress');
+}, 'device operations reject if a device state change is in progress');
 
 usb_test((t) => {
   return getFakeDevice().then(({device, fakeDevice}) => {

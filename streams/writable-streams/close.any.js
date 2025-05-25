@@ -453,7 +453,7 @@ promise_test(t => {
   return writer.close().then(() => {
     return promise_rejects_js(t, TypeError, ws.close(), 'close should reject');
   });
-}, 'close() on an closed stream should reject');
+}, 'close() on a closed stream should reject');
 
 promise_test(t => {
   const ws = new WritableStream({

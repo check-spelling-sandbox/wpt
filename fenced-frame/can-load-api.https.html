@@ -32,7 +32,7 @@ promise_test(async(t) => {
 
 promise_test(async(t) => {
   await runTest(false, "default", [], [], use_fencedframe=true);
-}, 'canLoadOpaqueURL returns false inside an default fenced frame');
+}, 'canLoadOpaqueURL returns false inside a default fenced frame');
 
 promise_test(async(t) => {
   await runTest(true, "default", [], [["Content-Security-Policy", "fenced-frame-src *"]]);

@@ -20,14 +20,14 @@ test(t => {
   assert_equals(
       insecureImport, origin,
       "A document with the strict-origin referrer policy served over HTTP, " +
-      "imports an module script over HTTP, that imports a descendant script " +
+      "imports a module script over HTTP, that imports a descendant script " +
       "over HTTP. The request for the descendant script is sent with a " +
       "`Referer` header with the page's origin");
 
   assert_equals(
       secureImport, "",
       "A document with the strict-origin referrer policy served over HTTP, " +
-      "imports an module script over HTTPS, that imports a descendant script " +
+      "imports a module script over HTTPS, that imports a descendant script " +
       "over HTTP. The request for the descendant script is sent with no " +
       "`Referer` header");
 }, "The strict-* referrer policies compare the trustworthiness of a " +
