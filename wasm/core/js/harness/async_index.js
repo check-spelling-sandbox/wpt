@@ -322,7 +322,7 @@ try {
 }
 
 function assert_exhaustion(action) {
-  const test = "Test that a WebAssembly code exhauts the stack space";
+  const test = "Test that a WebAssembly code exhausts the stack space";
   const loc = new Error().stack.toString().replace("Error", "");
   chain = Promise.all([action(), chain])
     .then(
