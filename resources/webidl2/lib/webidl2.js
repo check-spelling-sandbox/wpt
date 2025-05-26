@@ -3150,14 +3150,14 @@ function* checkInterfaceMemberDuplication(defs, i) {
 
   /**
    * @param {import("../productions/operation.js").Operation[]} additions
-   * @param {Set<string>} existings
+   * @param {Set<string>} existing
    * @param {import("../productions/container.js").Container} ext
    * @param {import("../productions/container.js").Container} base
    */
-  function* checkAdditions(additions, existings, ext, base) {
+  function* checkAdditions(additions, existing, ext, base) {
     for (const addition of additions) {
       const { name } = addition;
-      if (name && existings.has(name)) {
+      if (name && existing.has(name)) {
         const isStatic = addition.special === "static" ? "static " : "";
         const message = `The ${isStatic}operation "${name}" has already been defined for the base interface "${base.name}" either in itself or in a mixin`;
         yield (0,_error_js__WEBPACK_IMPORTED_MODULE_0__.validationError)(
