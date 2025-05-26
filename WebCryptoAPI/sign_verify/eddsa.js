@@ -213,7 +213,7 @@ function run_test(algorithmName) {
           let key = await subtle.generateKey(algorithm, false, ["sign", "verify"]);
           let signature = await subtle.sign(algorithm, key.privateKey, vector.data);
           let isVerified = await subtle.verify(algorithm, key.publicKey, signature, vector.data);
-          assert_true(isVerified, "Verificaton failed.");
+          assert_true(isVerified, "Verification failed.");
       }, "Sign and verify using generated " + vector.algorithmName + " keys.");
   });
 
