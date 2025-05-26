@@ -183,7 +183,7 @@
     deletionParent.removeChild(contentAttrElement);
     assert_equals(deletionParent.getAttribute("aria-activedescendant"), "contentAttrElement");
 
-    // As it was not explitly set, the attr-associated-element is computed from the content attribute,
+    // As it was not explicitly set, the attr-associated-element is computed from the content attribute,
     // and since descendant1 has been removed from the DOM, it is not valid.
     assert_equals(deletionParent.ariaActiveDescendantElement, null);
 
