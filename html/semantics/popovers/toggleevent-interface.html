@@ -15,7 +15,7 @@ test(function() {
 test(function() {
   var event = new ToggleEvent("");
   assert_true(event instanceof window.Event);
-}, "the event inherts from Event");
+}, "the event inherits from Event");
 
 test(function() {
   assert_throws_js(TypeError, function() {
