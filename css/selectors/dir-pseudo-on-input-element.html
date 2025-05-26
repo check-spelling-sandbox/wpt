@@ -138,7 +138,7 @@ test(() => {
     assert_false(input.matches(':dir(ltr)'));
     assert_true(input.matches(':dir(rtl)'));
 
-    // Changing to a different type that does't use value causes the bidi rule to no longer apply.
+    // Changing to a different type that doesn't use value causes the bidi rule to no longer apply.
     input.type = 'radio';
     assert_true(input.matches(':dir(ltr)'));
     assert_false(input.matches(':dir(rtl)'));
