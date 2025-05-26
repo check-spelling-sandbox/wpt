@@ -173,7 +173,7 @@ document_types().filter(function (entry) { return !entry.isOwner && entry.hasBro
             doc.adoptNode(unresolvedElement);
             assert_false(unresolvedElement instanceof UnresolvedElement);
         });
-    }, 'Adopting (and leaving disconnceted) an unresolved custom element into ' + documentName + ' must not enqueue a custom element upgrade reaction');
+    }, 'Adopting (and leaving disconnected) an unresolved custom element into ' + documentName + ' must not enqueue a custom element upgrade reaction');
 
     promise_test(function () {
         var unresolvedElement = document.createElement('unresolved-element');
