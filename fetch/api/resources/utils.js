@@ -15,7 +15,7 @@ function checkRequest(request, ExpectedValuesDict) {
         break;
 
       case "body":
-        //for checking body's content, a dedicated asyncronous/promise test should be used
+        //for checking body's content, a dedicated asynchronous/promise test should be used
         assert_true(request["headers"].has("Content-Type") , "Check request has body using Content-Type header")
         break;
 
