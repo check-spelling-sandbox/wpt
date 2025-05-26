@@ -176,7 +176,7 @@ var validSelectors = [
   // - :nth-of-type(n)       (Level 3)
   {name: ":nth-of-type selector, matching the third em element",                                        selector: "#pseudo-nth-p1 em:nth-of-type(3)",      expect: ["pseudo-nth-em3"],                                                                                 level: 3, testType: TEST_QSA | TEST_MATCH},
   {name: ":nth-of-type selector, matching every second element of their type",                          selector: "#pseudo-nth-p1 :nth-of-type(2n)",       expect: ["pseudo-nth-em2", "pseudo-nth-span2", "pseudo-nth-span4", "pseudo-nth-strong2", "pseudo-nth-em4"], level: 3, testType: TEST_QSA | TEST_MATCH},
-  {name: ":nth-of-type selector, matching every second elemetn of their type, starting from the first", selector: "#pseudo-nth-p1 span:nth-of-type(2n-1)", expect: ["pseudo-nth-span1", "pseudo-nth-span3"],                                                           level: 3, testType: TEST_QSA | TEST_MATCH},
+  {name: ":nth-of-type selector, matching every second element of their type, starting from the first", selector: "#pseudo-nth-p1 span:nth-of-type(2n-1)", expect: ["pseudo-nth-span1", "pseudo-nth-span3"],                                                           level: 3, testType: TEST_QSA | TEST_MATCH},
 
   // - :nth-last-of-type(n)  (Level 3)
   {name: ":nth-last-of-type selector, matching the third last em element", selector: "#pseudo-nth-p1 em:nth-last-of-type(3)",      expect: ["pseudo-nth-em2"],                                                                                 level: 3, testType: TEST_QSA | TEST_MATCH},
@@ -189,7 +189,7 @@ var validSelectors = [
   {name: ":first-of-type selector, matching the first td element in each table row", selector: "#pseudo-nth-table1 tr :first-of-type", expect: ["pseudo-nth-td1", "pseudo-nth-td7", "pseudo-nth-td13"],      level: 3, testType: TEST_QSA | TEST_MATCH},
 
   // - :last-of-type         (Level 3)
-  {name: ":last-of-type selector, matching the last em elemnet", selector: "#pseudo-nth-p1 em:last-of-type",      expect: ["pseudo-nth-em4"],                                           level: 3, testType: TEST_QSA | TEST_MATCH},
+  {name: ":last-of-type selector, matching the last em element", selector: "#pseudo-nth-p1 em:last-of-type",      expect: ["pseudo-nth-em4"],                                           level: 3, testType: TEST_QSA | TEST_MATCH},
   {name: ":last-of-type selector, matching the last of every type of element", selector: "#pseudo-nth-p1 :last-of-type",        expect: ["pseudo-nth-span4", "pseudo-nth-strong2", "pseudo-nth-em4"], level: 3, testType: TEST_QSA | TEST_MATCH},
   {name: ":last-of-type selector, matching the last td element in each table row", selector: "#pseudo-nth-table1 tr :last-of-type", expect: ["pseudo-nth-td6", "pseudo-nth-td12", "pseudo-nth-td18"],     level: 3, testType: TEST_QSA | TEST_MATCH},
 
@@ -557,7 +557,7 @@ var scopedSelectors = [
   // - :nth-of-type(n)       (Level 3)
   {name: ":nth-of-type selector, matching the third em element",                                        selector: "em:nth-of-type(3)",      ctx: "#pseudo-nth-p1", expect: ["pseudo-nth-em3"],                                                                                 level: 3, testType: TEST_FIND | TEST_MATCH},
   {name: ":nth-of-type selector, matching every second element of their type",                          selector: ":nth-of-type(2n)",       ctx: "#pseudo-nth-p1", expect: ["pseudo-nth-em2", "pseudo-nth-span2", "pseudo-nth-span4", "pseudo-nth-strong2", "pseudo-nth-em4"], level: 3, testType: TEST_FIND | TEST_MATCH},
-  {name: ":nth-of-type selector, matching every second elemetn of their type, starting from the first", selector: "span:nth-of-type(2n-1)", ctx: "#pseudo-nth-p1", expect: ["pseudo-nth-span1", "pseudo-nth-span3"],                                                           level: 3, testType: TEST_FIND | TEST_MATCH},
+  {name: ":nth-of-type selector, matching every second element of their type, starting from the first", selector: "span:nth-of-type(2n-1)", ctx: "#pseudo-nth-p1", expect: ["pseudo-nth-span1", "pseudo-nth-span3"],                                                           level: 3, testType: TEST_FIND | TEST_MATCH},
 
   // - :nth-last-of-type(n)  (Level 3)
   {name: ":nth-last-of-type selector, matching the third last em element",                                       selector: "em:nth-last-of-type(3)",      ctx: "#pseudo-nth-p1", expect: ["pseudo-nth-em2"],                                                                                 level: 3, testType: TEST_FIND | TEST_MATCH},
@@ -570,7 +570,7 @@ var scopedSelectors = [
   {name: ":first-of-type selector, matching the first td element in each table row", selector: "tr :first-of-type", ctx: "#pseudo-nth-table1", expect: ["pseudo-nth-td1", "pseudo-nth-td7", "pseudo-nth-td13"],      level: 3, testType: TEST_FIND | TEST_MATCH},
 
   // - :last-of-type         (Level 3)
-  {name: ":last-of-type selector, matching the last em elemnet",                     selector: "em:last-of-type",   ctx: "#pseudo-nth-p1",     expect: ["pseudo-nth-em4"],                                           level: 3, testType: TEST_FIND | TEST_MATCH},
+  {name: ":last-of-type selector, matching the last em element",                     selector: "em:last-of-type",   ctx: "#pseudo-nth-p1",     expect: ["pseudo-nth-em4"],                                           level: 3, testType: TEST_FIND | TEST_MATCH},
   {name: ":last-of-type selector, matching the last of every type of element",       selector: ":last-of-type",     ctx: "#pseudo-nth-p1",     expect: ["pseudo-nth-span4", "pseudo-nth-strong2", "pseudo-nth-em4"], level: 3, testType: TEST_FIND | TEST_MATCH},
   {name: ":last-of-type selector, matching the last td element in each table row",   selector: "tr :last-of-type",  ctx: "#pseudo-nth-table1", expect: ["pseudo-nth-td6", "pseudo-nth-td12", "pseudo-nth-td18"],     level: 3, testType: TEST_FIND | TEST_MATCH},
 

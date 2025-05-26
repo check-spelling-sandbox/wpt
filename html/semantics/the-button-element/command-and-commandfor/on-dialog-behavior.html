@@ -640,7 +640,7 @@
       async function (t) {
         const invokerbutton = document.createElement("button");
         const invokee = document.createElement("dialog");
-        invokerbutton.commandForElementt = invokee;
+        invokerbutton.commandForElement = invokee;
         invokerbutton.setAttribute("command", command);
         assert_false(invokee.open, "invokee.open");
         assert_false(invokee.matches(":modal"), "invokee :modal");
