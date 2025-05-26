@@ -6,7 +6,7 @@
 <script src=/resources/testharnessreport.js></script>
 <div id="noWhitespace" style="display: inline !important;"></div>
 <div id="whitespace" style="background-color: blue !important; color: red ! important;"></div>
-<div id="dinamicallyStyle"></div>
+<div id="dynamicallyStyle"></div>
 <script>
     test(function () {
         var css_style = document.querySelector('#noWhitespace').style.cssText;
@@ -19,14 +19,14 @@
     }, "Inline style declaration with whitespace between '!' and 'important'.");
 
     test(function () {
-        document.querySelector('#dinamicallyStyle').style.cssText = "color: black !important;";
-        var css_style = document.querySelector('#dinamicallyStyle').style.cssText;
+        document.querySelector('#dynamicallyStyle').style.cssText = "color: black !important;";
+        var css_style = document.querySelector('#dynamicallyStyle').style.cssText;
         assert_equals(css_style, "color: black !important;");
     }, "Style set dynamically via cssText without whitespace between '!' and 'important'.");
 
     test(function () {
-        document.querySelector('#dinamicallyStyle').style.cssText = "color: black ! important;";
-        var css_style = document.querySelector('#dinamicallyStyle').style.cssText;
+        document.querySelector('#dynamicallyStyle').style.cssText = "color: black ! important;";
+        var css_style = document.querySelector('#dynamicallyStyle').style.cssText;
         assert_equals(css_style, "color: black !important;");
     }, "Style set dynamically via cssText with whitespace between '!' and 'important'.");
 </script>
