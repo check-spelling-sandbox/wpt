@@ -228,7 +228,7 @@ async function createIndexedDBForTesting(rc, dbName, version) {
 }
 
 // Create an IndexedDB by executing script on the given remote context
-// with |dbName| and |version|, and wait for the reuslt.
+// with |dbName| and |version|, and wait for the result.
 async function waitUntilIndexedDBOpenForTesting(rc, dbName, version) {
   await rc.executeScript(async (dbName, version) => {
     await new Promise((resolve, reject) => {
