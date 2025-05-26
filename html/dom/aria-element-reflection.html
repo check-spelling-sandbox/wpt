@@ -639,7 +639,7 @@
       assert_array_equals(headingElement.ariaLabelledByElements, [headingLabel1, headingLabel2], "Elements are all in same scope, so gettable.");
       assert_equals(headingElement.getAttribute("aria-labelledby"), "", "Content attribute is empty.");
 
-      // Reset the association, the content attribute is sitll empty.
+      // Reset the association, the content attribute is still empty.
       headingElement.ariaLabelledByElements = [headingLabel1, headingLabel2];
       assert_equals(headingElement.getAttribute("aria-labelledby"), "");
 
