@@ -221,7 +221,7 @@
     assert_equals(parentNode.getAttribute("aria-activedescendant"), "");
     assert_equals(parentNode.ariaActiveDescendantElement, changingIdElement);
 
-    // The explicitly set element takes precendance over the content attribute.
+    // The explicitly set element takes precedence over the content attribute.
     // This means that we still return the same element reference, but the
     // content attribute is empty.
     changingIdElement.setAttribute("id", "newer-id");
