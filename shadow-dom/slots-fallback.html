@@ -220,7 +220,7 @@ test(() => {
   assert_array_equals(n.s2.assignedNodes({ flatten: true }), [d2]);
   assert_array_equals(n.s3.assignedNodes({ flatten: true }), [d2]);
   assert_array_equals(n.s4.assignedNodes({ flatten: true }), [d2, n.f4]);
-}, 'Slots fallback: Mutation. Assign a node to a slot so that fallback contens are no longer used.');
+}, 'Slots fallback: Mutation. Assign a node to a slot so that fallback contents are no longer used.');
 
 test(() => {
   let n = createTestTree(test5);
@@ -234,7 +234,7 @@ test(() => {
   assert_array_equals(n.s2.assignedNodes({ flatten: true }), [n.f1, n.f2]);
   assert_array_equals(n.s3.assignedNodes({ flatten: true }), [n.f1, n.f2]);
   assert_array_equals(n.s4.assignedNodes({ flatten: true }), [n.f1, n.f2, n.f4]);
-}, 'Slots fallback: Mutation. Remove an assigned node from a slot so that fallback contens will be used.');
+}, 'Slots fallback: Mutation. Remove an assigned node from a slot so that fallback contents will be used.');
 
 test(() => {
   let n = createTestTree(test5);
