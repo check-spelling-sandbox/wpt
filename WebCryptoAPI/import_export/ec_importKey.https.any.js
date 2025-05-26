@@ -105,7 +105,7 @@
 
 
     // Test importKey with a given key format and other parameters. If
-    // extrable is true, export the key and verify that it matches the input.
+    // extractable is true, export the key and verify that it matches the input.
     function testFormat(format, algorithm, data, keySize, usages, extractable) {
         const keyData = data[format];
         const compressed = format.endsWith("_compressed");

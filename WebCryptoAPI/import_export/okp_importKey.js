@@ -38,7 +38,7 @@ function runTests(algorithmName) {
 
 
 // Test importKey with a given key format and other parameters. If
-// extrable is true, export the key and verify that it matches the input.
+// extractable is true, export the key and verify that it matches the input.
 function testFormat(format, algorithm, keyData, keySize, usages, extractable) {
     [algorithm, algorithm.name].forEach((alg) => {
         promise_test(function(test) {

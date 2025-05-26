@@ -64,7 +64,7 @@
     }
 
     // Test importKey with a given key format and other parameters. If
-    // extrable is true, export the key and verify that it matches the input.
+    // extractable is true, export the key and verify that it matches the input.
     function testFormat(format, algorithm, keyData, keySize, usages, extractable) {
         promise_test(function(test) {
             return subtle.importKey(format, keyData, algorithm, extractable, usages).
