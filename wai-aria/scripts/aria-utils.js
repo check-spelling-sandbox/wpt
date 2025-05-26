@@ -107,7 +107,7 @@ const AriaUtils = {
 
       AriaUtils.verifyGenericRolesBySelector(".ex-generic");
 
-   This helper function is equivalant to AriaUtils.verifyRoleOrVariantRolesBySelector(".ex-generic", ["generic", "", "none"]);
+   This helper function is equivalent to AriaUtils.verifyRoleOrVariantRolesBySelector(".ex-generic", ["generic", "", "none"]);
    See various issues and discussions linked from https://github.com/web-platform-tests/interop-accessibility/issues/48
 
   */
