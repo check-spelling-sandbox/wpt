@@ -90,7 +90,7 @@ var values = {
             keyword: ['visible', 'hidden', {discrete: true}]
         };
     },
-    // types reqired for non-specified properties
+    // types required for non-specified properties
     'border-radius': function() {
         return {
             px: ['1px', '10px'],
