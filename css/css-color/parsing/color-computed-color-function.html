@@ -290,7 +290,7 @@ test_computed_value("color", "color(srgb 0.1 0.2 0.3 / 1.9)", "color(srgb 0.1 0.
 test_computed_value("color", "color(srgb 1 1 1 / -0.2)", "color(srgb 1 1 1 / 0)", "[Negative alpha should clamp]");
 
 
-// Ensure that `calc` values work with dynamically changing relative units (slighly different alpha values to make test harness not complain about duplicate tests).
+// Ensure that `calc` values work with dynamically changing relative units (slightly different alpha values to make test harness not complain about duplicate tests).
 document.getElementById("container").style.width = "1000px";
 test_computed_value("color", `color(srgb calc(0.5 + (sign(2cqw - 10px) * 0.1)) 0 0 / 0.51)`, `color(srgb 0.6 0 0 / 0.51)`);
 document.getElementById("container").style.width = "100px";
