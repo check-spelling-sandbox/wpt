@@ -51,7 +51,7 @@ for (const colorSpace of [ "srgb", "srgb-linear", "a98-rgb", "rec2020", "prophot
     test_computed_value("color", `color(${colorSpace} calc(NaN) 0 0)`, `color(${colorSpace} 0 0 0)`);
     test_computed_value("color", `color(${colorSpace} calc(0 / 0) 0 0)`, `color(${colorSpace} 0 0 0)`);
 
-    // calc(50% + (sign(1em - 10px) * 10%)), with its font relative units, must be evaluatated for computed value.
+    // calc(50% + (sign(1em - 10px) * 10%)), with its font relative units, must be evaluated for computed value.
     test_computed_value("color", `color(${colorSpace} calc(50% + (sign(1em - 10px) * 10%)) 0 0 / 0.5)`, `color(${colorSpace} 0.6 0 0 / 0.5)`);
     test_computed_value("color", `color(${colorSpace} 0.5 0 0 / calc(50% + (sign(1em - 10px) * 10%)))`, `color(${colorSpace} 0.5 0 0 / 0.6)`);
 }
@@ -84,7 +84,7 @@ for (const colorSpace of [ "xyz", "xyz-d50", "xyz-d65" ]) {
     test_computed_value("color", `color(${colorSpace} calc(NaN) 0 0)`, `color(${resultColorSpace} 0 0 0)`);
     test_computed_value("color", `color(${colorSpace} calc(0 / 0) 0 0)`, `color(${resultColorSpace} 0 0 0)`);
 
-    // calc(50% + (sign(1em - 10px) * 10%)), with its font relative units, must be evaluatated for computed value.
+    // calc(50% + (sign(1em - 10px) * 10%)), with its font relative units, must be evaluated for computed value.
     test_computed_value("color", `color(${colorSpace} calc(0.5 + (sign(1em - 10px) * 0.1)) 0 0 / 0.5)`, `color(${resultColorSpace} 0.6 0 0 / 0.5)`);
     test_computed_value("color", `color(${colorSpace} 0.5 0 0 / calc(0.5 + (sign(1em - 10px) * 0.1)))`, `color(${resultColorSpace} 0.5 0 0 / 0.6)`);
 }

@@ -114,7 +114,7 @@ tests = [
     ["rgb(var(--high), 0, 0)", "rgb(255, 0, 0)", "Variables above 255 get clamped to 255."],
     ["rgb(var(--negative), 64, 128)", "rgb(0, 64, 128)", "Variables below 0 get clamped to 0."],
 
-    // calc(50% + (sign(1em - 10px) * 10%)), with its font relative units, must be evaluatated for computed value.
+    // calc(50% + (sign(1em - 10px) * 10%)), with its font relative units, must be evaluated for computed value.
     ["rgb(calc(50% + (sign(1em - 10px) * 10%)), 0%, 0%, 50%)", "rgba(153, 0, 0, 0.5)"],
     ["rgba(calc(50% + (sign(1em - 10px) * 10%)), 0%, 0%, 50%)", "rgba(153, 0, 0, 0.5)"],
     ["rgb(calc(50 + (sign(1em - 10px) * 10)), 0, 0, 0.5)", "rgba(60, 0, 0, 0.5)"],

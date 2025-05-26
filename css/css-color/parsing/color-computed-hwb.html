@@ -75,7 +75,7 @@ tests = [
     ["hwb(90 50% 50% / 0.2)", "rgba(128, 128, 128, 0.2)", "HWB value should parse and round correctly"],
     ["hwb(90 50% 50% / 1)", "rgb(128, 128, 128)", "HWB value should parse and round correctly"],
 
-    // calc(50% + (sign(1em - 10px) * 10%)), with its font relative units, must be evaluatated for computed value.
+    // calc(50% + (sign(1em - 10px) * 10%)), with its font relative units, must be evaluated for computed value.
     ["hwb(calc(110deg + (sign(1em - 10px) * 10deg)) 30% 50% / 50%)", "rgba(77, 128, 77, 0.5)"],
     ["hwb(calc(110 + (sign(1em - 10px) * 10)) 30 50 / 0.5)", "rgba(77, 128, 77, 0.5)"],
     ["hwb(120deg 30% 50% / calc(50% + (sign(1em - 10px) * 10%)))", "rgba(77, 128, 77, 0.6)"],

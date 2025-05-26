@@ -3761,7 +3761,7 @@ tests = [
     ["hsl(360, 37.5%, 75%)", "rgb(215, 167, 167)", "HSL/HSLA value should parse and round correctly"],
     ["hsla(360, 37.5%, 75%, 0)", "rgba(215, 167, 167, 0)", "HSL/HSLA value should parse and round correctly"],
 
-    // calc(50% + (sign(1em - 10px) * 10%)), with its font relative units, must be evaluatated for computed value.
+    // calc(50% + (sign(1em - 10px) * 10%)), with its font relative units, must be evaluated for computed value.
     ["hsl(calc(50deg + (sign(1em - 10px) * 10deg)), 100%, 37.5%, 50%)", "rgba(191, 191, 0, 0.5)"],
     ["hsla(calc(50deg + (sign(1em - 10px) * 10deg)), 100%, 37.5%, 50%)", "rgba(191, 191, 0, 0.5)"],
     ["hsl(calc(50 + (sign(1em - 10px) * 10)), 100%, 37.5%, 50%)", "rgba(191, 191, 0, 0.5)"],

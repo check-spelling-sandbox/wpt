@@ -148,7 +148,7 @@ tests = [
     ["oklch(calc(NaN) 0 0)", "oklch(0 0 0)"],
     ["oklch(calc(0 / 0) 0 0)", "oklch(0 0 0)"],
 
-    // calc(50% + (sign(1em - 10px) * 10%)), with its font relative units, must be evaluatated for computed value.
+    // calc(50% + (sign(1em - 10px) * 10%)), with its font relative units, must be evaluated for computed value.
     ["lab(calc(50 + (sign(1em - 10px) * 10)) 30 50 / 50%)", "lab(60 30 50 / 0.5)"],
     ["oklab(calc(0.5 + (sign(1em - 10px) * 0.1)) 0.3 0.5 / 50%)", "oklab(0.6 0.3 0.5 / 0.5)"],
     ["lab(60 30 50 / calc(50% + (sign(1em - 10px) * 10%)))", "lab(60 30 50 / 0.6)"],
