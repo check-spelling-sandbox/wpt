@@ -66,8 +66,8 @@ testText("<div><span style='inline-flex'></span> <div>abc</div>", "abc", "Whites
 testText("<div><span style='inline-grid'></span> <div>abc</div>", "abc", "Whitespace between inline-grid and block should be collapsed");
 testText("<div>abc <img> def", "abc  def", "Whitespace around <img> should not be collapsed");
 testText("<div>abc <img width=1 height=1> def", "abc  def", "Whitespace around <img> should not be collapsed");
-testText("<div><img> abc", " abc", "Leading whitesapce should not be collapsed");
-testText("<div>abc <img>", "abc ", "Trailing whitesapce should not be collapsed");
+testText("<div><img> abc", " abc", "Leading whitespace should not be collapsed");
+testText("<div>abc <img>", "abc ", "Trailing whitespace should not be collapsed");
 testText("<div>abc <b></b> def", "abc def", "Whitespace around empty span should be collapsed");
 testText("<div>abc <b><i></i></b> def", "abc def", "Whitespace around empty spans should be collapsed");
 testText("<div><canvas></canvas> abc", " abc", "<canvas> should not collapse following space");
