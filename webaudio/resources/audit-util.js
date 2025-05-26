@@ -16,7 +16,7 @@ let RENDER_QUANTUM_FRAMES = 128;
 //   options.thresholdSNR: Minimum allowed SNR between the actual and expected
 //     signal. The default value is 10000.
 //   options.thresholdDiffULP: Maximum allowed difference between the actual
-//     and expected signal in ULP(Unit in the last place). The default is 0.
+//     and expected signal in ULP (Unit in the last place). The default is 0.
 //   options.thresholdDiffCount: Maximum allowed number of sample differences
 //     which exceeds the threshold. The default is 0.
 //   options.bitDepth: The expected result is assumed to come from an audio
