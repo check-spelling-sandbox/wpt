@@ -508,7 +508,7 @@ function testSlotchangeFiresWhenNestedSlotChange(mode, connectedToDocument)
                 if (innerSlotEventCount === 0) {
                     assert_equals(event.target, innerSlot, 'slotchange event\'s target must be the inner slot element at 1st slotchange');
                 } else if (innerSlotEventCount === 1) {
-                    assert_equals(event.target, outerSlot, 'slotchange event\'s target must be the outer slot element at 2nd sltochange');
+                    assert_equals(event.target, outerSlot, 'slotchange event\'s target must be the outer slot element at 2nd slotchange');
                 }
             });
             innerSlotEventCount++;
