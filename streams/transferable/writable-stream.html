@@ -142,5 +142,5 @@ promise_test(async t => {
   assert_equals(orig.events[0], 'abort', 'first event should be abort');
   assert_equals(orig.events[1].name, 'DataCloneError',
                 'reason should be a DataCloneError');
-}, 'writing a unclonable object should error the stream');
+}, 'writing a uncloneable object should error the stream');
 </script>
