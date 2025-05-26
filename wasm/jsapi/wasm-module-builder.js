@@ -1329,7 +1329,7 @@ class WasmModuleBuilder {
         section.emit_u8(1);  // one memory entry
         const has_max = wasm.memory.max !== undefined;
         const is_shared = wasm.memory.shared !== undefined;
-        // Emit flags (bit 0: reszeable max, bit 1: shared memory)
+        // Emit flags (bit 0: resizable max, bit 1: shared memory)
         if (is_shared) {
           section.emit_u8(has_max ? kSharedHasMaximumFlag : 2);
         } else {
