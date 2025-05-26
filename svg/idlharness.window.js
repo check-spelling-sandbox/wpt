@@ -84,7 +84,7 @@ idl_test(
       try {
         objects[element] = document.createElementNS(svgUrl, element);
       } catch (e) {
-        // Will be surfaced by idlharess.js's test_object below.
+        // Will be surfaced by idlharness.js's test_object below.
       }
     }
 
