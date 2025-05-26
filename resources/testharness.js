@@ -1042,7 +1042,7 @@
      * @property {bool} explicit_timeout - disable file timeout; only
      * stop waiting for results when the `timeout()` function is
      * called This should typically only be set for manual tests, or
-     * by a test runner that providees its own timeout mechanism.
+     * by a test runner that provides its own timeout mechanism.
      * @property {number} timeout_multiplier - Multiplier to apply to
      * per-test timeouts. This should only be set by a test runner.
      * @property {Document} output_document - The document to which
