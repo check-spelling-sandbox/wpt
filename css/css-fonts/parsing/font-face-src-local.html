@@ -8,9 +8,9 @@
 <script>
   const sheet = testStyle.sheet;
   tests = [
-    // Gargbage data following valid local() is not valid
+    // Garbage data following valid local() is not valid
     { src:'local(A) dummy()', valid:false},
-    // Gargbage data preceding valid local() is not valid
+    // Garbage data preceding valid local() is not valid
     { src:'dummy() local(A)', valid:false},
     // Unquoted collapsing space
     { src:'local(  A  )', valid:true },
