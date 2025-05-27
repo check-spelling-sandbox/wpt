@@ -9,32 +9,32 @@
 <script src="/resources/testdriver-actions.js"></script>
 <script src="/resources/testdriver-vendor.js"></script>
 <style>
-  .ancestor:has(.descendant1:hover) { color: blue }
-  .ancestor:has(.descendant1:hover) .other-descendant { color: navy }
-  .ancestor:has(.descendant1:hover:active) { color: skyblue }
-  .ancestor:has(.descendant1:hover:active) .other-descendant { color: lightblue }
+  .ancestor:has(.descendent1:hover) { color: blue }
+  .ancestor:has(.descendent1:hover) .other-descendent { color: navy }
+  .ancestor:has(.descendent1:hover:active) { color: skyblue }
+  .ancestor:has(.descendent1:hover:active) .other-descendent { color: lightblue }
   .ancestor:has(:focus) { color: green }
-  .ancestor:has(:focus) .other-descendant { color: darkgreen }
-  .ancestor:has(.descendant2:focus-visible) { color: yellowgreen }
-  .ancestor:has(.descendant2:focus-visible) .other-descendant { color: greenyellow }
-  .ancestor:has(.descendant3:focus-within) { color: lightgreen }
-  .ancestor:has(.descendant3:focus-within) .other-descendant { color: violet }
+  .ancestor:has(:focus) .other-descendent { color: darkgreen }
+  .ancestor:has(.descendent2:focus-visible) { color: yellowgreen }
+  .ancestor:has(.descendent2:focus-visible) .other-descendent { color: greenyellow }
+  .ancestor:has(.descendent3:focus-within) { color: lightgreen }
+  .ancestor:has(.descendent3:focus-within) .other-descendent { color: violet }
 </style>
 <div id=subject1 class=ancestor>
   <div>
     <div id=unhoverme>No :hover</div>
-    <div id=hoverme class=descendant1>Hover and click me</div>
+    <div id=hoverme class=descendent1>Hover and click me</div>
     <div id=focusme1 tabindex=1>Focus me</div>
-    <div id=focusme2 class=descendant2 tabindex=2>Focus me</div>
-    <div class=descendant3>
+    <div id=focusme2 class=descendent2 tabindex=2>Focus me</div>
+    <div class=descendent3>
       <div><div id=focusme3 tabindex=3>Focus me</div></div>
     </div>
   </div>
-  <div><div id=subject3 class=other-descendant>subject</div></div>
+  <div><div id=subject3 class=other-descendent>subject</div></div>
 </div>
 <div id=subject2 class=ancestor>
   <div id=focusme4 tabindex=4>Focus me</div>
-  <div><div id=subject4 class=other-descendant>subject</div></div>
+  <div><div id=subject4 class=other-descendent>subject</div></div>
 </div>
 <script>
   const tab_key = '\ue004';

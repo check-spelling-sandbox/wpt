@@ -662,7 +662,7 @@ function modifyForRemove(removedNode, point) {
     return point;
   }
 
-  // "For each boundary point whose node is removed node or a descendant of
+  // "For each boundary point whose node is removed node or a descendent of
   // it, set the boundary point to (old parent, old index)."
   if (point[0] == removedNode || isDescendant(point[0], removedNode)) {
     return [oldParent, oldIndex];

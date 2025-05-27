@@ -19,13 +19,13 @@ div, main { color: grey }
     <div id=subject></div>
     <div id=first_sibling>
         <div id=first_sibling_child>
-            <div id=first_sibling_descendant></div>
+            <div id=first_sibling_descendent></div>
         </div>
     </div>
     <div id=second_sibling></div>
     <div id=third_sibling>
         <div id=third_sibling_child>
-            <div id=third_sibling_descendant></div>
+            <div id=third_sibling_descendent></div>
         </div>
     </div>
 </main>
@@ -111,39 +111,39 @@ testClassChange(first_sibling, green);
 testClassChange(second_sibling, red);
 testClassChange(third_sibling, red);
 testClassChange(first_sibling_child, pink);
-testClassChange(first_sibling_descendant, yellow);
+testClassChange(first_sibling_descendent, yellow);
 testClassChange(third_sibling_child, purple);
-testClassChange(third_sibling_descendant, blue);
+testClassChange(third_sibling_descendent, blue);
 
 testElementInsertionBefore(first_sibling, green);
 testElementInsertionBefore(second_sibling, red);
 testElementInsertionBefore(third_sibling, red);
 testElementInsertionBefore(first_sibling_child, pink);
-testElementInsertionBefore(first_sibling_descendant, yellow);
+testElementInsertionBefore(first_sibling_descendent, yellow);
 testElementInsertionBefore(third_sibling_child, purple);
-testElementInsertionBefore(third_sibling_descendant, blue);
+testElementInsertionBefore(third_sibling_descendent, blue);
 
 testElementInsertionAfter(first_sibling, red);
 testElementInsertionAfter(second_sibling, red);
 testElementInsertionAfter(third_sibling, red);
 testElementInsertionAfter(first_sibling_child, pink);
-testElementInsertionAfter(first_sibling_descendant, yellow);
+testElementInsertionAfter(first_sibling_descendent, yellow);
 testElementInsertionAfter(third_sibling_child, purple);
-testElementInsertionAfter(third_sibling_descendant, blue);
+testElementInsertionAfter(third_sibling_descendent, blue);
 
 testTreeInsertionBefore(first_sibling, pink);
 testTreeInsertionBefore(second_sibling, purple);
 testTreeInsertionBefore(third_sibling, purple);
 testTreeInsertionBefore(first_sibling_child, yellow);
-testTreeInsertionBefore(first_sibling_descendant, yellow);
+testTreeInsertionBefore(first_sibling_descendent, yellow);
 testTreeInsertionBefore(third_sibling_child, blue);
-testTreeInsertionBefore(third_sibling_descendant, blue);
+testTreeInsertionBefore(third_sibling_descendent, blue);
 
 testTreeInsertionAfter(first_sibling, purple);
 testTreeInsertionAfter(second_sibling, purple);
 testTreeInsertionAfter(third_sibling, purple);
 testTreeInsertionAfter(first_sibling_child, yellow);
-testTreeInsertionAfter(first_sibling_descendant, yellow);
+testTreeInsertionAfter(first_sibling_descendent, yellow);
 testTreeInsertionAfter(third_sibling_child, blue);
-testTreeInsertionAfter(third_sibling_descendant, blue);
+testTreeInsertionAfter(third_sibling_descendent, blue);
 </script>

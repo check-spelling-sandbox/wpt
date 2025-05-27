@@ -20,9 +20,9 @@
   test_matches(subject, ':has(child)', true);
   test_matches(subject, ':has(> child)', true);
 
-  subject.innerHTML = '<child><descendant></descendant></child>';
-  test_matches(subject, ':has(descendant)', true);
-  test_matches(subject, ':has(> descendant)', false);
+  subject.innerHTML = '<child><descendent></descendent></child>';
+  test_matches(subject, ':has(descendent)', true);
+  test_matches(subject, ':has(> descendent)', false);
 
   subject.innerHTML = '<child></child><direct_sibling></direct_sibling><indirect_sibling></indirect_sibling>';
   test_matches(subject.firstChild, ':has(~ direct_sibling)', true);

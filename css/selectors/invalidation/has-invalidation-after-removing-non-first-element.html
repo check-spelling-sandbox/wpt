@@ -7,12 +7,12 @@
 <link rel="help" href="https://drafts.csswg.org/selectors/#relational">
 <style>
 div, main { color: grey }
-#subject:has(descendant) { color: red }
+#subject:has(descendent) { color: red }
 </style>
 <main id="main">
   <div id="subject">
     <div></div>
-    <descendant id="descendant"></descendant>
+    <descendent id="descendent"></descendent>
   </div>
 </main>
 <script>
@@ -26,6 +26,6 @@ div, main { color: grey }
   }
 
   test_div('initial_color', subject, red);
-  subject.removeChild(descendant);
-  test_div('remove descendant', subject, grey);
+  subject.removeChild(descendent);
+  test_div('remove descendent', subject, grey);
 </script>

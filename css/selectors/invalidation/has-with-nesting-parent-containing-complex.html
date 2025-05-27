@@ -10,7 +10,7 @@
 <style>
   .anchor { background-color: white; }
 
-  .ancestor .descendant {
+  .ancestor .descendent {
     .anchor:has(&) { background-color: blue; }
   }
 
@@ -18,11 +18,11 @@
     .anchor:has(> &) { background-color: lightblue; }
   }
 
-  .ancestor_prev ~ div .descendant {
+  .ancestor_prev ~ div .descendent {
     .anchor:has(&) { background-color: yellow; }
   }
 
-  .ancestor_prev ~ div.ancestor .descendant {
+  .ancestor_prev ~ div.ancestor .descendent {
     .anchor:has(&) { background-color: yellowgreen; }
   }
 
@@ -37,7 +37,7 @@
 <div><div id="grand_parent1">
   <div id="parent1">
     <div id="anchor1" class="anchor">
-      <div><div class="descendant"></div></div>
+      <div><div class="descendent"></div></div>
     </div>
   </div>
 </div></div>
@@ -57,7 +57,7 @@
          <div id="anchor_indirect_prev3"></div>
          <div id="anchor_direct_prev3"></div>
          <div id="anchor3" class="anchor">
-           <div><div class="descendant"></div></div>
+           <div><div class="descendent"></div></div>
          </div>
        </div>
 </div></div>

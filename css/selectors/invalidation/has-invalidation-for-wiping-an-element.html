@@ -7,7 +7,7 @@
 <link rel="help" href="https://drafts.csswg.org/selectors/#relational">
 <style>
 div, main { color: grey }
-.subject:has(.descendant) { color: green}
+.subject:has(.descendent) { color: green}
 </style>
 <main id=main>
   <div id="subject" class="subject"></div>
@@ -24,19 +24,19 @@ div, main { color: grey }
 
   test_div('initial color', subject, grey);
 
-  subject.innerHTML = "This is a text <div><div class='descendant'></div></div>";
+  subject.innerHTML = "This is a text <div><div class='descendent'></div></div>";
 
-  test_div('color after inserting text and div > .descendant', subject, green);
+  test_div('color after inserting text and div > .descendent', subject, green);
 
   subject.innerHTML = "This is a text";
 
-  test_div('color after wiping #child to remove div > .descendant', subject, grey);
+  test_div('color after wiping #child to remove div > .descendent', subject, grey);
 
-  subject.innerHTML = "<div id='child'> This is a text <div class='descendant'></div></div>";
+  subject.innerHTML = "<div id='child'> This is a text <div class='descendent'></div></div>";
 
-  test_div('color after inserting text and #child > .descendant', subject, green);
+  test_div('color after inserting text and #child > .descendent', subject, green);
 
   child.innerHTML = "This is a text";
 
-  test_div('color after wiping #child to remove .descendant', subject, grey);
+  test_div('color after wiping #child to remove .descendent', subject, grey);
 </script>

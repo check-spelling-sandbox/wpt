@@ -154,7 +154,7 @@ function setupRangeTests() {
         "[paras[0].firstChild, 0, paras[1].firstChild, 0]",
         "[paras[0].firstChild, 0, paras[1].firstChild, 8]",
         "[paras[0].firstChild, 3, paras[3], 1]",
-        // How about something that spans a node and its descendant?
+        // How about something that spans a node and its descendent?
         "[paras[0], 0, paras[0].firstChild, 7]",
         "[testDiv, 2, paras[4], 1]",
         // Then a few more interesting things just for good measure.
@@ -420,7 +420,7 @@ function previousNode(node) {
 }
 
 /**
- * Returns the next Node that's after node and all its descendants in tree
+ * Returns the next Node that's after node and all its descendents in tree
  * order, or null if node is the last Node or an ancestor of it.
  */
 function nextNodeDescendants(node) {
@@ -444,39 +444,39 @@ function ownerDocument(node) {
 }
 
 /**
- * Returns true if ancestor is an ancestor of descendant, false otherwise.
+ * Returns true if ancestor is an ancestor of descendent, false otherwise.
  */
-function isAncestor(ancestor, descendant) {
-    if (!ancestor || !descendant) {
+function isAncestor(ancestor, descendent) {
+    if (!ancestor || !descendent) {
         return false;
     }
-    while (descendant && descendant != ancestor) {
-        descendant = descendant.parentNode;
+    while (descendent && descendent != ancestor) {
+        descendent = descendent.parentNode;
     }
-    return descendant == ancestor;
+    return descendent == ancestor;
 }
 
 /**
- * Returns true if ancestor is an inclusive ancestor of descendant, false
+ * Returns true if ancestor is an inclusive ancestor of descendent, false
  * otherwise.
  */
-function isInclusiveAncestor(ancestor, descendant) {
-    return ancestor === descendant || isAncestor(ancestor, descendant);
+function isInclusiveAncestor(ancestor, descendent) {
+    return ancestor === descendent || isAncestor(ancestor, descendent);
 }
 
 /**
- * Returns true if descendant is a descendant of ancestor, false otherwise.
+ * Returns true if descendent is a descendent of ancestor, false otherwise.
  */
-function isDescendant(descendant, ancestor) {
-    return isAncestor(ancestor, descendant);
+function isDescendant(descendent, ancestor) {
+    return isAncestor(ancestor, descendent);
 }
 
 /**
- * Returns true if descendant is an inclusive descendant of ancestor, false
+ * Returns true if descendent is an inclusive descendent of ancestor, false
  * otherwise.
  */
-function isInclusiveDescendant(descendant, ancestor) {
-    return descendant === ancestor || isDescendant(descendant, ancestor);
+function isInclusiveDescendant(descendent, ancestor) {
+    return descendent === ancestor || isDescendant(descendent, ancestor);
 }
 
 /**

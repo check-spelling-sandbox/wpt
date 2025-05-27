@@ -10,19 +10,19 @@
   color: grey;
 }
 
-#subject1:is(.other-match, :has(.descendant)) {
+#subject1:is(.other-match, :has(.descendent)) {
   color: red;
 }
 
-#subject1:is(.parent > .other-match, .parent > :has(.descendant)) {
+#subject1:is(.parent > .other-match, .parent > :has(.descendent)) {
   color: orangered;
 }
 
-#subject2:where(.other-match, :has(.descendant)) {
+#subject2:where(.other-match, :has(.descendent)) {
   color: darkred;
 }
 
-#subject2:where(.parent > .other-match, .parent > :has(.descendant)) {
+#subject2:where(.parent > .other-match, .parent > :has(.descendent)) {
   color: pink;
 }
 

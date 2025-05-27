@@ -48,7 +48,7 @@
       <input type=checkbox onclick="this.checked ? activated(this) : null" class="activates">
       <span class="click container">label</span>
     </label>
-    <!--activation behavior of label for event targeted at interactive content descendant is to do nothing-->
+    <!--activation behavior of label for event targeted at interactive content descendent is to do nothing-->
     <label class="container">
         <button class="click" type="button"></button>
     </label>
@@ -128,7 +128,7 @@ const test_container = document.getElementById("test_container");
  * The behavior should be triggered by clicking the element of class click
  * and will manifest as a call to activated().
  *
- * For each [target, parent] in tests, we make target a descendant of parent
+ * For each [target, parent] in tests, we make target a descendent of parent
  * and test that only target gets activated when dispatching a click.
  */
 for (let i = 0; i < tests.length; i++) {

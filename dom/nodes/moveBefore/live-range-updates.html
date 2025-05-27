@@ -27,7 +27,7 @@ test(t => {
   // Moves `start` span to the very bottom of the container.
   old_parent.moveBefore(start, null);
 
-  // In an ordinary removal, when a node whose descendant is the start (or end)
+  // In an ordinary removal, when a node whose descendent is the start (or end)
   // of a live range is removed, the range's start is set to the removed node's
   // parent. For now, the same thing happens during `moveBefore()`.
   assert_equals(range.startContainer, old_parent, "startContainer updates during move");

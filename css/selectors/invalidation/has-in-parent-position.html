@@ -26,7 +26,7 @@ div:has(+ div [test_attr]) > #subject { color: lightpink }
         <div id=subject_parent>
             <div id=subject>
                 <div id=subject_child>
-                    <div id=subject_descendant></div>
+                    <div id=subject_descendent></div>
                 </div>
             </div>
         </div>
@@ -271,30 +271,30 @@ testClassChange(subject_ancestor, "grey");
 testClassChange(subject_parent, "grey");
 testClassChange(subject, "green");
 testClassChange(subject_child, "red");
-testClassChange(subject_descendant, "red");
+testClassChange(subject_descendent, "red");
 
 testElementInsertionBefore(subject_ancestor, "grey");
 testElementInsertionBefore(subject_parent, "grey");
 testElementInsertionBefore(subject, "green");
 testElementInsertionBefore(subject_child, "red");
-testElementInsertionBefore(subject_descendant, "red");
+testElementInsertionBefore(subject_descendent, "red");
 
 testElementInsertionAfter(subject_ancestor, "grey");
 testElementInsertionAfter(subject_parent, "blue");
 testElementInsertionAfter(subject, "green");
 testElementInsertionAfter(subject_child, "red");
-testElementInsertionAfter(subject_descendant, "red");
+testElementInsertionAfter(subject_descendent, "red");
 
 testTreeInsertionBefore(subject_ancestor, "grey");
 testTreeInsertionBefore(subject_parent, "grey");
 testTreeInsertionBefore(subject, "red");
 testTreeInsertionBefore(subject_child, "red");
-testTreeInsertionBefore(subject_descendant, "red");
+testTreeInsertionBefore(subject_descendent, "red");
 
 testTreeInsertionAfter(subject_ancestor, "grey");
 testTreeInsertionAfter(subject_parent, "pink");
 testTreeInsertionAfter(subject, "red");
 testTreeInsertionAfter(subject_child, "red");
-testTreeInsertionAfter(subject_descendant, "red");
+testTreeInsertionAfter(subject_descendent, "red");
 
 </script>

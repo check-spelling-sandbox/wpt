@@ -72,7 +72,7 @@ function init(target) {
 
   var outOfScope = element.cloneNode(true);   // Append this to the body before running the in-document
                                                // Element tests, but after running the Document tests. This
-                                               // tests that no elements that are not descendants of element
+                                               // tests that no elements that are not descendents of element
                                                // are selected.
 
   traverse(outOfScope, function(elem) {        // Annotate each element as being a clone; used for verifying

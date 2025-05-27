@@ -8,10 +8,10 @@
 <style>
 div, main { color: grey }
 .subject:has(> .child) { color: red }
-.subject:has(.descendant) { color: green }
-.subject:has([attrname=descendant]) { color: blue }
-.subject:has(#div_descendant) { color: yellow }
-.subject:has(descendant) { color: yellowgreen }
+.subject:has(.descendent) { color: green }
+.subject:has([attrname=descendent]) { color: blue }
+.subject:has(#div_descendent) { color: yellow }
+.subject:has(descendent) { color: yellowgreen }
 </style>
 <main id=main>
   <div id=div_subject class="subject">
@@ -48,42 +48,42 @@ div, main { color: grey }
   div_grandchild.classList.remove('child');
   test_div('remove .child from #div_grandchild', div_subject, grey);
 
-  div_child.classList.add('descendant');
-  test_div('add .descendant to #div_child', div_subject, green);
-  div_child.classList.remove('descendant');
-  test_div('remove .descendant from #div_child', div_subject, grey);
+  div_child.classList.add('descendent');
+  test_div('add .descendent to #div_child', div_subject, green);
+  div_child.classList.remove('descendent');
+  test_div('remove .descendent from #div_child', div_subject, grey);
 
-  div_grandchild.classList.add('descendant');
-  test_div('add .descendant to #div_grandchild', div_subject, green);
-  div_grandchild.classList.remove('descendant');
-  test_div('remove .descendant from #div_grandchild', div_subject, grey);
+  div_grandchild.classList.add('descendent');
+  test_div('add .descendent to #div_grandchild', div_subject, green);
+  div_grandchild.classList.remove('descendent');
+  test_div('remove .descendent from #div_grandchild', div_subject, grey);
 
-  div_grandchild.setAttribute('attrname', 'descendant');
-  test_div('set descendant to #div_grandchild[attrname]', div_subject, blue);
+  div_grandchild.setAttribute('attrname', 'descendent');
+  test_div('set descendent to #div_grandchild[attrname]', div_subject, blue);
   div_grandchild.setAttribute('attrname', '');
   test_div('clear #div_grandchild[attrname]', div_subject, grey);
 
-  div_grandchild.id = 'div_descendant';
-  test_div('change #div_grandchild to #div_descendant', div_subject, yellow);
-  div_descendant.id = 'div_grandchild';
-  test_div('change #div_descendant to #div_grandchild', div_subject, grey);
+  div_grandchild.id = 'div_descendent';
+  test_div('change #div_grandchild to #div_descendent', div_subject, yellow);
+  div_descendent.id = 'div_grandchild';
+  test_div('change #div_descendent to #div_grandchild', div_subject, grey);
 
   {
-    const descendant = document.createElement('descendant');
-    div_subject.appendChild(descendant);
-    test_div('add descendant to #div_subject', div_subject, yellowgreen);
-    div_subject.removeChild(descendant);
-    test_div('remove descendant from #div_subject', div_subject, grey);
+    const descendent = document.createElement('descendent');
+    div_subject.appendChild(descendent);
+    test_div('add descendent to #div_subject', div_subject, yellowgreen);
+    div_subject.removeChild(descendent);
+    test_div('remove descendent from #div_subject', div_subject, grey);
   }
 
   {
     const div = document.createElement('div');
-    const descendant = document.createElement('descendant');
-    div.appendChild(descendant);
+    const descendent = document.createElement('descendent');
+    div.appendChild(descendent);
     div_subject.appendChild(div);
-    test_div('add "div > descendant" to #div_subject', div_subject, yellowgreen);
+    test_div('add "div > descendent" to #div_subject', div_subject, yellowgreen);
     div_subject.removeChild(div);
-    test_div('remove "div > descendant" from #div_subject', div_subject, grey);
+    test_div('remove "div > descendent" from #div_subject', div_subject, grey);
   }
 
   {
@@ -96,39 +96,39 @@ div, main { color: grey }
   }
 
   {
-    const descendant = document.createElement('div');
-    descendant.classList.add('descendant');
+    const descendent = document.createElement('div');
+    descendent.classList.add('descendent');
     const div = document.createElement('div');
-    div.appendChild(descendant);
+    div.appendChild(descendent);
     div_subject.appendChild(div);
-    test_div('add "div > div.descendant" to #div_subject', div_subject, green);
+    test_div('add "div > div.descendent" to #div_subject', div_subject, green);
     div_subject.removeChild(div);
-    test_div('remove "div > div.descendant" from #div_subject', div_subject, grey);
+    test_div('remove "div > div.descendent" from #div_subject', div_subject, grey);
   }
 
   {
     const child = document.createElement('div');
-    child.id = 'div_descendant';
+    child.id = 'div_descendent';
     div_subject.appendChild(child);
-    test_div('add div#div_descendant to #div_subject', div_subject, yellow);
+    test_div('add div#div_descendent to #div_subject', div_subject, yellow);
     div_subject.removeChild(child);
-    test_div('remove div#div_descendant from #div_subject', div_subject, grey);
+    test_div('remove div#div_descendent from #div_subject', div_subject, grey);
   }
 
   {
-    const descendant = document.createElement('div');
-    descendant.id = 'div_descendant';
+    const descendent = document.createElement('div');
+    descendent.id = 'div_descendent';
     const div = document.createElement('div');
-    div.appendChild(descendant);
+    div.appendChild(descendent);
     div_subject.appendChild(div);
-    test_div('add "div#div_descendant" to #div_subject', div_subject, yellow);
+    test_div('add "div#div_descendent" to #div_subject', div_subject, yellow);
     div_subject.removeChild(div);
-    test_div('remove "div#div_descendant" from #div_subject', div_subject, grey);
+    test_div('remove "div#div_descendent" from #div_subject', div_subject, grey);
   }
 
   {
     const child = document.createElement('div');
-    child.setAttribute('attrname', 'descendant');
+    child.setAttribute('attrname', 'descendent');
     div_subject.appendChild(child);
     test_div('add div[attrname] to #div_subject', div_subject, blue);
     div_subject.removeChild(child);
@@ -136,10 +136,10 @@ div, main { color: grey }
   }
 
   {
-    const descendant = document.createElement('div');
-    descendant.setAttribute('attrname', 'descendant');
+    const descendent = document.createElement('div');
+    descendent.setAttribute('attrname', 'descendent');
     const div = document.createElement('div');
-    div.appendChild(descendant);
+    div.appendChild(descendent);
     div_subject.appendChild(div);
     test_div('add "div > div[attrname]" to #div_subject', div_subject, blue);
     div_subject.removeChild(div);

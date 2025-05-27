@@ -14,7 +14,7 @@ div, main { color: grey }
 <main id=main>
     <div id=subject>
         <div id=subject_child class=test>
-            <div id=subject_descendant class=test></div>
+            <div id=subject_descendent class=test></div>
         </div>
     </div>
 </main>
@@ -90,18 +90,18 @@ function testTreeInsertionAfter(afterElement, expectedColor)
 testColor('Initial color', grey);
 
 testClassChange(subject_child, green);
-testClassChange(subject_descendant, red);
+testClassChange(subject_descendent, red);
 
 testElementInsertionBefore(subject_child, green);
-testElementInsertionBefore(subject_descendant, red);
+testElementInsertionBefore(subject_descendent, red);
 
 testElementInsertionAfter(subject_child, green);
-testElementInsertionAfter(subject_descendant, red);
+testElementInsertionAfter(subject_descendent, red);
 
 testTreeInsertionBefore(subject_child, green);
-testTreeInsertionBefore(subject_descendant, red);
+testTreeInsertionBefore(subject_descendent, red);
 
 testTreeInsertionAfter(subject_child, green);
-testTreeInsertionAfter(subject_descendant, red);
+testTreeInsertionAfter(subject_descendent, red);
 
 </script>

@@ -69,15 +69,15 @@ const skyblue = 'rgb(135, 206, 235)';
 
 const colors = {
   red: {
-    descendant: red,
+    descendent: red,
     sibling: orangered,
   },
   green: {
-    descendant: green,
+    descendent: green,
     sibling: lightgreen,
   },
   blue: {
-    descendant: blue,
+    descendent: blue,
     sibling: skyblue,
   },
 };
@@ -91,7 +91,7 @@ function testColor(testName, element, color) {
 function testClassChange(trigger, targetDescendant, targetSibling, expected)
 {
   trigger.classList.add('test');
-  testColor(`add .test to ${trigger.id} - check ${targetDescendant.id}`, targetDescendant, colors[expected].descendant);
+  testColor(`add .test to ${trigger.id} - check ${targetDescendant.id}`, targetDescendant, colors[expected].descendent);
   testColor(`add .test to ${trigger.id} - check ${targetSibling.id}`, targetSibling, colors[expected].sibling);
   trigger.classList.remove('test');
   testColor(`remove .test from ${trigger.id} - check ${targetDescendant.id}`, targetDescendant, grey);

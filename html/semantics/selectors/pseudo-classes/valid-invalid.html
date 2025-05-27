@@ -70,7 +70,7 @@
 
   testSelectorIdsMatch("#FormSelection :valid", ["form1", "text3"], "':valid' matches form elements that are not the form owner of any elements that themselves are candidates for constraint validation but do not satisfy their constraints");
 
-  testSelectorIdsMatch("#FieldSetSelection :valid", ["fieldset1", "text5"], "':valid' matches fieldset elements that have no descendant elements that themselves are candidates for constraint validation but do not satisfy their constraints");
+  testSelectorIdsMatch("#FieldSetSelection :valid", ["fieldset1", "text5"], "':valid' matches fieldset elements that have no descendent elements that themselves are candidates for constraint validation but do not satisfy their constraints");
 
   testSelectorIdsMatch("#patternConstraints :valid", [ "text8" ], "':valid' matches elements that satisfy their pattern constraints");
 
@@ -81,7 +81,7 @@
 
   testSelectorIdsMatch("#FormSelection :invalid", ["form2", "text4"], "':invalid' matches form elements that are the form owner of one or more elements that themselves are candidates for constraint validation but do not satisfy their constraints");
 
-  testSelectorIdsMatch("#FieldSetSelection :invalid", ["fieldset2", "text6"], "':invalid' matches fieldset elements that have of one or more descendant elements that themselves are candidates for constraint validation but do not satisfy their constraints");
+  testSelectorIdsMatch("#FieldSetSelection :invalid", ["fieldset2", "text6"], "':invalid' matches fieldset elements that have of one or more descendent elements that themselves are candidates for constraint validation but do not satisfy their constraints");
 
   testSelectorIdsMatch("#patternConstraints :invalid", ["text7"], "':invalid' matches elements that do not satisfy their pattern constraints");
 
