@@ -1,0 +1,259 @@
+# See https://github.com/check-spelling/check-spelling/wiki/Configuration-Examples:-patterns
+
+^a=\S+$
+\\u[0-9a-f]{4}
+>[A-B]{3,}<
+
+# Non-Latin words
+abschließend|Álvare|Álvarez|äscii|Äscii|äsciiattribute|Äsciiattribute|Bernát|beszélnek|Bézier|Boisgérault|bokmål|Bülter|Byé|café|Čaro|Castelló|català|Català|CDGÂÂÄ|česky|Čeština|chuāng|Chvátal|Clément|comté|cümledir|député|Député|dichlorodiphényltrichloroéthane|doppelgänger|É\d|EÅRTH|eivät|Éloi|enciclopèdia|enciclopèdies|Encyclopædia|endß|Éric|Español|Estève|était|falsé|fáncy|Fédor|Fëdor|fooÉ|français|Français|François|Frédéric|Gábor|Gàidhlige|García|Gavenčiak|geklärt|Gérard|Górny|gråter|Grönholm|groüp|Guinée|Güttler|Håkon|hällo|három|hellö|Hellström|HEYÏ|Höfling|Hofstätter|Hørthe|Hovmöller|Hrončok|Ibáñez|illroyß|Íslenska|Jägenstedt|Jérémie|Jesús|Jiménez|Jürgen|Kadžar|Kalmár|Käufl|killroyß|KILLROYß|Kulík|Latviešu|lietuviškai|López|luftputebåten|Łukasz|Marié|Mariñez|Michailovičius|Michajlovič|Michał|Mihailovitš|Mihhailovitš|Misevičius|Müller|Münster|Nāser|Nasereddín|Nàssir|nemluví|Neumüller|Nicolás|Nordström|oración|örnek|Összeg|passﬁeld|passfİeld|paßfield|paẞfield|paſſfield|passfıeld|Paweł|Perchè|Péroux|PÉROUX|política|Português|préfixewithaccent|Proč|Québec|QWERTYUIOPÅÄÖLKJHGFDSAZXCVBNM|République|réttlátur|Română|Röthlisberger|Röttsches|rouée|rücken|Rüdiger|Ruslân|Rússia|Ŝaho|Sánchez|Sébastien|Skyttä|Slocumâ|Slovenčina|Slovenščina|Söderquist|Sören|SPEÄKING|ßPageRevelEvent|ßsimple|stéphane|Stéphane|Súkup|szkło|tatarça|TECHNICIÄNS|Teleżyński|Thörnros|točiki|Tomáš|Trinité|Tröger|Trøndere|único|üser|Varför|vetëm|voilà|Völker|wächst|Wilczyński|wôrld|Wülker|zhuāng|Zoltán
+
+# Automatically suggested patterns
+
+# hit-count: 151199 file-count: 1339
+# hex digits including css/html color classes:
+(?:[\\0][xX]|\\u\{?|[uU]\+|#x?|%23|&H)[0-9_a-fA-FgGrR]*?[a-fA-FgGrR]{2,}[0-9_a-fA-FgGrR]*(?:[uUlL]{0,3}|[iu]\d+)\b
+
+# hit-count: 63413 file-count: 38474
+# https/http/file urls
+(?:\b(?:https?|ftp|file)://)[-A-Za-z0-9+&@#/*%?=~_|!:,.;]+[-A-Za-z0-9+&@#/*%=~_|]
+
+# hit-count: 21334 file-count: 19629
+# mailto urls
+mailto:[-a-zA-Z=;:/?%&0-9+@._]{3,}
+
+# hit-count: 5070 file-count: 197
+# URL escaped characters
+%[0-9A-F][A-F](?=[A-Za-z])
+
+# hit-count: 2494 file-count: 1158
+# css fonts
+\bfont(?:-family|):[^;}]+
+
+# hit-count: 2265 file-count: 1924
+# css url wrappings
+\burl\([^)]+\)
+
+# hit-count: 784 file-count: 628
+# IServiceProvider / isAThing
+(?:(?:\b|_|(?<=[a-z]))I|(?:\b|_)(?:nsI|isA))(?=(?:[A-Z][a-z]{2,})+(?:[A-Z\d]|\b))
+
+# hit-count: 733 file-count: 153
+# in check-spelling@v0.0.22+, printf markers aren't automatically consumed
+# printf markers
+(?<!\\)\\(?:n|r(?!ight)|t(?!e[sx]t))(?=[a-z]{2,})
+
+# hit-count: 630 file-count: 281
+# python
+\b(?i)py(?!gments|gmy|lon|ramid|ro|th)(?=[a-z]{2,})
+
+# hit-count: 402 file-count: 75
+# version suffix <word>v#
+(?:(?<=[A-Z]{2})V|(?<=[a-z]{2}|[A-Z]{2})v)\d+(?:\b|(?=[a-zA-Z_]))
+
+# hit-count: 384 file-count: 102
+# uuid:
+\b[0-9a-fA-F]{8}-(?:[0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}\b
+
+# hit-count: 377 file-count: 235
+# data url
+\bdata:[-a-zA-Z=;:/0-9+_]*,\S*
+
+# hit-count: 367 file-count: 129
+# Python string prefix / binary prefix
+# Note that there's a high false positive rate, remove the `?=` and search for the regex to see if the matches seem like reasonable strings
+(?<!['"])\b(?:B|BR|Br|F|FR|Fr|R|RB|RF|Rb|Rf|U|UR|Ur|b|bR|br|f|fR|fr|r|rB|rF|rb|rf|u|uR|ur)['"](?=[A-Z]{3,}|[A-Z][a-z]{2,}|[a-z]{3,})
+
+# hit-count: 328 file-count: 76
+# Lorem
+# Update Lorem based on your content (requires `ge` and `w` from https://github.com/jsoref/spelling; and `review` from https://github.com/check-spelling/check-spelling/wiki/Looking-for-items-locally )
+# grep '^[^#].*lorem' .github/actions/spelling/patterns.txt|perl -pne 's/.*i..\?://;s/\).*//' |tr '|' "\n"|sort -f |xargs -n1 ge|perl -pne 's/^[^:]*://'|sort -u|w|sed -e 's/ .*//'|w|review -
+# Warning, while `(?i)` is very neat and fancy, if you have some binary files that aren't proper unicode, you might run into:
+# ... Operation "substitution (s///)" returns its argument for non-Unicode code point 0x1C19AE (the code point will vary).
+# ... You could manually change `(?i)X...` to use `[Xx]...`
+# ... or you could add the files to your `excludes` file (a version after 0.0.19 should identify the file path)
+(?:(?:\w|\s|[,.])*\b(?i)(?:amet|consectetur|cursus|dolor|eros|ipsum|lacus|libero|ligula|lorem|magna|neque|nulla|suscipit|tempus)\b(?:\w|\s|[,.])*)
+
+# hit-count: 307 file-count: 96
+# machine learning (?)
+\b(?i)ml(?!ine)(?=[a-z]{2,})
+
+# hit-count: 162 file-count: 51
+# base64 encoded content, possibly wrapped in mime
+(?:^|[\s=;:?])[-a-zA-Z=;:/0-9+]{50,}(?:[\s=;:?]|$)
+
+# hit-count: 158 file-count: 76
+# Markdown anchor links
+\(#\S*?[a-zA-Z]\S*?\)
+
+# hit-count: 72 file-count: 63
+# imports
+^import\s+(?:(?:static|type)\s+|)(?:[\w.]|\{\s*\w*?(?:,\s*(?:\w*|\*))+\s*\})+
+
+# hit-count: 69 file-count: 11
+# Punycode
+\bxn--[-0-9a-z]+
+
+# hit-count: 60 file-count: 18
+# libraries
+(?:\b|_)[Ll]ib(?:re(?=office)|)(?!era[lt]|ero|erty|rar(?:i(?:an|es)|y))(?=[a-z])
+
+# hit-count: 56 file-count: 13
+# javascript match regex
+\.match\(/[^/\s"]{3,}/[gim]*\s*
+
+# hit-count: 48 file-count: 4
+# GitHub JSON
+"node_id": "[-a-zA-Z=;:/0-9+_]*"
+
+# hit-count: 26 file-count: 23
+# data url in parens
+\(data:(?:[^) ][^)]*?|)(?:[A-Z]{3,}|[A-Z][a-z]{2,}|[a-z]{3,})[^)]*\)
+
+# hit-count: 25 file-count: 14
+# javascript replace regex
+\.replace\(/[^/\s"]{3,}/[gim]*\s*,
+
+# hit-count: 24 file-count: 2
+# GitHub SHAs (api)
+\bapi.github\.com/repos(?:/[^/\s"]+){3}/[0-9a-f]+\b
+
+# hit-count: 21 file-count: 13
+# set arguments
+\b(?:bash|sh|set)(?:\s+[-+][abefimouxE]{1,2})*\s+[-+][abefimouxE]{3,}(?:\s+[-+][abefimouxE]+)*
+
+# hit-count: 19 file-count: 6
+# Compiler flags (Windows / PowerShell)
+# This is a subset of the more general compiler flags pattern.
+# It avoids matching `-Path` to prevent it from being treated as `ath`
+(?:^|[\t ,"'`=(#])-(?:[DL](?=[A-Z]{2,})|(?:W(?!ait)|[XY])(?=[A-Z]{2,}|[A-Z][a-z]|[a-z]{2,}))
+
+# hit-count: 16 file-count: 9
+# basic auth
+(['"])[Bb]asic [-a-zA-Z=;:/0-9+]{3,}\g{-1}
+
+# hit-count: 13 file-count: 1
+# ANSI color codes
+(?:\\(?:u00|x)1[Bb]|\\03[1-7]|\x1b|\\u\{1[Bb]\})\[\d+(?:;\d+)*m
+
+# hit-count: 11 file-count: 10
+# integrity
+integrity=(['"])(?:\s*sha\d+-[-a-zA-Z=;:/0-9+]{40,})+\g{-1}
+
+# hit-count: 10 file-count: 2
+# highlighted letters
+\[[A-Z]\][a-z]+
+
+# hit-count: 8 file-count: 1
+# Contributor
+\[[^\]]+\]\(https://github\.com/[^/\s"]+/?\)
+
+# hit-count: 7 file-count: 7
+# assign regex
+= /[^*].*?(?:[a-z]{3,}|[A-Z]{3,}|[A-Z][a-z]{2,}).*/[gim]*(?=\W|$)
+
+# hit-count: 7 file-count: 4
+# lower URL escaped characters
+%[0-9a-f][a-f](?=[a-z]{2,})
+
+# hit-count: 6 file-count: 4
+# JavaScript regular expressions
+# javascript test regex
+/.{3,}/[gim]*\.test\(
+
+# hit-count: 5 file-count: 3
+# GitHub actions
+\buses:\s+[-\w.]+/[-\w./]+@[-\w.]+
+
+# hit-count: 4 file-count: 2
+# perl regex test
+[!=]~ (?:/.*/|m\{.*?\}|m<.*?>|m([|!/@#,;']).*?\g{-1})
+
+# hit-count: 4 file-count: 1
+# node packages
+(["'])@[^/'" ]+/[^/'" ]+\g{-1}
+
+# hit-count: 3 file-count: 2
+# hex in url queries
+=[0-9a-fA-F]*?(?:[A-F]{3,}|[a-f]{3,})[0-9a-fA-F]*?&
+
+# hit-count: 2 file-count: 2
+# copyright
+Copyright (?:\([Cc]\)|)(?:[-\d, ]|and)+(?: [A-Z][a-z]+ [A-Z][a-z]+,?)+
+
+# hit-count: 2 file-count: 2
+# C# includes
+^\s*using [^;]+;
+
+# hit-count: 2 file-count: 2
+# go install
+go install(?:\s+[a-z]+\.[-@\w/.]+)+
+
+# hit-count: 2 file-count: 2
+# latex (check-spelling >= 0.0.22)
+\\\w{2,}\{
+
+# hit-count: 1 file-count: 1
+# Docker images
+^\s*(?i)FROM\s+\S+:\S+(?:\s+AS\s+\S+|)
+
+# hit-count: 1 file-count: 1
+# regex choice
+\(\?:[^)]+\|[^)]+\)
+
+# hit-count: 1 file-count: 1
+# base64 encoded content in xml/sgml
+>[-a-zA-Z=;:/0-9+]{3,}=</
+
+# hit-count: 1 file-count: 1
+# base64 encoded json
+\beyJ[-a-zA-Z=;:/0-9+]+
+
+# hit-count: 1 file-count: 1
+# tar arguments
+\b(?:\\n|)g?tar(?:\.exe|)(?:(?:\s+--[-a-zA-Z]+|\s+-[a-zA-Z]+|\s[ABGJMOPRSUWZacdfh-pr-xz]+\b)(?:=[^ ]*|))+
+
+# Questionably acceptable forms of `in to`
+# Personally, I prefer `log into`, but people object
+# https://www.tprteaching.com/log-into-log-in-to-login/
+\b(?:(?:[Ll]og(?:g(?=[a-z])|)|[Ss]ign)(?:ed|ing)?) in to\b
+
+# to opt in
+\bto opt in\b
+
+# pass(ed|ing) in
+\bpass(?:ed|ing) in\b
+
+# acceptable duplicates
+# ls directory listings
+[-bcdlpsw](?:[-r][-w][-SsTtx]){3}[\.+*]?\s+\d+\s+\S+\s+\S+\s+[.\d]+(?:[KMGT]|)\s+
+# mount
+\bmount\s+-t\s+(\w+)\s+\g{-1}\b
+# C types and repeated CSS values
+\s(auto|buffalo|center|div|inherit|long|LONG|none|normal|solid|thin|transparent|very)(?:\s\g{-1})+\s
+# C enum and struct
+\b(?:enum|struct)\s+(\w+)\s+\g{-1}\b
+# go templates
+\s(\w+)\s+\g{-1}\s+\`(?:graphql|inject|json|yaml):
+# doxygen / javadoc / .net
+(?:[\\@](?:brief|defgroup|groupname|link|t?param|return|retval)|(?:public|private|\[Parameter(?:\(.+\)|)\])(?:\s+(?:static|override|readonly|required|virtual))*)(?:\s+\{\w+\}|)\s+(\w+)\s+\g{-1}\s
+
+# macOS file path
+(?:Contents\W+|(?!iOS)/)MacOS\b
+
+# Python package registry has incorrect spelling for macOS / Mac OS X
+"Operating System :: MacOS :: MacOS X"
+
+# "company" in Germany
+\bGmbH\b
+
+# IntelliJ
+\bIntelliJ\b
+
+# Commit message -- Signed-off-by and friends
+^\s*(?:(?:Based-on-patch|Co-authored|Helped|Mentored|Reported|Reviewed|Signed-off)-by|Thanks-to): (?:[^<]*<[^>]*>|[^<]*)\s*$
+
+# Autogenerated revert commit message
+^This reverts commit [0-9a-f]{40}\.$
+
+# ignore long runs of a single character:
+\b([A-Za-z])\g{-1}{3,}\b
