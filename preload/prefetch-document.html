@@ -16,7 +16,7 @@ async function prefetch_document_and_count_fetches(options, t) {
         "cache-control": "public, max-age=3600",
         file: "prefetch-exec.html",
         type: "text/html",
-        corssOrigin: "anonymous",
+        crossOrigin: "anonymous",
         ...options});
     const popup = window.open(href);
     const remoteContext = new RemoteContext(uid);
@@ -49,7 +49,7 @@ promise_test(async t => {
     const {href, uid} = await prefetch({
         file: "prefetch-exec.html",
         type: "text/html",
-        corssOrigin: "anonymous",
+        crossOrigin: "anonymous",
         origin: ORIGIN});
     const popup = window.open(href + "&cache_bust=" + token());
     const remoteContext = new RemoteContext(uid);
