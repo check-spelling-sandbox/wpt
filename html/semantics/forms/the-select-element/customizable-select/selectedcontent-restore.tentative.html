@@ -16,7 +16,7 @@ promise_test(async () => {
 
   iframe.contentDocument.querySelector('select').value = 'two';
   assert_equals(iframe.contentDocument.querySelector('select').value, 'two',
-    'Assining two to select.value should work.');
+    'Assigning two to select.value should work.');
   iframe.contentDocument.querySelector('form').submit();
   await new Promise(resolve => iframe.onload = resolve);
 
