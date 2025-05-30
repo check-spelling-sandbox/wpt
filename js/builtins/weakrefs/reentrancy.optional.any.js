@@ -14,7 +14,7 @@ function callback(holding) {
   called += 1;
 
   if (called === 1) {
-    // Atempt to re-enter the callback.
+    // Attempt to re-enter the callback.
     let nestedCallbackRan = false;
     finalizationRegistry.cleanupSome(() => { nestedCallbackRan = true });
     assert_equals(nestedCallbackRan, true);
