@@ -59,7 +59,7 @@ async function createConnectionWithTransform(test, script, gumOptions) {
   return {sender, receiver, senderPc, receiverPc};
 }
 
-async function createConnections(test, setupLocalConnection, setupRemoteConnection, doNotCloseAutmoatically) {
+async function createConnections(test, setupLocalConnection, setupRemoteConnection, doNotCloseAutomatically) {
     const localConnection = new RTCPeerConnection();
     const remoteConnection = new RTCPeerConnection();
 
@@ -77,7 +77,7 @@ async function createConnections(test, setupLocalConnection, setupRemoteConnecti
     await remoteConnection.setLocalDescription(answer);
     await localConnection.setRemoteDescription(answer);
 
-    if (!doNotCloseAutmoatically) {
+    if (!doNotCloseAutomatically) {
         test.add_cleanup(() => {
             localConnection.close();
             remoteConnection.close();
