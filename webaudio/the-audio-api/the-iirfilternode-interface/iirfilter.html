@@ -232,7 +232,7 @@
                 let expected = result.getChannelData(0);
                 let actual = result.getChannelData(1);
 
-                // On MacOSX, WebAudio uses an optimized Biquad implementation
+                // On macOSX, WebAudio uses an optimized Biquad implementation
                 // that is different from the implementation used for Linux and
                 // Windows.  This will cause the output to differ, even if the
                 // threshold passes.  Thus, only print out a very small number

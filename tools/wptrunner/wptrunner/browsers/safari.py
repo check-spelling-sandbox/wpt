@@ -173,7 +173,7 @@ class SafariBrowser(WebDriverBrowser):
         if not isinstance(exe, str):
             return None
 
-        exe_path = os.path.join(bundle_path, "Contents", "MacOS", exe)
+        exe_path = os.path.join(bundle_path, "Contents", "macOS", exe)
         if not os.path.isfile(exe_path):
             return None
 

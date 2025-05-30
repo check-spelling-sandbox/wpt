@@ -13,8 +13,8 @@ function pressAccessKey(accessKey){
   let shiftKey = '\uE008'; // left Shift key
   // There are differences in using accesskey across browsers and OS's.
   // See: // https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/accesskey
-  let isMacOSX = navigator.userAgent.indexOf("Mac") != -1;
-  let osAccessKey = isMacOSX ? [controlKey, optionKey] : [shiftKey, altKey];
+  let ismacOSX = navigator.userAgent.indexOf("Mac") != -1;
+  let osAccessKey = ismacOSX ? [controlKey, optionKey] : [shiftKey, altKey];
   let actions = new test_driver.Actions();
   // Press keys.
   for (let key of osAccessKey) {

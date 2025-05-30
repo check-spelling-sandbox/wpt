@@ -21,7 +21,7 @@
     return navigator.mediaDevices.getDisplayMedia(constraints);
   }
 
-  // On MacOS these tests need to be run with setTimeout for threading purposes.
+  // On macOS these tests need to be run with setTimeout for threading purposes.
   promise_test(async t => {
     var video = document.createElement("video");
     const stream = await getDisplayMedia({ displaySurface: "monitor" });

@@ -133,7 +133,7 @@ def available_screen_size(session):
     """Return the effective available screen size (width/height).
 
     This is size which excludes any fixed window manager elements like menu
-    bars, and the dock on MacOS.
+    bars, and the dock on macOS.
     """
     return tuple(session.execute_script("""
         return [

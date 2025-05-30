@@ -56,7 +56,7 @@ jobs:
           export SYSTEM_VERSION_COMPAT=0
           ./wpt install --channel preview --download-only -d . --rename STP safari browser
           sudo installer -pkg STP.pkg -target LocalSystem
-          sudo /Applications/Safari\ Technology\ Preview.app/Contents/MacOS/safaridriver --enable
+          sudo /Applications/Safari\ Technology\ Preview.app/Contents/macOS/safaridriver --enable
       - name: Update hosts
         run: |-
           set -eux -o pipefail

@@ -324,7 +324,7 @@ class Firefox(Browser):
             binary = which("firefox",
                            path=os.path.join(path,
                                              self.application_name.get(channel, "Firefox Nightly.app"),
-                                             "Contents", "MacOS"))
+                                             "Contents", "macOS"))
 
         return binary
 
@@ -342,12 +342,12 @@ class Firefox(Browser):
                     break
 
         if not binary and self.platform == "macos":
-            macpaths = ["/Applications/Firefox Nightly.app/Contents/MacOS",
-                        os.path.expanduser("~/Applications/Firefox Nightly.app/Contents/MacOS"),
-                        "/Applications/Firefox Developer Edition.app/Contents/MacOS",
-                        os.path.expanduser("~/Applications/Firefox Developer Edition.app/Contents/MacOS"),
-                        "/Applications/Firefox.app/Contents/MacOS",
-                        os.path.expanduser("~/Applications/Firefox.app/Contents/MacOS")]
+            macpaths = ["/Applications/Firefox Nightly.app/Contents/macOS",
+                        os.path.expanduser("~/Applications/Firefox Nightly.app/Contents/macOS"),
+                        "/Applications/Firefox Developer Edition.app/Contents/macOS",
+                        os.path.expanduser("~/Applications/Firefox Developer Edition.app/Contents/macOS"),
+                        "/Applications/Firefox.app/Contents/macOS",
+                        os.path.expanduser("~/Applications/Firefox.app/Contents/macOS")]
             return which("firefox", path=os.pathsep.join(macpaths))
 
         if binary is None:
@@ -924,7 +924,7 @@ class Chromium(ChromeChromiumBase):
                                                        self._chromium_package_name,
                                                        "Chromium.app",
                                                        "Contents",
-                                                       "MacOS"))
+                                                       "macOS"))
         # which will add .exe on Windows automatically.
         return which("chrome", path=os.path.join(directory, self._chromium_package_name))
 
@@ -1307,7 +1307,7 @@ class Chrome(ChromeChromiumBase):
                                   self._chrome_package_name,
                                   "Google Chrome for Testing.app",
                                   "Contents",
-                                  "MacOS"))
+                                  "macOS"))
         # "which" will add .exe on Windows automatically.
         return which("chrome", path=os.path.join(directory, self._chrome_package_name))
 
@@ -1331,7 +1331,7 @@ class Chrome(ChromeChromiumBase):
             suffix = ""
             if channel in ("beta", "dev", "canary"):
                 suffix = " " + channel.capitalize()
-            return f"/Applications/Google Chrome{suffix}.app/Contents/MacOS/Google Chrome{suffix}"
+            return f"/Applications/Google Chrome{suffix}.app/Contents/macOS/Google Chrome{suffix}"
         if uname[0] == "Windows":
             name = "Chrome"
             if channel == "beta":
@@ -1826,7 +1826,7 @@ class Edge(Browser):
             suffix = ""
             if channel in ("beta", "dev", "canary"):
                 suffix = " " + channel.capitalize()
-            return f"/Applications/Microsoft Edge{suffix}.app/Contents/MacOS/Microsoft Edge{suffix}"
+            return f"/Applications/Microsoft Edge{suffix}.app/Contents/macOS/Microsoft Edge{suffix}"
         if self.platform == "win":
             suffix = ""
             if channel in ("beta", "dev"):
@@ -2163,7 +2163,7 @@ class Safari(Browser):
     def find_webdriver(self, venv_path=None, channel=None):
         path = None
         if channel == "preview":
-            path = "/Applications/Safari Technology Preview.app/Contents/MacOS"
+            path = "/Applications/Safari Technology Preview.app/Contents/macOS"
         return which("safaridriver", path=path)
 
     def install_webdriver(self, dest=None, channel=None, browser_binary=None):

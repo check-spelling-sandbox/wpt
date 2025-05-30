@@ -5,7 +5,7 @@ for Safari and Safari Technology Preview.
 
   * Allow Safari to be controlled by SafariDriver:
     * `safaridriver --enable` or
-    * `"/Applications/Safari Technology Preview.app/Contents/MacOS/safaridriver" --enable`
+    * `"/Applications/Safari Technology Preview.app/Contents/macOS/safaridriver" --enable`
 
   * Allow pop-up windows:
     * `defaults write com.apple.Safari WebKitJavaScriptCanOpenWindowsAutomatically 1` or
