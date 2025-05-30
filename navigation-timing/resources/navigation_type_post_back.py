@@ -1,4 +1,4 @@
-# Accoridng to routes.py in the wpt server implementation, POST method is
+# According to routes.py in the wpt server implementation, POST method is
 # handled by a Python script handler which requires this file to return an html.
 def main(request, response):
     content = """
