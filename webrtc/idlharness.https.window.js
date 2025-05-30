@@ -80,7 +80,7 @@ async function asyncInitTransports() {
   idlTestObjects.iceCandidatePair = iceCandidatePair;
 }
 
-// Asynchoronously generate MediaStreamTrack from getUserMedia
+// Asynchronously generate MediaStreamTrack from getUserMedia
 function asyncInitMediaStreamTrack() {
   return getNoiseStream({ audio: true })
     .then(mediaStream => {
