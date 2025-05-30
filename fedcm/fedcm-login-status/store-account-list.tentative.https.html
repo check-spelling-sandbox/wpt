@@ -37,7 +37,7 @@ promise_test(
   async t => {
     assert_equals(await navigator.login.setStatus('logged-in', {
         expiration: 60*1000 // 60 seconds
-      }), undefined, 'A setStatus with an no account list call resolves with undefined.');
+      }), undefined, 'A setStatus with no account list call resolves with undefined.');
   },
   'login.setStatus with no account list succeeds.'
 );
