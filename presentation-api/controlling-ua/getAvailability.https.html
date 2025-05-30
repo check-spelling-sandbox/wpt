@@ -30,7 +30,7 @@
         const promise = request.getAvailability();
         assert_true(promise instanceof Promise, 'PresentationRequest.getAvailability() returns a Promise.');
         const newPromise = request.getAvailability();
-        assert_true(newPromise instanceof Promise, 'PresentationRequest.getAvailabilty() returns a Promise.');
+        assert_true(newPromise instanceof Promise, 'PresentationRequest.getAvailability() returns a Promise.');
         assert_not_equals(promise, newPromise, 'PresentationRequest.getAvailability() should return a new Promise each time it is called.');
 
         return promise.then(a => {
