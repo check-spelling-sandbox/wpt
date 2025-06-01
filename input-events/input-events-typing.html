@@ -120,7 +120,7 @@ promise_test(async function() {
     assert_equals(beforeInputEvent.inputType, 'deleteContentForward');
     assert_equals(inputEvent.inputType, 'deleteContentForward');
     assert_equals(beforeInputEvent.data, inputEvent.data);
-}, 'It triggers beforeinput and input events on typing DELETE with pre-existing content');
+}, 'It triggers beforeinput and input events on typing DELETE with preexisting content');
 
 promise_test(async function() {
     this.add_cleanup(resetRich);
@@ -133,7 +133,7 @@ promise_test(async function() {
     assert_equals(beforeInputEvent.inputType, 'deleteContentForward');
     assert_equals(inputEvent.inputType, 'deleteContentForward');
     assert_equals(beforeInputEvent.data, inputEvent.data);
-}, 'It triggers beforeinput and input events on typing DELETE with no pre-existing content');
+}, 'It triggers beforeinput and input events on typing DELETE with no preexisting content');
 
 promise_test(async function() {
     this.add_cleanup(resetRich);
@@ -149,7 +149,7 @@ promise_test(async function() {
     assert_equals(beforeInputEvent.inputType, 'deleteContentBackward');
     assert_equals(inputEvent.inputType, 'deleteContentBackward');
     assert_equals(beforeInputEvent.data, inputEvent.data);
-}, 'It triggers beforeinput and input events on typing BACK_SPACE with pre-existing content');
+}, 'It triggers beforeinput and input events on typing BACK_SPACE with preexisting content');
 
 promise_test(async function () {
     this.add_cleanup(resetRich);
@@ -249,7 +249,7 @@ promise_test(async function() {
     assert_equals(beforeInputEvent.inputType, 'deleteContentBackward');
     assert_equals(inputEvent.inputType, 'deleteContentBackward');
     assert_equals(beforeInputEvent.data, inputEvent.data);
-}, 'It triggers beforeinput and input events on typing BACK_SPACE with no pre-existing content');
+}, 'It triggers beforeinput and input events on typing BACK_SPACE with no preexisting content');
 
 promise_test(async function() {
     this.add_cleanup(resetRich);

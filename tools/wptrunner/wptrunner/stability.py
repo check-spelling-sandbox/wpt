@@ -187,7 +187,7 @@ def write_github_checks_summary_inconsistent(log, inconsistent, iterations):
     log("Some affected tests had inconsistent (flaky) results:\n")
     write_inconsistent(log, inconsistent, iterations)
     log("\n")
-    log("These may be pre-existing or new flakes. Please try to reproduce (see "
+    log("These may be preexisting or new flakes. Please try to reproduce (see "
         "the above WPT command, though some flags may not be needed when "
         "running locally) and determine if your change introduced the flake. "
         "If you are unable to reproduce the problem, please tag "
@@ -199,7 +199,7 @@ def write_github_checks_summary_slow_tests(log, slow):
     log("Some affected tests had slow results:\n")
     write_slow_tests(log, slow)
     log("\n")
-    log("These may be pre-existing or newly slow tests. Slow tests indicate "
+    log("These may be preexisting or newly slow tests. Slow tests indicate "
         "that a test ran very close to the test timeout limit and so may "
         "become TIMEOUT-flaky in the future. Consider speeding up the test or "
         "breaking it into multiple tests. For help, please tag "

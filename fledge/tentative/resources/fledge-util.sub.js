@@ -1032,7 +1032,7 @@ async function deleteAllCookies() {
   await test_driver.delete_all_cookies();
 }
 
-// Deletes all cookies (to avoid pre-existing cookies causing inconsistent
+// Deletes all cookies (to avoid preexisting cookies causing inconsistent
 // output on failure) and sets a cookie with name "cookie" and a value of
 // "cookie". Adds a cleanup task to delete all cookies again when the test
 // is done.

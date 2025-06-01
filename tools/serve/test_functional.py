@@ -61,7 +61,7 @@ def test_subprocess_exit(server_subprocesses, tempfile_name):
 
         # The `logger` module from the wptserver package uses a singleton
         # pattern which resists testing. In order to avoid conflicting with
-        # other tests which rely on that module, pre-existing state is
+        # other tests which rely on that module, preexisting state is
         # discarded through an explicit "reload" operation.
         reload(logger)
 
