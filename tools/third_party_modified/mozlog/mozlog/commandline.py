@@ -100,7 +100,7 @@ fmt_options = {
     ),
     "level": (
         level_filter_wrapper,
-        "A least log level to subscribe to for the given formatter "
+        "A minimum log level for the given formatter "
         "(debug, info, error, etc.)",
         {"mach", "raw", "tbpl"},
         "store",
