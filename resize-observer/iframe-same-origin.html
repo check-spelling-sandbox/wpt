@@ -65,7 +65,7 @@
       });
     });
   }).then(() => {
-    // This is needed to workaround a Chromium test infrastructure bug.
+    // This is needed to work around a Chromium test infrastructure bug.
     // See https://crbug.com/1270820#c8 for details.
     return new Promise((resolve) => window.requestAnimationFrame(resolve));
   }).then(() => {

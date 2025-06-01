@@ -253,7 +253,7 @@ window.onload =
         /** Iterates through all resource entries on the timeline, vetting all invariants. */
         function assertInvariants(test, done) {
             // Multiple browsers seem to cheat a bit and race img.onLoad and setting responseEnd.  Microsoft https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/2379187
-            // Yield for 100ms to workaround a suspected race where window.onload fires before
+            // Yield for 100ms to work around a suspected race where window.onload fires before
             //     script visible side-effects from the wininet/urlmon thread have finished.
             test.step_timeout(
                 test.step_func(
