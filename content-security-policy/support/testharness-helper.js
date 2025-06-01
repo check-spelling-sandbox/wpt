@@ -84,7 +84,7 @@ function assert_service_worker_is_loaded(url, description) {
 }
 
 // Given the URL of a worker that pings its opener upon load, this
-// function builds a test that asserts that the an error event is
+// function builds a test that asserts that an error event is
 // fired on the worker, and that a CSP event fires.
 function assert_worker_is_blocked(url, description) {
   async_test(t => {
