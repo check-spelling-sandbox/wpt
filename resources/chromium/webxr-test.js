@@ -2319,8 +2319,8 @@ class MockXRInputSource {
 
     // Add x/y value if supported.
     if (axesStartIndex != -1) {
-      this.gamepad_.axes[axesStartIndex] = (buttonState.xValue == null ? 0.0 : buttonSate.xValue);
-      this.gamepad_.axes[axesStartIndex + 1] = (buttonState.yValue == null ? 0.0 : buttonSate.yValue);
+      this.gamepad_.axes[axesStartIndex] = (buttonState.xValue == null ? 0.0 : buttonState.xValue);
+      this.gamepad_.axes[axesStartIndex + 1] = (buttonState.yValue == null ? 0.0 : buttonState.yValue);
     }
   }
 
