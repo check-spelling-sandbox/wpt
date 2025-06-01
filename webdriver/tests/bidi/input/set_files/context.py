@@ -5,7 +5,7 @@ from .. import get_events
 pytestmark = pytest.mark.asyncio
 
 
-async def test_set_files_сontext(
+async def test_set_files_context(
     bidi_session, top_context, new_tab, load_static_test_page, get_element, create_files
 ):
     await load_static_test_page(page="files.html")
